@@ -4,7 +4,7 @@ https://github.com/Omar27522/NewLAtPC/blob/main/spanish/trabajo/EstructuraBasica
 
 Este es el mismo archivo en .docx
 https://github.com/Omar27522/NewLAtPC/blob/main/spanish/trabajo/Estructura_HTML_%26_CSS_Estandarizada.docx
-    
+
 	El problema con este trabajo.
 
 Cada parte de el codigo esta en Headings. esta parte de codigo no se podra usar.
@@ -28,9 +28,42 @@ basado en el PDF de la estructura, hay que cambiar el codigo usando una de estas
 
 --HTML--
 
+Esta es la estructura basica de tu primer reporte. El reporte no tiene que ser seguido al pie de la letra, pero si es muy importante mantener la estructura del mismo.
 
+--Reporte--_incluye: Nombre, Fecha, Área, Título, Syntax_--Reporte--
+El Sitio: Peripherals->Mouse
+La Tienda: Todos los archivos que se necesitan estaran en el repositorio de github
+Los Trabajos: Codigo .txt a HTML
+Yo Quisiera que:
+Un Enunciado completo Por trabajo completado
 
+--Reporte--
+Ejemplo de un reporte...
 
+Omar May19-26,2024 Site Report liveCode
+		Site:-~->
+We’ve created a new item on the sidebar, it will have work
+tutorials.
+We’ve Uploaded the pending items onto ProducƟon.
+We’ve started a new GitHub repo. The repo will house the
+new site. -we will work on it from Ɵme to Ɵme.
+		Shop:-~->
+All items are organized in their proper place. Technology
+folder.
+		Jobs:-~->
+All The AIO computer that was being stored was finally
+delivered to its owner.
+I would like to Blog and Vlog; and also make learning videos
+Also Make the site more interacƟve, intuiƟve, and a beƩer
+overall user experience.
+		I Would like to:-~->
+Organize and fix all the cables, and tools.
+Have a proper inventory of all tools and devices. Maybe I
+could implement this idea on the Checklist on Project
+Tracking LAtPC		-~->-~->-~->
+	Files have been organized on Technology under LAtinosPC.
+	Files like this one will be located in
+		the WEEKS folder.
 
 
 
