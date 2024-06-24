@@ -4,15 +4,15 @@ https://github.com/Omar27522/NewLAtPC/blob/main/spanish/trabajo/EstructuraBasica
 
 Este es el mismo archivo en .docx
 https://github.com/Omar27522/NewLAtPC/blob/main/spanish/trabajo/Estructura_HTML_%26_CSS_Estandarizada.docx
-
-
-
-    El problema con este trabajo.
+    
+	El problema con este trabajo.
 
 Cada parte de el codigo esta en Headings. esta parte de codigo no se podra usar.
 basado en el PDF de la estructura, hay que cambiar el codigo usando una de estas estrategias.
 
---HTML--
+
+--HTML trabajo1 Peripherals Mouse--
+
 <h2>Inception and Evolution of Computer Mouse Technology</h2>
 <h3>The computer mouse was invented by Douglas Engelbart in 1963, while he was working at the Stanford Research Institute. The original design of the mouse included two perpendicular wheels that could detect the direction of movement. Later, the design was improved to include a ball that rolled on two axes, detecting the direction of movement and transmitting this information to the computer.</h3>
 <h3>In the 1980s, the mouse became a popular peripheral for personal computers, particularly with the rise of the graphical user interface (GUI) and the introduction of the Apple Macintosh computer. Over time, the mouse has continued to evolve, with new designs and features that make it more ergonomic and easier to use.</h3>
@@ -25,6 +25,7 @@ basado en el PDF de la estructura, hay que cambiar el codigo usando una de estas
 <a href="#mouse"><h3><img alt="A small green rectangle to divide sections of the document" height="3" src="/images/green_rectangle.png" style="margin-left:0px;margin-top:0px;" title="Divider Line" width="44" /></h3></a></section><section>
 <h2>About the Mouse</h2>
 <h3>The computer mouse is a versatile input device that is used for a wide range of applications. Some of the most common use cases and applications for a computer mouse include:</h3>
+
 --HTML--
 
 
