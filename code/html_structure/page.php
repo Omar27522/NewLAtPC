@@ -67,5 +67,17 @@
         echo $obj->footer;
     ?>
 </footer>
+<script>
+const menuToggleInput = document.querySelector('#menuToggle input');
+const body = document.querySelector('body');
+
+menuToggleInput.addEventListener('change', function() {
+  if (menuToggleInput.checked) {
+    body.classList.add('menu-open');
+  } else {
+    body.classList.remove('menu-open');
+  }
+});
+</script>
 </body>
 </html>
