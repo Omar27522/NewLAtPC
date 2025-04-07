@@ -6,7 +6,7 @@ include ('../code/html_structure/page.php');
 class page_content    {
    /* public $a;
         function __construct (){
-        
+
             $this->a='
 <article>
 <h1>Yay! Algun contenido.</h1>
@@ -21,7 +21,7 @@ class page_content    {
 Mon April 1st. 2024
 </footer>
 </article>';*/
-        
+
         function content ()    {
             echo '<article>
             <h1>Yay! Algun contenido.</h1>
@@ -36,7 +36,7 @@ Mon April 1st. 2024
             Mon April 1st. 2024
             </footer>
             </article>';
-            
+
         }
 }
 titles();
