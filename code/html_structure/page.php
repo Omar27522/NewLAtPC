@@ -23,14 +23,17 @@
             <span class="crumbs">
                 <!-- HERE ARE THE PAGE CRUMBS-->
                 <?php echo $crumbs;/*Call the Crumbs*/?>
+                <hr>
             </span>
+
             <a href="#" class="phone">
                 909-276-7214
             </a>
+
             <div class="logo">
                 <?php echo $logo; /*Call the Logo*/?>
             </div><br />
-            <nav>
+            <nav class="sticky">
                 <!--    TerwanPOP    -->
                 <div role="navigation" class="burg">
                     <div id="menuToggle"><input type="checkbox" />
@@ -43,13 +46,17 @@
             </nav>
         </header>
         <article>
-            <section>
-                HERE IS SOME HTML CONTENT
+            <section><?php
+            include_once('./jesuscrist/content.php');
+            //echo var_dump(function_exists('content'));
+           content();
+               ?>
             </section>
         </article>
     </main>
     <footer id="footer">
-        This is SOME FOOTER
+         LAtinosPC.com © 2025
+        <!-- <img src="banner.webp" style="width:100vw">-->
     </footer>
     <script>
     const menuToggleInput = document.querySelector('#menuToggle input');
