@@ -4,21 +4,29 @@
 }
 .logos {
     color: #ecf0f1;
-    /* Light text color */
     font-family: manuscript;
-    position: relative;
-    /* For potential absolute positioning of elements inside */
-    overflow: hidden;
-    /* To contain any potential animations */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+.logo-text {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .logos span {
-
     font-weight: bold;
     letter-spacing: 2px;
-    /* Add some letter spacing */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    /* Text shadow for depth */
 }
 
 .logos span:first-child {
@@ -35,11 +43,11 @@
 
 .logos small {
     display: block;
-    /* Make the small text appear on a new line */
     font-size: 0.5em;
     color: #95a5a6;
-    /* Muted color for the small text */
     font-style: italic;
-    padding-right: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 

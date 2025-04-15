@@ -198,8 +198,23 @@ content();
 .fl { margin:4px 16px 4px 0; float:left;}
 .rtl { margin:4px 4px 16px 0; float:right;}
 nav.sticky {
-  position: sticky;
-  top: 0;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  background-color: cornflowerblue !important;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  transform: translateY(0) !important;
+  will-change: transform !important;
+}
+
+nav.sticky.nav-hidden {
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+}
 }
 	</style>
 	<!-- This is what all images should have depending on size

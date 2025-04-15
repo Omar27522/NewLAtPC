@@ -30,9 +30,9 @@ article {
 main header {
     width: 100%;
     height: auto;
-    padding: 5% 1% 0% 1%;
-    position: relative;
+    padding: 5% 1% 1% 1%;
     background-color: cornflowerblue;
+    margin-bottom: 0;
 
 }
 
@@ -54,9 +54,10 @@ main header {
 header .logo {
     font-size: calc(3vw + 3vh);
     color: midnightblue;
-    display: inline;
-    float: left;
+    display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header small {
@@ -70,13 +71,13 @@ header span {
 }
 
 nav {
-    display: inline-flex;
-    margin-bottom: 0;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: cornflowerblue;
+    padding: 10px 0;
+    margin: 0;
 }
 
 button a {

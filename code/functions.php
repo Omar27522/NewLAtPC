@@ -11,8 +11,7 @@ function is_english(){
    /* $logo = '<img src="banner2.webp" class="logos">
                 <small>PC is for Personal Computer</small>';*/
 
-    $logo = '<div class="logos"><span>LA</span>tinos<span>PC</span>.com
-                <small>PC is for Personal Computer</small></div>';
+    $logo = '<div class="logos"><div class="logo-text"><span>LA</span>tinos<span>PC</span>.com</div><small>PC is for Personal Computer</small></div>';
 
         ob_start();
             include ('./code/includes/en/nav_menu.php');

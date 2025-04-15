@@ -32,8 +32,9 @@
 
             <div class="logo">
                 <?php echo $logo; /*Call the Logo*/?>
-            </div><br />
-            <nav class="sticky">
+            </div>
+        </header>
+        <nav class="sticky">
                 <!--    TerwanPOP    -->
                 <div role="navigation" class="burg">
                     <div id="menuToggle"><input type="checkbox" />
@@ -70,6 +71,33 @@
         }
     });
     </script>
+    <script>
+        // Sticky nav code
+        let lastScrollTop = 0;
+        const nav = document.querySelector('nav.sticky');
+        const scrollThreshold = 100;
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Only start hiding/showing after scrolling past threshold
+            if (scrollTop > scrollThreshold) {
+                // Scrolling down
+                if (scrollTop > lastScrollTop) {
+                    nav.classList.add('nav-hidden');
+                }
+                // Scrolling up
+                else if (scrollTop < lastScrollTop) {
+                    nav.classList.remove('nav-hidden');
+                }
+            } else {
+                // Above threshold - always show nav
+                nav.classList.remove('nav-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        </script>
 </body>
 
 </html>
