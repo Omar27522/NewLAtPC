@@ -4,7 +4,7 @@
     <a href="https://www.vatican.va/roman_curia/pontifical_councils/interelg/documents/rc_pc_interelg_doc_20030203_new-age_en.html" target="_blank" alt="Jesus">
         <img src="https://latinospc.com/images/artificialintelligence/our_lord_and_savior_jesus_christ/lamb10.webp" width="100%" height="auto">
     </a>
-    <a href="#">
+    <a href="./jesusChrist">
         <li>Heavenly Father Tell me about the Web</li>
     </a><a href="https://bibilium.com/38-parables-of-jesus-parables-of-jesus/">
         <li>Parables</li>

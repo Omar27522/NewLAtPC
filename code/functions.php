@@ -1,12 +1,11 @@
 <?php
 function is_english(){
-    global $lang,$title, $css, $crumbs, $logo ,$nav_menu, $nav_buttons;
+    global $lang, $css, $crumbs, $logo ,$nav_menu, $nav_buttons,$dir;
     $lang = "lang=\"en-US\"";
-    $title ="Welcome";
-    $css = '<link rel="stylesheet" href="./code/style.css">
-            <link rel="stylesheet" href="./code/logo.css">
-            <link rel="stylesheet" href="./code/terwanpop.css">';
-    $crumbs = '<a href="./services/">Service</a>&nbsp;<a href="./parts/">Parts</a>&nbsp;<a href="./programs/">Software</a>';
+    $css = '<link rel="stylesheet" href="'.$dir.'code/style.css">
+            <link rel="stylesheet" href="'.$dir.'code/logo.css">
+            <link rel="stylesheet" href="'.$dir.'code/terwanpop.css">';
+    $crumbs = '<a href="'.$dir.'services/">Service</a>&nbsp;<a href="'.$dir.'parts/">Parts</a>&nbsp;<a href="'.$dir.'programs/">Software</a>';
 
    /* $logo = '<img src="banner2.webp" class="logos">
                 <small>PC is for Personal Computer</small>';*/
@@ -15,11 +14,11 @@ function is_english(){
                 <small>PC is for Personal Computer</small></div>';
 
         ob_start();
-            include ('./code/includes/en/nav_menu.php');
+            include ($dir.'code/includes/en/nav_menu.php');
     $nav_menu = ob_get_clean();
 
         ob_start();
-            include ('./code/includes/en/nav_buttons.php');
+            include ($dir.'code/includes/en/nav_buttons.php');
     $nav_buttons = ob_get_clean();
 }
 ?>

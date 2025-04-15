@@ -9,8 +9,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>
         <?php echo $title; /* Call the title */?>
     </title>
@@ -47,15 +46,13 @@
         </header>
         <article>
             <section><?php
-            include_once('./jesuscrist/content.php');
-            //echo var_dump(function_exists('content'));
            content();
                ?>
             </section>
         </article>
     </main>
     <footer id="footer">
-         LAtinosPC.com © 2025
+        LAtinosPC.com © 2025
         <!-- <img src="banner.webp" style="width:100vw">-->
     </footer>
     <script>
