@@ -1,5 +1,6 @@
 <?php function content(){
 	global $titles, $dangers, $links, $browse, $browseS, $isAlwaysGod, $battle, $rejection, $responsibility;
+	global $titulos, $ligas, $peligros, $navegar, $navegarS, $siempreEsDios, $batalla, $rechazo, $responsabilidad;
 	?><style>
 
 .dangers {

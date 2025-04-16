@@ -11,7 +11,7 @@ function is_english(){
                 <small>PC is for Personal Computer</small>';*/
 
     $logo = '<div class="logos"><span>LA</span>tinos<span>PC</span>.com
-                <small>PC is for Personal Computer</small></div>';
+                <small class="rtl">PC is for Personal Computer</small></div>';
 
         ob_start();
             include ($dir.'code/includes/en/nav_menu.php');

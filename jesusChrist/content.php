@@ -1,6 +1,4 @@
 <?php
-
-    
 $titles = [
     'Heavenly Father Tell me about the web',
     'Dangers of the Internet',
