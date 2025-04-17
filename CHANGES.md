@@ -5,9 +5,9 @@
 This site is for everyone to use, here we can learn about Jesus, His teachings and personal computer technologies.
 
 ## Appendix
-[April 2025](#4/6/2025)<a id="appendix"></a>
+- [April 2025](#4/6/2025)<a id="appendix"></a>
 menu Update
-[4/15](#4/15/2025)
+- [4/15](#4/15/2025)
 The site is slowly being migrated from Live.
 There have been many challenges along the way regarding style, and the architecture.
 
