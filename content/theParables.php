@@ -7,7 +7,7 @@
     <li>Rather than forcing interpretations, parables invited listeners to discover meaning for themselves, engaging their minds and hearts in the process.</li>
 </ul>
 
-
+<!-- This is the Dialog for the links -->
 <div class="multi-link-container" id="multiLinkContainer">
   <span class="linked-text" id="linkedText">Click Here</span>
   <div class="link-dialog" id="linkDialog">
@@ -16,7 +16,55 @@
     <a href="https://www.example.com/link3">Another Link</a>
   </div>
 </div>
+<!-- This is the Dialog for the links -->
 
+<!-- This is the style for the image link -->
+<style>
+  .multi-link-container-img {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px; /* Add spacing between the link/image sets */
+  }
+
+  .linked-text-img {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .image-dialog {
+  display: none; /* Initially hidden */
+  position: fixed; /* Stay fixed relative to the viewport */
+  top: 50%; /* Position in the vertical center */
+  left: 50%; /* Position in the horizontal center */
+  transform: translate(-50%, -50%); /* Center the dialog precisely */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  z-index: 1000; /* Ensure it's on top */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the image */
+  opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
+  transition: opacity 0.3s ease-in-out; /* Transition the opacity property */
+}
+
+.image-dialog.visible {
+  display: block; /* Make it visible */
+  opacity: 1; /* Fade it in */
+}
+
+  .image-dialog img {
+    display: block;
+    max-width: 90vw; /* Limit image width to viewport width */
+    max-height: 90vh; /* Limit image height to viewport height */
+    height: auto;
+    margin: 0 auto; /* Center the image within the dialog */
+  }
+</style>
+<!-- This is the style for the image link -->
+
+<!-- This is the style for the Dialog links -->
 <style>
   .multi-link-container {
     display: inline-block; /* Keep it inline with surrounding text */
@@ -57,7 +105,9 @@
     text-decoration: underline;
   }
 </style>
+<!-- This is the style for the Dialog links -->
 
+<!-- This is the script for the Dialog links -->
 <script>
   const multiLinkContainer = document.getElementById('multiLinkContainer');
   const linkedText = document.getElementById('linkedText');
@@ -74,7 +124,7 @@
     }
   });
 </script>
-
+<!-- This is the script for the Dialog links -->
 
 
 
@@ -133,12 +183,39 @@ OpenBible.com" style="color:white;"><ruby>
             </th>
         </tr>
         <tr>
-            <td class="parable-name">The Sower</td>
+           <!-- <td class="parable-name">The Sower</td> -->
+
+
+
+            <div class="multi-link-container-img" >
+  <td><span class="linked-text-img" >The Sower</span></td>
+  <div class="image-dialog" >
+    <figure>
+        <img src="../images/sower.png" alt="Image 1">
+        <figcaption>The Parable of the Sower</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+
+
             <td>Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</td>
             <td>Matthew <a href="https://openbible.com/ylt/matthew/13.htm" target="_blank">13:1-23,</a> Mark 4:1-20, Luke 8:4-15</td>
         </tr>
         <tr>
-            <td class="parable-name">The Mustard Seed</td>
+            
+
+            <div class="multi-link-container-img" >
+  <td><span class="linked-text-img" >The Mustard Seed</span></td>
+  <div class="image-dialog" >
+    <figure>
+        <img src="../images/mustardSeed.png" alt="Image 1">
+        <figcaption>Parable of The Mustard Seed</figcaption>
+    </figure>
+  </div>
+</div>
+
             <td>Illustrates how God's kingdom starts small but grows enormously</td>
             <td>Matthew 13:31-32, Mark 4:30-32, Luke 13:18-19</td>
         </tr>
@@ -368,3 +445,65 @@ OpenBible.com" style="color:white;"><ruby>
             <td>Luke 17:7-10</td>
         </tr>
     </table>
+
+
+
+<!-- This is the script for the Image Link -->
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const linkedTexts = document.querySelectorAll('.linked-text-img'); // Select all the trigger elements
+    const imageDialogs = document.querySelectorAll('.image-dialog'); // Select all the dialogs
+    let currentlyOpenDialog = null;
+
+    linkedTexts.forEach((linkedText, index) => {
+      const imageDialog = imageDialogs[index]; // Assuming each link corresponds to a dialog in the same order
+
+      if (linkedText && imageDialog) {
+        linkedText.addEventListener('click', (event) => {
+          event.stopPropagation();
+
+          // Close the currently open dialog
+          if (currentlyOpenDialog) {
+            currentlyOpenDialog.classList.remove('visible');
+            setTimeout(() => {
+              if (currentlyOpenDialog && !currentlyOpenDialog.classList.contains('visible')) {
+                currentlyOpenDialog.style.display = 'none';
+              }
+            }, 300);
+          }
+
+          // Open the current dialog
+          imageDialog.style.display = 'block';
+          imageDialog.offsetHeight; // Force reflow
+          imageDialog.classList.add('visible');
+          currentlyOpenDialog = imageDialog;
+        });
+      }
+    });
+
+     // Close any open image dialog when clicking anywhere on the document
+     document.addEventListener('click', (event) => {
+      if (currentlyOpenDialog) {
+        currentlyOpenDialog.classList.remove('visible');
+        setTimeout(() => {
+          if (currentlyOpenDialog && !currentlyOpenDialog.classList.contains('visible')) {
+            currentlyOpenDialog.style.display = 'none';
+            currentlyOpenDialog = null;
+          }
+        }, 300);
+      }
+    });
+
+    // Close dialog on pressing the Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && currentlyOpenDialog) {
+        currentlyOpenDialog.classList.remove('visible');
+        setTimeout(() => {
+          currentlyOpenDialog.style.display = 'none';
+          currentlyOpenDialog = null;
+        }, 300);
+      }
+    });
+  });
+</script>
+<!-- This is the script for the Image Link -->
