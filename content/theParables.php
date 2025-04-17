@@ -107,24 +107,7 @@
 </style>
 <!-- This is the style for the Dialog links -->
 
-<!-- This is the script for the Dialog links -->
-<script>
-  const multiLinkContainer = document.getElementById('multiLinkContainer');
-  const linkedText = document.getElementById('linkedText');
-  const linkDialog = document.getElementById('linkDialog');
 
-  linkedText.addEventListener('click', (event) => {
-    event.stopPropagation(); // Prevent immediate closing
-    linkDialog.style.display = 'block';
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!multiLinkContainer.contains(event.target)) {
-      linkDialog.style.display = 'none';
-    }
-  });
-</script>
-<!-- This is the script for the Dialog links -->
 
 
 
@@ -161,16 +144,40 @@
             text-align: center;
         }
         a {
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 100%;
-  font-size: 0.9em; /* Optionally reduce font size for small screens */
-}
+            display: inline-block;
+            white-space: nowrap;
+            max-width: 100%;
+            font-size: 0.9em; /* Optionally reduce font size for small screens */
+        }
+        figcaption a {
+          text-decoration:none;
+          font-size:2em;
+          color:white;
+          background-color:black;
+          margin-top:2%;
+          padding-right:2%;
+          padding-left:2%;
+        }
+        figcaption a:hover{
+          text-decoration:underline;
+          color:royalblue;
+        }
+        .gospel{
+          display:inline-block;
+        }
+        .link-dialog p{
+          font-size:1.07em;
+        }
+        .link-dialog p:hover,.link-dialog p:focus{
+          background:black;
+          color:white;
+        }
     </style>
 </head>
 <body>
-    <h3>Parables of Jesus in the Gospels</h3>
+    <h3 style="font-size:2em; margin:0;padding:1.3%;text-align:center;">Jesus in the Gospels</h3>
     <table>
+
         <tr>
             <th>Parable</th>
             <th>Description</th>
@@ -182,43 +189,57 @@ OpenBible.com" style="color:white;"><ruby>
                 </a></span>
             </th>
         </tr>
+
         <tr>
-           <!-- <td class="parable-name">The Sower</td> -->
-
-
-
             <div class="multi-link-container-img" >
-  <td><span class="linked-text-img" >The Sower</span></td>
-  <div class="image-dialog" >
-    <figure>
-        <img src="../images/sower.png" alt="Image 1">
-        <figcaption>The Parable of the Sower</figcaption>
-    </figure>
-  </div>
-</div>
-
-
-
-
-            <td>Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</td>
-            <td>Matthew <a href="https://openbible.com/ylt/matthew/13.htm" target="_blank">13:1-23,</a> Mark 4:1-20, Luke 8:4-15</td>
-        </tr>
-        <tr>
+              <td><span class="linked-text-img" >The Sower</span></td>
+                <div class="image-dialog" >
+                  <figure>
+                      <img src="../images/sower.webp" alt="Image 1">
+                      <figcaption><a href="../images/sower.png">The Parable of the Sower</a></figcaption>
+                  </figure>
+                </div>
+            </div>
             
 
-            <div class="multi-link-container-img" >
-  <td><span class="linked-text-img" >The Mustard Seed</span></td>
-  <div class="image-dialog" >
-    <figure>
-        <img src="../images/mustardSeed.png" alt="Image 1">
-        <figcaption>Parable of The Mustard Seed</figcaption>
-    </figure>
-  </div>
-</div>
+<td>
+            <div class="multi-link-container">
+  <span class="linked-text">Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</span>
+  <div class="link-dialog">
+  <p tabindex="0">Okay, imagine a farmer throwing seeds on the ground. That's kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.</p>
+  <p tabindex="0">Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That's like people who hear the message but don't get it, and then it's just forgotten.</p>
+  <p tabindex="0">Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn't deep, they dried up and died. That's like people who are excited about the message at first, but when things get tough, they give up.</p>
+  <p tabindex="0">Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That's like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn't really change them.</p>
+  <p tabindex="0">But some seeds fell on good dirt. They grew really well and made lots more seeds. That's like people who really listen to the message, understand it, and let it change how they live. They end up doing good things because of it.</p>
+  <p tabindex="0">So, the story is about how different people hear the same message in different ways, depending on what's going on in their hearts. Only the people with "good hearts" really let the message grow and make a difference.</p>
+      </div>
+      </div>
+            </td>
+            
+            
+            
+            
+            <td>
+              <div class="gospel">Matthew <a href="https://openbible.com/ylt/matthew/13.htm" target="_blank">13:1-23,</a></div>
+              <div class="gospel">Mark <a href="#">4:1-20,</a></div>
+              <div class="gospel">Luke <a href="">8:4-15</a></div>
+            </td>
+        </tr>
 
+        <tr>
+            <div class="multi-link-container-img" >
+              <td><span class="linked-text-img" >The Mustard Seed</span></td>
+                <div class="image-dialog" >
+                  <figure>
+                      <img src="../images/mustardSeed.webp" alt="Image 1">
+                      <figcaption><a href="../images/mustardSeed.png">Parable of The Mustard Seed</a></figcaption>
+                  </figure>
+                </div>
+            </div>
             <td>Illustrates how God's kingdom starts small but grows enormously</td>
             <td>Matthew 13:31-32, Mark 4:30-32, Luke 13:18-19</td>
         </tr>
+
         <tr>
             <td class="parable-name">The Leaven</td>
             <td>Shows how the kingdom of God works subtly but thoroughly transforms</td>
@@ -507,3 +528,35 @@ OpenBible.com" style="color:white;"><ruby>
   });
 </script>
 <!-- This is the script for the Image Link -->
+
+<!-- This is the script for the Dialog links -->
+<script>
+  const multiLinkContainers = document.querySelectorAll('.multi-link-container');
+  const linkedTexts = document.querySelectorAll('.linked-text');
+  const linkDialogs = document.querySelectorAll('.link-dialog');
+
+  linkedTexts.forEach((linkedTextElement, index) => {
+    linkedTextElement.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent immediate closing
+
+      // Find the corresponding linkDialog (it's the next sibling)
+      const correspondingDialog = linkedTextElement.nextElementSibling;
+      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
+        // Hide all other dialogs
+        linkDialogs.forEach(dialog => {
+          if (dialog !== correspondingDialog) {
+            dialog.style.display = 'none';
+          }
+        });
+        correspondingDialog.style.display = 'block';
+      }
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!Array.from(multiLinkContainers).some(container => container.contains(event.target))) {
+      linkDialogs.forEach(dialog => dialog.style.display = 'none');
+    }
+  });
+</script>
+<!-- This is the script for the Dialog links -->
