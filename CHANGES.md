@@ -2,7 +2,7 @@
 ![Logo](https://latinospc.com/images/latinospc.png)
 
 # LAtinosPC Update Report
-This site is for everyone to use, here we can learn about Jesus His teachings and personal computer technologies.
+This site is for everyone to use, here we can learn about Jesus, His teachings and personal computer technologies.
 
 ## Appendix
 [April 2025](#4/6/2025)<a id="appendix"></a>
