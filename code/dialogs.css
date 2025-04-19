@@ -1,0 +1,92 @@
+/*
+    <!-- This is the style for the image link -->
+*/
+  .multi-link-container-img {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px; /* Add spacing between the link/image sets */
+  }
+
+  .linked-text-img {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .image-dialog {
+  display: none; /* Initially hidden */
+  position: fixed; /* Stay fixed relative to the viewport */
+  top: 50%; /* Position in the vertical center */
+  left: 50%; /* Position in the horizontal center */
+  transform: translate(-50%, -50%); /* Center the dialog precisely */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  z-index: 1000; /* Ensure it's on top */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the image */
+  opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
+  transition: opacity 0.3s ease-in-out; /* Transition the opacity property */
+}
+
+.image-dialog.visible {
+  display: block; /* Make it visible */
+  opacity: 1; /* Fade it in */
+}
+
+  .image-dialog img {
+    display: block;
+    max-width: 90vw; /* Limit image width to viewport width */
+    max-height: 90vh; /* Limit image height to viewport height */
+    height: auto;
+    margin: 0 auto; /* Center the image within the dialog */
+  }
+
+/*
+    <!-- This is the style for the image link -->
+*/
+/*
+    <!-- This is the style for the Dialog links -->
+*/
+  .multi-link-container {
+    display: inline-block; /* Keep it inline with surrounding text */
+    position: relative; /* For positioning the dialog */
+  }
+
+  .linked-text {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .link-dialog {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the container */
+    top: 100%; /* Position directly below the text */
+    left: 0; /* Align with the left edge of the text */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's on top */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 120px; /* Adjust as needed */
+  }
+
+  .link-dialog a {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .link-dialog a:last-child {
+    margin-bottom: 0;
+  }
+
+  .link-dialog a:hover {
+    text-decoration: underline;
+  }
+/*
+    <!-- This is the style for the Dialog links -->
+*/

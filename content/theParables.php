@@ -18,101 +18,7 @@
 </div>
 <!-- This is the Dialog for the links -->
 
-<!-- This is the style for the image link -->
-<style>
-  .multi-link-container-img {
-    display: inline-block;
-    position: relative;
-    margin-bottom: 20px; /* Add spacing between the link/image sets */
-  }
-
-  .linked-text-img {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  .image-dialog {
-  display: none; /* Initially hidden */
-  position: fixed; /* Stay fixed relative to the viewport */
-  top: 50%; /* Position in the vertical center */
-  left: 50%; /* Position in the horizontal center */
-  transform: translate(-50%, -50%); /* Center the dialog precisely */
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 15px;
-  z-index: 1000; /* Ensure it's on top */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center the image */
-  opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
-  transition: opacity 0.3s ease-in-out; /* Transition the opacity property */
-}
-
-.image-dialog.visible {
-  display: block; /* Make it visible */
-  opacity: 1; /* Fade it in */
-}
-
-  .image-dialog img {
-    display: block;
-    max-width: 90vw; /* Limit image width to viewport width */
-    max-height: 90vh; /* Limit image height to viewport height */
-    height: auto;
-    margin: 0 auto; /* Center the image within the dialog */
-  }
-</style>
-<!-- This is the style for the image link -->
-
-<!-- This is the style for the Dialog links -->
-<style>
-  .multi-link-container {
-    display: inline-block; /* Keep it inline with surrounding text */
-    position: relative; /* For positioning the dialog */
-  }
-
-  .linked-text {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-  }
-
-  .link-dialog {
-    display: none; /* Initially hidden */
-    position: absolute; /* Position relative to the container */
-    top: 100%; /* Position directly below the text */
-    left: 0; /* Align with the left edge of the text */
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000; /* Ensure it's on top */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    min-width: 120px; /* Adjust as needed */
-  }
-
-  .link-dialog a {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .link-dialog a:last-child {
-    margin-bottom: 0;
-  }
-
-  .link-dialog a:hover {
-    text-decoration: underline;
-  }
-</style>
-<!-- This is the style for the Dialog links -->
-
-
-
-
-
-
-
+<link rel="stylesheet" href="../code/dialogs.css">
 
 <style>
         table {
@@ -172,7 +78,7 @@
           background:black;
           color:white;
         }
-    </style>
+</style>
 </head>
 <body>
     <h3 style="font-size:2em; margin:0;padding:1.3%;text-align:center;">Jesus in the Gospels</h3>
@@ -190,6 +96,95 @@ OpenBible.com" style="color:white;"><ruby>
             </th>
         </tr>
 
+
+<?php
+global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+// Not really sure why The global $Vars have to be declared outside as well as inside the function.
+function theSower(){
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  $title= 'The Sower';
+  $image = '../images/sower.webp';
+  $imageAlt = 'The Sower Parable';
+  $linked_image = '../images/sower.png';
+  $figCaption = 'The Parable of the Sower';
+  $description = 'Describes different responses to the gospel message using the analogy of seeds falling on different types of soil';
+  $paragraphDialogs = ['Okay, imagine a farmer throwing seeds on the ground. That\'s kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.',
+                      'Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That\'s like people who hear the message but don\'t get it, and then it\'s just forgotten.',
+                      'Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn\'t deep, they dried up and died. That\'s like people who are excited about the message at first, but when things get tough, they give up.',
+                      'Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That\'s like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn\'t really change them.',
+                      'But some seeds fell on good dirt. They grew really well and made lots more seeds. That\'s like people who really listen to the message, understand it, and let it change how they live. They end up doing good things because of it.',
+                      'So, the story is about how different people hear the same message in different ways, depending on what\'s going on in their hearts. Only the people with "good hearts" really let the message grow and make a difference.'
+                    ];
+  $gospel = ['Matthew','Mark','Luke'];
+  //$gospelLinkPrefix = $gLP;
+  $gLP ='https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#1','mark/4.htm#1','luke/8.htm#4'];
+  $passage = ['13:1-23,','4:1-20,','8:4-15'];
+                  }
+
+function mustardSeed(){
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  $title= 'The Mustard Seed';
+  $image = '../images/mustardSeed.webp';
+  $imageAlt = 'The Mustard Seed Parable';
+  $linked_image = '../images/mustardSeed.webp';
+  $figCaption = 'The Parable of the Mustard Seed';
+  $description = 'Illustrates how God\'s kingdom starts small but grows enormously';
+  $paragraphDialogs = ['Okay, so Jesus told another story, this time about a tiny mustard seed. You know how small those are, right?',
+                      'He said that the kingdom of God is like that little seed. When it\'s planted, it\'s one of the smallest seeds you can find.',
+                      'But guess what? When it grows up, it becomes the biggest of all garden plants! It gets so big that birds can even come and make nests in its branches.',
+                      'So, what Jesus was saying is that even though God\'s kingdom might seem really small or unimportant at first, it has the power to grow into something huge and amazing. It starts small but ends up being big enough to help and shelter lots of people, just like the big mustard plant shelters the birds. It\'s like something little that has the potential to become something really, really big!'
+                    ];
+  $gospel = ['Matthew','Mark','Luke'];
+  //$gospelLinkPrefix = $gLP;
+  $gLP ='https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#31','mark/4.htm#30','luke/13.htm#18'];
+  $passage = ['13:31-32,','4:30-32,','13:18-19'];
+}
+// Array of functions to call
+$parableFunctions = ['theSower', 'mustardSeed'];
+
+foreach ($parableFunctions as $functionTableRow) {
+    // Call the current function
+    $functionTableRow();
+    /*The code below is the Main Table row the loop will iterate over each function*/
+    ?>
+        <tr>
+            <div class="multi-link-container-img" >
+              <td><span class="linked-text-img" ><?= $title; ?></span></td>
+                <div class="image-dialog" >
+                  <figure>
+                      <img src="<?= $image; ?>" alt="<?= $imageAlt; ?>">
+                      <figcaption><a href="<?= $linked_image; ?>"><?= $figCaption; ?></a></figcaption>
+                  </figure>
+                </div>
+            </div>
+              <td>
+            <div class="multi-link-container">
+              <span class="linked-text"><?= $description; ?></span>
+              <div class="link-dialog">
+                <?php foreach ($paragraphDialogs as $index ) {
+                  echo '<p tabindex="0">'.$index.'</p>';
+                }
+                ?>
+                </div>
+            </div>
+            </td>
+            <td>
+            <?php foreach ($gospel as $index => $text): ?>
+              <div class="gospel"><?= $text ?> <a href="<?= $gLP . $gospelLinks[$index] ?>" target="_blank"><?= $passage[$index] ?></a></div>
+            <?php endforeach; ?>
+            </td>
+        </tr>
+        <?php
+        }
+        ?>
+
+
+
+
+
+<!-- HTML SAMPLES OF THE FUNCTIONS
         <tr>
             <div class="multi-link-container-img" >
               <td><span class="linked-text-img" >The Sower</span></td>
@@ -200,29 +195,23 @@ OpenBible.com" style="color:white;"><ruby>
                   </figure>
                 </div>
             </div>
-            
-
-<td>
+              <td>
             <div class="multi-link-container">
-  <span class="linked-text">Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</span>
-  <div class="link-dialog">
-  <p tabindex="0">Okay, imagine a farmer throwing seeds on the ground. That's kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.</p>
-  <p tabindex="0">Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That's like people who hear the message but don't get it, and then it's just forgotten.</p>
-  <p tabindex="0">Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn't deep, they dried up and died. That's like people who are excited about the message at first, but when things get tough, they give up.</p>
-  <p tabindex="0">Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That's like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn't really change them.</p>
-  <p tabindex="0">But some seeds fell on good dirt. They grew really well and made lots more seeds. That's like people who really listen to the message, understand it, and let it change how they live. They end up doing good things because of it.</p>
-  <p tabindex="0">So, the story is about how different people hear the same message in different ways, depending on what's going on in their hearts. Only the people with "good hearts" really let the message grow and make a difference.</p>
-      </div>
-      </div>
+              <span class="linked-text">Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</span>
+              <div class="link-dialog">
+                <p tabindex="0">Okay, imagine a farmer throwing seeds on the ground. That's kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.</p>
+                <p tabindex="0">Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That's like people who hear the message but don't get it, and then it's just forgotten.</p>
+                <p tabindex="0">Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn't deep, they dried up and died. That's like people who are excited about the message at first, but when things get tough, they give up.</p>
+                <p tabindex="0">Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That's like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn't really change them.</p>
+                <p tabindex="0">But some seeds fell on good dirt. They grew really well and made lots more seeds. That's like people who really listen to the message, understand it, and let it change how they live. They end up doing good things because of it.</p>
+                <p tabindex="0">So, the story is about how different people hear the same message in different ways, depending on what's going on in their hearts. Only the people with "good hearts" really let the message grow and make a difference.</p>
+              </div>
+            </div>
             </td>
-            
-            
-            
-            
             <td>
               <div class="gospel">Matthew <a href="https://openbible.com/ylt/matthew/13.htm" target="_blank">13:1-23,</a></div>
-              <div class="gospel">Mark <a href="#">4:1-20,</a></div>
-              <div class="gospel">Luke <a href="">8:4-15</a></div>
+              <div class="gospel">Mark <a href="https://openbible.com/ylt/mark/4.htm">4:1-20,</a></div>
+              <div class="gospel">Luke <a href="https://openbible.com/ylt/luke/8.htm">8:4-15</a></div>
             </td>
         </tr>
 
@@ -236,9 +225,20 @@ OpenBible.com" style="color:white;"><ruby>
                   </figure>
                 </div>
             </div>
-            <td>Illustrates how God's kingdom starts small but grows enormously</td>
+            <td>
+              <div class="multi-link-container">
+                <span class="linked-text">Illustrates how God's kingdom starts small but grows enormously</span>
+                <div class="link-dialog">
+                  <p tabindex="0">Okay, so Jesus told another story, this time about a tiny mustard seed. You know how small those are, right?</p>
+                  <p tabindex="0">He said that the kingdom of God is like that little seed. When it's planted, it's one of the smallest seeds you can find.</p>
+                  <p tabindex="0">But guess what? When it grows up, it becomes the biggest of all garden plants! It gets so big that birds can even come and make nests in its branches.</p>
+                  <p tabindex="0">So, what Jesus was saying is that even though God's kingdom might seem really small or unimportant at first, it has the power to grow into something huge and amazing. It starts small but ends up being big enough to help and shelter lots of people, just like the big mustard plant shelters the birds. It's like something little that has the potential to become something really, really big!</p>
+                  </div>
+              </div>
+            </td>
             <td>Matthew 13:31-32, Mark 4:30-32, Luke 13:18-19</td>
         </tr>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*HTML SAMPLES OF THE FUNCTIONS -->
 
         <tr>
             <td class="parable-name">The Leaven</td>
@@ -469,94 +469,85 @@ OpenBible.com" style="color:white;"><ruby>
 
 
 
-<!-- This is the script for the Image Link -->
-    <script>
+<!-- This is the script for the Image and Text Dialog Links -->
+<script>
   document.addEventListener('DOMContentLoaded', () => {
-    const linkedTexts = document.querySelectorAll('.linked-text-img'); // Select all the trigger elements
-    const imageDialogs = document.querySelectorAll('.image-dialog'); // Select all the dialogs
-    let currentlyOpenDialog = null;
+    const multiLinkContainers = document.querySelectorAll('.multi-link-container');
+    const linkedTexts = document.querySelectorAll('.linked-text');
+    const linkDialogs = document.querySelectorAll('.link-dialog');
 
-    linkedTexts.forEach((linkedText, index) => {
-      const imageDialog = imageDialogs[index]; // Assuming each link corresponds to a dialog in the same order
+    const imageDialogs = document.querySelectorAll('.image-dialog');
+    const linkedTextsImg = document.querySelectorAll('.linked-text-img');
 
+    let currentlyOpenDialog = null; // This will track ANY open dialog (image or text)
+    let currentlyOpenTextLink = null; // Track the clicked text link
+
+    // --- Text Dialogs ---
+    linkedTexts.forEach((linkedTextElement) => {
+      const correspondingDialog = linkedTextElement.nextElementSibling;
+      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
+        linkedTextElement.addEventListener('click', (event) => {
+          event.stopPropagation();
+          if (currentlyOpenDialog === correspondingDialog) {
+            // Close if re-clicked
+            closeAnyOpenDialogs();
+          } else {
+            closeAnyOpenDialogs();
+            correspondingDialog.style.display = 'block';
+            currentlyOpenDialog = correspondingDialog;
+            currentlyOpenTextLink = linkedTextElement;
+          }
+        });
+      }
+    });
+
+    // --- Image Dialogs ---
+    linkedTextsImg.forEach((linkedText, index) => {
+      const imageDialog = imageDialogs[index];
       if (linkedText && imageDialog) {
         linkedText.addEventListener('click', (event) => {
           event.stopPropagation();
-
-          // Close the currently open dialog
-          if (currentlyOpenDialog) {
-            currentlyOpenDialog.classList.remove('visible');
-            setTimeout(() => {
-              if (currentlyOpenDialog && !currentlyOpenDialog.classList.contains('visible')) {
-                currentlyOpenDialog.style.display = 'none';
-              }
-            }, 300);
-          }
-
-          // Open the current dialog
+          closeAnyOpenDialogs();
           imageDialog.style.display = 'block';
-          imageDialog.offsetHeight; // Force reflow
-          imageDialog.classList.add('visible');
+          imageDialog.classList.add('visible'); // Assuming you have CSS for .visible
           currentlyOpenDialog = imageDialog;
         });
       }
     });
 
-     // Close any open image dialog when clicking anywhere on the document
-     document.addEventListener('click', (event) => {
+    // --- Close Any Open Dialogs ---
+    function closeAnyOpenDialogs() {
       if (currentlyOpenDialog) {
-        currentlyOpenDialog.classList.remove('visible');
-        setTimeout(() => {
-          if (currentlyOpenDialog && !currentlyOpenDialog.classList.contains('visible')) {
-            currentlyOpenDialog.style.display = 'none';
-            currentlyOpenDialog = null;
-          }
-        }, 300);
+        currentlyOpenDialog.style.display = 'none';
+        currentlyOpenDialog.classList.remove('visible'); //If you are using class visible
+        currentlyOpenDialog = null;
+        currentlyOpenTextLink = null;
+      }
+    }
+
+    // --- Global Click Handler ---
+    document.addEventListener('click', (event) => {
+      if (currentlyOpenDialog &&
+          !currentlyOpenDialog.contains(event.target) &&
+          event.target !== currentlyOpenTextLink) { // Prevent closing on the text link
+        closeAnyOpenDialogs();
       }
     });
 
-    // Close dialog on pressing the Escape key
+    // --- Escape Key Handler ---
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && currentlyOpenDialog) {
-        currentlyOpenDialog.classList.remove('visible');
-        setTimeout(() => {
-          currentlyOpenDialog.style.display = 'none';
-          currentlyOpenDialog = null;
-        }, 300);
+        closeAnyOpenDialogs();
       }
+    });
+
+    // --- Image Dialog Click Handler ---
+    imageDialogs.forEach(dialog => {
+      dialog.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent conflict with the document click handler
+        closeAnyOpenDialogs(); // Close on click inside
+      });
     });
   });
 </script>
-<!-- This is the script for the Image Link -->
-
-<!-- This is the script for the Dialog links -->
-<script>
-  const multiLinkContainers = document.querySelectorAll('.multi-link-container');
-  const linkedTexts = document.querySelectorAll('.linked-text');
-  const linkDialogs = document.querySelectorAll('.link-dialog');
-
-  linkedTexts.forEach((linkedTextElement, index) => {
-    linkedTextElement.addEventListener('click', (event) => {
-      event.stopPropagation(); // Prevent immediate closing
-
-      // Find the corresponding linkDialog (it's the next sibling)
-      const correspondingDialog = linkedTextElement.nextElementSibling;
-      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
-        // Hide all other dialogs
-        linkDialogs.forEach(dialog => {
-          if (dialog !== correspondingDialog) {
-            dialog.style.display = 'none';
-          }
-        });
-        correspondingDialog.style.display = 'block';
-      }
-    });
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!Array.from(multiLinkContainers).some(container => container.contains(event.target))) {
-      linkDialogs.forEach(dialog => dialog.style.display = 'none');
-    }
-  });
-</script>
-<!-- This is the script for the Dialog links -->
+<!-- This is the script for the Image and Text Dialog Links -->
