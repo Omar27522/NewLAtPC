@@ -7,7 +7,7 @@
     <li>Rather than forcing interpretations, parables invited listeners to discover meaning for themselves, engaging their minds and hearts in the process.</li>
 </ul>
 
-<!-- This is the Dialog for the links -->
+<!-- This is the Dialog for the links
 <div class="multi-link-container" id="multiLinkContainer">
   <span class="linked-text" id="linkedText">Click Here</span>
   <div class="link-dialog" id="linkDialog">
@@ -16,7 +16,7 @@
     <a href="https://www.example.com/link3">Another Link</a>
   </div>
 </div>
-<!-- This is the Dialog for the links -->
+ This is the Dialog for the links -->
 
 <link rel="stylesheet" href="../code/dialogs.css">
 
@@ -108,7 +108,7 @@ function theSower(){
   $linked_image = '../images/sower.png';
   $figCaption = 'The Parable of the Sower';
   $description = 'Describes different responses to the gospel message using the analogy of seeds falling on different types of soil';
-  $paragraphDialogs = ['Okay, imagine a farmer throwing seeds on the ground. That\'s kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.',
+  $paragraphDialogs = ['Imagine a farmer throwing seeds on the ground. That\'s kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.',
                       'Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That\'s like people who hear the message but don\'t get it, and then it\'s just forgotten.',
                       'Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn\'t deep, they dried up and died. That\'s like people who are excited about the message at first, but when things get tough, they give up.',
                       'Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That\'s like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn\'t really change them.',
@@ -127,13 +127,13 @@ function mustardSeed(){
   $title= 'The Mustard Seed';
   $image = '../images/mustardSeed.webp';
   $imageAlt = 'The Mustard Seed Parable';
-  $linked_image = '../images/mustardSeed.webp';
+  $linked_image = '../images/mustardSeed.png';
   $figCaption = 'The Parable of the Mustard Seed';
   $description = 'Illustrates how God\'s kingdom starts small but grows enormously';
-  $paragraphDialogs = ['Okay, so Jesus told another story, this time about a tiny mustard seed. You know how small those are, right?',
+  $paragraphDialogs = ['A tiny round mustard seed. You know how small those are, right? Black mustard seeds are about 1mm, or about .05 inches in diameter.',
                       'He said that the kingdom of God is like that little seed. When it\'s planted, it\'s one of the smallest seeds you can find.',
                       'But guess what? When it grows up, it becomes the biggest of all garden plants! It gets so big that birds can even come and make nests in its branches.',
-                      'So, what Jesus was saying is that even though God\'s kingdom might seem really small or unimportant at first, it has the power to grow into something huge and amazing. It starts small but ends up being big enough to help and shelter lots of people, just like the big mustard plant shelters the birds. It\'s like something little that has the potential to become something really, really big!'
+                      'So, what Jesus was saying is that even though God\'s kingdom might seem really small or unimportant for people, But the kingdom is something huge and amazing. It starts small but ends up being big enough to help and shelter lots of people, just like the big mustard plant shelters the birds. It\'s like something little that has the potential to become something really, really big!'
                     ];
   $gospel = ['Matthew','Mark','Luke'];
   //$gospelLinkPrefix = $gLP;
@@ -141,8 +141,517 @@ function mustardSeed(){
   $gospelLinks = ['matthew/13.htm#31','mark/4.htm#30','luke/13.htm#18'];
   $passage = ['13:31-32,','4:30-32,','13:18-19'];
 }
+
+function leavenedFlour (){
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  $title= 'The Leaven';
+  $image = '../images/leavenedFlour.webp';
+  $imageAlt = 'The Leaven Parable';
+  $linked_image = '../images/leavenedFlour.png';
+  $figCaption = 'The Parable of the Leavened Flour';
+  $description = 'Shows how the kingdom of God works subtly but thoroughly transforms';
+  $paragraphDialogs = ['Imagine a woman making a whole bunch of bread. She takes a little bit of yeast (or leaven) and mixes it into a huge amount of flour – like, a really, really big bowl of it!',
+                   'Even though she only puts in a little bit of yeast, something amazing happens. Slowly but surely, the yeast spreads all the way through the dough, and it makes the whole thing rise and get bigger.',
+                   'So, what Jesus was saying is that even though God\'s kingdom might start with just a few people or seem like something small, it has this incredible power to spread and grow and affect everything around it.',
+                   'Just like a little bit of yeast can change a whole lot of dough, God\'s kingdom can start small but eventually touch and change many, many lives. It has this quiet but powerful way of growing and making a big difference!'
+                  ];
+  $gospel = ['Matthew','Luke'];
+  //$gospelLinkPrefix = $gLP;
+  $gLP ='https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#33', 'luke/13.htm#20'];
+  $passage = ['13:33,','13:20-21'];
+}
+
+function hiddenTreasure() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Hidden Treasure';
+  $image = '../images/hiddenTreasure.webp';
+  $imageAlt = 'The Hidden Treasure Parable';
+  $linked_image = '../images/hiddenTreasure.png';
+  $figCaption = 'The Parable of the Hidden Treasure';
+  $description = 'Reveals the supreme value of God\'s kingdom, worth sacrificing everything to obtain';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a man who was walking through someone else\'s field. While he was walking, he found a treasure that was hidden in the ground!',
+    'The man was super excited about finding this treasure. He covered it back up really quick so nobody else would find it.',
+    'Then he went and sold everything he owned - like all his stuff! That\'s how badly he wanted this treasure.',
+    'With all the money he got from selling his things, he bought the field where the treasure was hidden. Now the treasure was all his!',
+    'Jesus was teaching that God\'s kingdom is like that treasure. When people realize how amazing God\'s kingdom is, they\'ll be willing to give up everything else just to be part of it. It\'s that valuable!'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#44'];
+  $passage = ['13:44'];
+}
+
+function pearlOfGreatPrice() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Pearl of Great Price';
+  $image = '../images/pearlOfGreatPrice.webp';
+  $imageAlt = 'The Pearl of Great Price Parable';
+  $linked_image = '../images/pearlOfGreatPrice.png';
+  $figCaption = 'The Parable of the Pearl of Great Price';
+  $description = 'Similar to the Hidden Treasure, emphasizes the kingdom\'s incomparable worth';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a merchant, which is like a businessman who buys and sells valuable things. This merchant was looking for beautiful pearls to sell.',
+    'One day, he found an amazing pearl - the most perfect and valuable pearl he had ever seen in his whole life!',
+    'The merchant wanted this special pearl so badly that he went and sold absolutely everything he owned just to get enough money to buy it.',
+    'Jesus was showing us that God\'s kingdom is like that perfect pearl. When we truly understand how amazing God\'s kingdom is, we\'ll think it\'s worth giving up everything else we have just to be part of it!'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#44'];
+  $passage = ['13:45-46'];
+}
+
+function dragnet() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Dragnet';
+  $image = '../images/dragnet.webp';
+  $imageAlt = 'The Dragnet Parable';
+  $linked_image = '../images/dragnet.png';
+  $figCaption = 'The Parable of the Dragnet';
+  $description = 'Describes the final judgment when the righteous will be separated from the wicked';
+
+  $paragraphDialogs = [
+    'Jesus told a story about some fishermen who threw a big net into the lake. The net caught all kinds of fish - good ones and bad ones all mixed together.',
+    'When the net was full, the fishermen pulled it up onto the shore. Then they sat down and began sorting through all the fish.',
+    'They put the good fish into baskets to keep, but they threw the bad fish away because nobody would want to eat those.',
+    'Jesus said this is like what will happen at the end of the world. Angels will separate good people from bad people, just like the fishermen separated good fish from bad fish.',
+    'The bad people will be thrown away into a fiery furnace where there will be crying and lots of sadness. But the good people, who follow God, will shine like the sun in God\'s kingdom!'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/13.htm#47'];
+  $passage = ['13:47-50'];
+}
+
+function goodSamaritan() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Good Samaritan';
+  $image = '../images/goodSamaritan.webp';
+  $imageAlt = 'The Good Samaritan Parable';
+  $linked_image = '../images/goodSamaritan.png';
+  $figCaption = 'The Parable of the Good Samaritan';
+  $description = 'Teaches about loving one\'s neighbor through the story of an unlikely hero helping a wounded stranger';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a Jewish man who was traveling on a road from Jerusalem to Jericho. While he was traveling, some robbers attacked him! They beat him up, took all his stuff, and left him hurt really badly on the side of the road.',
+    'A priest (that\'s like a church leader) came walking down the same road. But when he saw the hurt man, he just crossed to the other side of the road and kept on walking!',
+    'Then another religious leader called a Levite came by. He also saw the hurt man, but he did the same thing - he just walked on by without helping!',
+    'Finally, a Samaritan man came down the road. Now, Samaritans and Jews usually didn\'t like each other at all. But when this Samaritan saw the hurt Jewish man, he felt sorry for him.',
+    'The Samaritan cleaned and bandaged the man\'s wounds. Then he put the hurt man on his own donkey and took him to an inn, which is like a hotel. The Samaritan even paid the innkeeper to take care of the hurt man until he got better!',
+    'After telling this story, Jesus asked who was a real neighbor to the man who got hurt. The answer was the Samaritan - the one who showed kindness and mercy. Jesus told us to go and do the same thing - to show love to everyone, even people who might be different from us.'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/10.htm#25'];
+  $passage = ['10:25-37'];
+}
+
+function prodigalSon() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Prodigal Son';
+  $image = '../images/prodigalSon.webp';
+  $imageAlt = 'The Prodigal Son Parable';
+  $linked_image = '../images/prodigalSon.png';
+  $figCaption = 'The Parable of the Prodigal Son';
+  $description = 'Illustrates God\'s forgiveness and the joy of reconciliation through a father welcoming back his wayward son';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a father who had two sons. The younger son asked his father for his share of the family money, even though his father wasn\'t dead yet! This was super disrespectful, but the father gave him the money anyway.',
+    'The younger son took all that money and moved far away from home. There, he wasted all his money on wild parties and doing whatever he wanted. He was having fun for a while, but then he ran out of money completely!',
+    'Right at that time, there was a terrible famine in that country, which means there wasn\'t enough food. The son got so desperate and hungry that he took a job feeding pigs. He was so hungry that he even wanted to eat the gross pig food!',
+    'Finally, the son realized how badly he had messed up. He thought, "Even my father\'s servants have plenty of food, and here I am starving!" So he decided to go back home and beg his father to let him be just a servant.',
+    'But while the son was still a long way off, his father saw him coming. Instead of being angry, the father ran to his son, hugged him, and kissed him! The son started to apologize, but the father was already calling for a celebration.',
+    'The father gave his son a fancy robe, a ring, and sandals. Then he threw a big party because his son who had been "dead" was now alive again; his son who had been lost was now found!',
+    'The older brother got mad about this party. He complained that he had always obeyed his father, but never got a party. The father explained that everything he had already belonged to the older son, but they needed to celebrate because the lost brother had returned.',
+    'Jesus told this story to show how much God loves us and is ready to forgive us. Like the father in the story, God eagerly waits for us to come back to Him when we mess up, and He celebrates when we do!'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/15.htm#11'];
+  $passage = ['15:11-32'];
+}
+
+function lostSheep() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Lost Sheep';
+  $image = '../images/lostSheep.webp';
+  $imageAlt = 'The Lost Sheep Parable';
+  $linked_image = '../images/lostSheep.png';
+  $figCaption = 'The Parable of the Lost Sheep';
+  $description = 'Shows God\'s concern for each individual through a shepherd seeking one lost sheep';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a shepherd who had 100 sheep. Shepherds take care of sheep and protect them from wild animals and danger.',
+    'One day, the shepherd noticed that one of his sheep was missing! What do you think he did? He left the 99 other sheep in a safe place and went searching for that one lost sheep.',
+    'When the shepherd finally found his lost sheep, he was so happy! He put the sheep on his shoulders and carried it all the way home.',
+    'The shepherd was so excited about finding his lost sheep that he called all his friends and neighbors together for a celebration!',
+    'Jesus explained that this is how God feels about people who are lost and then found. He said there\'s more joy in heaven over one lost person who turns back to God than over 99 people who are already following God.',
+    'This story shows that God cares about every single person. Just like the shepherd wasn\'t willing to lose even one sheep, God doesn\'t want to lose any of us. He will come looking for us when we wander away!'
+  ];
+
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/18.htm#12', 'luke/15.htm#1'];
+  $passage = ['18:12-14,', '15:1-7'];
+}
+
+function lostCoin() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Lost Coin';
+  $image = '../images/lostCoin.webp';
+  $imageAlt = 'The Lost Coin Parable';
+  $linked_image = '../images/lostCoin.png';
+  $figCaption = 'The Parable of the Lost Coin';
+  $description = 'Emphasizes the value God places on finding those who are lost';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a woman who had ten silver coins. These coins were very important to her.',
+    'One day, she realized that one of her coins was missing! She was so worried about finding it that she lit a lamp, swept the whole house, and searched carefully everywhere until she found it.',
+    'When she finally found her lost coin, she was super happy! She called all her friends and neighbors together and said, "Come celebrate with me because I\'ve found my lost coin!"',
+    'Jesus explained that this is how God and the angels feel when one person who was doing wrong turns back to God. There\'s a big celebration in heaven!',
+    'This story teaches us that God values each person so much. Just like the woman searched hard for one coin, God seeks out people who are lost. And just like she celebrated finding her coin, God celebrates when someone comes back to Him!'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/15.htm#8'];
+  $passage = ['15:8-10'];
+}
+
+function unmercifulServant() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Unmerciful Servant';
+  $image = '../images/unmercifulServant.webp';
+  $imageAlt = 'The Unmerciful Servant Parable';
+  $linked_image = '../images/unmercifulServant.png';
+  $figCaption = 'The Parable of the Unmerciful Servant';
+  $description = 'Teaches about forgiveness by contrasting a king\'s mercy with a servant\'s harshness';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a king who wanted to settle accounts with his servants. One servant was brought to him who owed the king millions of dollars - way more money than the servant could ever pay back!',
+    'The king ordered that the servant and his whole family should be sold as slaves to pay back some of the debt. The servant fell on his knees and begged, "Please be patient with me, and I will pay back everything!"',
+    'The king felt sorry for the servant and did something amazing - he canceled the whole debt! He let the servant go free without having to pay back anything at all!',
+    'But then that same servant went out and found a fellow servant who owed him just a few dollars. He grabbed him, started choking him, and demanded, "Pay back what you owe me!"',
+    'The fellow servant begged for patience, just like the first servant had done with the king. But the first servant refused to show mercy. He had the man thrown into prison until he could pay the debt.',
+    'When the other servants saw what happened, they were really upset. They went and told the king everything. The king called the first servant back and said, "You wicked servant! I canceled all that debt because you begged me to. Shouldn\'t you have had mercy on your fellow servant just as I had on you?"',
+    'The angry king then handed the unmerciful servant over to the jailers to be punished until he could pay back all he owed.',
+    'Jesus ended by saying that this is how God will treat us if we don\'t forgive others from our heart. The story teaches us that since God has forgiven us so much, we should also be willing to forgive others when they do wrong to us.'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/18.htm#21'];
+  $passage = ['18:21-35'];
+}
+
+function workersInVineyard() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Workers in the Vineyard';
+  $image = '../images/workersInVineyard.webp';
+  $imageAlt = 'The Workers in the Vineyard Parable';
+  $linked_image = '../images/workersInVineyard.png';
+  $figCaption = 'The Parable of the Workers in the Vineyard';
+  $description = 'Reveals God\'s generosity and grace that defies human expectations of fairness';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a landowner who needed workers for his vineyard. Early in the morning, around 6 AM, he went out and hired some workers. He agreed to pay them a denarius for the day, which was the normal daily wage.',
+    'Later that morning, around 9 AM, the landowner saw more people standing in the marketplace with nothing to do. He told them, "You also go and work in my vineyard, and I will pay you whatever is right." So they went.',
+    'The landowner did the same thing at noon, at 3 PM, and even at 5 PM when the workday was almost over! Each time, he sent more workers into his vineyard.',
+    'When evening came, it was time to pay all the workers. The landowner told his manager to call the workers and pay them, starting with the ones who were hired last.',
+    'The workers who were hired at 5 PM came first. Surprisingly, each of them received a full denarius - a whole day\'s wage! When the workers who were hired first saw this, they got excited thinking they would get even more.',
+    'But when their turn came, they also received one denarius each - exactly what they had agreed to at the beginning of the day. They started complaining to the landowner, "These people who were hired last worked only one hour, but you\'ve paid them the same as us who worked all day in the hot sun!"',
+    'The landowner replied to one of them, "Friend, I\'m not being unfair to you. Didn\'t you agree to work for a denarius? Take your pay and go. I want to give the one who was hired last the same as I gave you. Don\'t I have the right to do what I want with my own money? Or are you envious because I am generous?"',
+    'Jesus ended by saying, "So the last will be first, and the first will be last." This story teaches us that God\'s way of rewarding people isn\'t based on how long or how much they work. Instead, God is generous and gives good gifts to everyone who follows Him, whether they\'ve been following Him their whole life or just started recently.'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/20.htm#1'];
+  $passage = ['20:1-16'];
+}
+
+function richManAndLazarus() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Rich Man and Lazarus';
+  $image = '../images/richManAndLazarus.webp';
+  $imageAlt = 'The Rich Man and Lazarus Parable';
+  $linked_image = '../images/richManAndLazarus.png';
+  $figCaption = 'The Parable of the Rich Man and Lazarus';
+  $description = 'Warns about the dangers of wealth and ignoring those in need';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a rich man who lived in luxury every day. He wore expensive purple clothes and fine linen, and he feasted on delicious food all the time.',
+    'At the rich man\'s gate was a poor beggar named Lazarus. His body was covered with sores, and he was so hungry that he wished he could eat just the crumbs that fell from the rich man\'s table. Even dogs came and licked his sores. The rich man didn\'t help Lazarus at all.',
+    'Eventually, both men died. Lazarus was carried by angels to Abraham\'s side in heaven. The rich man went to Hades, where he was in terrible pain.',
+    'The rich man looked up and saw Abraham far away with Lazarus by his side. He called out, "Father Abraham, have mercy on me! Send Lazarus to dip the tip of his finger in water and cool my tongue, because I\'m suffering in this fire."',
+    'But Abraham replied, "Son, remember that in your lifetime you received good things, while Lazarus received bad things. Now he is comforted here, and you are in agony. Besides, there\'s a huge gap between us that nobody can cross."',
+    'The rich man then begged Abraham to send Lazarus to warn his five brothers so they wouldn\'t end up in the same painful place. Abraham said, "They have Moses and the Prophets; let them listen to them."',
+    'The rich man argued, "No, father Abraham, but if someone from the dead goes to them, they will repent!" Abraham responded, "If they don\'t listen to Moses and the Prophets, they won\'t be convinced even if someone rises from the dead."',
+    'Jesus told this story to warn people about the dangers of focusing on wealth and comfort while ignoring those in need. The story teaches us that how we treat others, especially people who are poor or suffering, matters a lot to God.'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/16.htm#19'];
+  $passage = ['16:19-31'];
+}
+
+function phariseeAndTaxCollector() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Pharisee and the Tax Collector';
+  $image = '../images/phariseeAndTaxCollector.webp';
+  $imageAlt = 'The Pharisee and the Tax Collector Parable';
+  $linked_image = '../images/phariseeAndTaxCollector.png';
+  $figCaption = 'The Parable of the Pharisee and the Tax Collector';
+  $description = 'Contrasts self-righteous pride with humble repentance in prayer';
+
+  $paragraphDialogs = [
+    'Jesus told a story about two men who went to the temple to pray. One was a Pharisee, which is like a religious leader who followed all the rules really carefully. The other was a tax collector, which most people disliked because tax collectors often cheated people.',
+    'The Pharisee stood up by himself and prayed, "God, I thank you that I\'m not like other people—robbers, evildoers, adulterers—or even like this tax collector. I fast twice a week and give a tenth of all I get." He was basically bragging about how good he was!',
+    'But the tax collector stood at a distance. He wouldn\'t even look up to heaven. Instead, he beat his chest and said, "God, have mercy on me, a sinner." He knew he had done wrong things and was asking God to forgive him.',
+    'Jesus said that it was actually the tax collector, not the Pharisee, who went home right with God! Then Jesus explained, "For all those who make themselves important will become unimportant, and those who humble themselves will become important."',
+    'This story teaches us that God doesn\'t want us to be proud or to think we\'re better than other people. Instead, God wants us to be honest about our mistakes and to ask for His forgiveness with a humble heart.'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/18.htm#9'];
+  $passage = ['18:9-14'];
+}
+
+function persistentWidow() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Persistent Widow';
+  $image = '../images/persistentWidow.webp';
+  $imageAlt = 'The Persistent Widow Parable';
+  $linked_image = '../images/persistentWidow.png';
+  $figCaption = 'The Parable of the Persistent Widow';
+  $description = 'Encourages persistent prayer through the story of a widow seeking justice';
+
+  $paragraphDialogs = [
+    'Jesus told a story to teach his followers that they should always pray and never give up. The story was about a judge who didn\'t care about God or what people thought about him.',
+    'In the same town was a widow who kept coming to this judge with the same request: "Grant me justice against my opponent." A widow is a woman whose husband has died, and in those days, widows often had a hard time taking care of themselves.',
+    'For a long time, the judge refused to help her. But the widow didn\'t give up! She kept coming back again and again, asking for justice.',
+    'Finally, the judge thought to himself, "Even though I don\'t care about God or people, I will give this widow justice because she keeps bothering me. If I don\'t help her, she\'ll wear me out with her constant requests!"',
+    'Then Jesus explained the point of the story. He said, "Listen to what the unfair judge said. And won\'t God bring justice for his chosen people, who cry out to him day and night? Will he keep putting them off? I tell you, he will give them justice quickly."',
+    'The story teaches us that if even an unfair judge will eventually respond to someone who keeps asking, how much more will God - who is perfectly good and who loves us - respond to our prayers when we keep bringing our needs to Him!'
+  ];
+
+  $gospel = ['Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['luke/18.htm#1'];
+  $passage = ['18:1-8'];
+}
+
+function tenVirgins() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Ten Virgins';
+  $image = '../images/tenVirgins.webp';
+  $imageAlt = 'The Ten Virgins Parable';
+  $linked_image = '../images/tenVirgins.png';
+  $figCaption = 'The Parable of the Ten Virgins';
+  $description = 'Stresses readiness for Christ\'s return through the analogy of wedding attendants';
+
+  $paragraphDialogs = [
+    'Jesus told a story comparing the kingdom of heaven to ten bridesmaids who took their lamps and went out to meet the bridegroom (that\'s the man getting married).',
+    'Five of the bridesmaids were foolish, and five were wise. The foolish ones took their lamps but didn\'t bring any extra oil with them. The wise ones, however, took oil in jars along with their lamps. They were prepared!',
+    'The bridegroom was a long time in coming, and all the bridesmaids got sleepy and fell asleep. But at midnight, someone shouted, "Here\'s the bridegroom! Come out to meet him!"',
+    'All the bridesmaids woke up and got their lamps ready. The foolish ones realized they were running out of oil and said to the wise ones, "Give us some of your oil; our lamps are going out."',
+    'But the wise ones replied, "No, there may not be enough for both us and you. Go to those who sell oil and buy some for yourselves."',
+    'While the foolish bridesmaids were gone buying oil, the bridegroom arrived. The wise bridesmaids, who were ready, went in with him to the wedding banquet. And then the door was shut and locked!',
+    'Later, the foolish bridesmaids came back and called out, "Sir! Sir! Open the door for us!" But the bridegroom answered, "Truly I tell you, I don\'t know you."',
+    'Jesus ended the story by saying, "Therefore keep watch, because you do not know the day or the hour." He was teaching us to always be ready for when He comes back, because we don\'t know exactly when that will be!'
+  ];
+
+  $gospel = ['Matthew'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/25.htm#1'];
+  $passage = ['25:1-13'];
+}
+
+function talents() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+  $title = 'The Talents/Minas';
+  $image = '../images/talents.webp';
+  $imageAlt = 'The Talents Parable';
+  $linked_image = '../images/talents.png';
+  $figCaption = 'The Parable of the Talents';
+  $description = 'Teaches about stewardship and accountability for what God entrusts to us';
+
+  $paragraphDialogs = [
+    'Jesus told a story about a man going on a journey. Before he left, he called his servants and entrusted his wealth to them. Talents were large amounts of money in those days.',
+    'To one servant he gave five talents, to another two talents, and to another just one talent. He gave to each according to their ability. Then he went on his journey.',
+    'The servant who received five talents went right away and put the money to work, earning five more talents. The one with two talents gained two more. But the servant who got one talent dug a hole in the ground and hid his master\'s money.',
+    'After a long time, the master came back and settled accounts with his servants. The one who had received five talents brought the additional five and said, "Master, you gave me five talents. See, I have gained five more!"',
+    'The master replied, "Well done, good and faithful servant! You have been faithful with a few things; I will put you in charge of many things. Come and share your master\'s happiness!"',
+    'The servant who had received two talents also came and said, "Master, you gave me two talents. See, I have gained two more!" The master said the same thing to him, "Well done, good and faithful servant!"',
+    'Then the servant who had received one talent came and said, "Master, I knew you are a hard man, harvesting where you haven\'t sown and gathering where you haven\'t scattered seed. So I was afraid and went out and hid your talent in the ground. Here, take back what belongs to you."',
+    'The master replied, "You wicked, lazy servant! If you knew I harvest where I haven\'t sown, you should have at least put my money in the bank so I could have gotten it back with interest!"',
+    'The master took the one talent from him and gave it to the servant who had ten talents. He said, "Everyone who uses well what they are given will get more. But the one who does not use well what they are given will have everything taken away."',
+    'Jesus told this story to teach that God expects us to use the gifts, abilities, and opportunities He gives us. When we use them well, He will give us more responsibilities and blessings!'
+  ];
+
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = 'https://openbible.com/ylt/';
+  $gospelLinks = ['matthew/25.htm#14', 'luke/19.htm#11'];
+  $passage = ['25:14-30', '19:11-27'];
+}
+
+function parableSheepAndGoats() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+    $title = "The Sheep and the Goats";
+    $image = "../images/sheepAndGoats.webp";
+    $imageAlt = "Jesus separates the sheep and the goats";
+    $linked_image = "sheepAndGoats.webp";
+
+    $description = "Describes the final judgment based on how people treated \"the least of these\"";
+
+    $paragraphDialogs = [
+        "Jesus says when He comes back, He will separate people like a shepherd separates sheep from goats.",
+        "The sheep are the people who helped others when they were hungry, sick, or in trouble. Jesus says they were really helping Him.",
+        "The goats are the people who didn’t help others. Jesus says they ignored Him by not caring for others.",
+        "This story teaches us that showing kindness to others is very important to God."
+    ];
+    $gospel = ['Matthew'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['matthew/25.htm#31'];
+    $passage = ['25:31-46'];
+}
+
+function parableTwoDebtors() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+    $title = "The Two Debtors";
+    $image = "../images/twoDebtors.webp";
+    $imageAlt = "Two people owe money to the same lender";
+    $linked_image = "twoDebtors.webp";
+
+    $description = "Shows how gratitude flows from understanding the depth of forgiveness received";
+
+    $paragraphDialogs = [
+        "Jesus tells a story about two people who owe money. One person owes a little, and the other owes a lot.",
+        "The lender decides to forgive both of them and says they don’t have to pay it back.",
+        "Jesus asks which person will love the lender more. The answer is the one who was forgiven the most.",
+        "This shows us that people who know they’ve been forgiven a lot by God will love Him more."
+    ];
+    $gospel = ['Luke'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['luke/7.htm#41'];
+    $passage = ['7:41-43'];
+}
+
+function parableUnfruitfulFigTree() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+    $title = "The Unfruitful Fig Tree";
+    $image = "../images/unfruitfulFigTree.webp";
+    $imageAlt = "A fig tree without fruit is given one more chance";
+    $linked_image = "unfruitfulFigTree.webp";
+
+    $description = "Warns about the need for spiritual fruitfulness and God's patience";
+
+    $paragraphDialogs = [
+        "A man planted a fig tree, but year after year it didn’t grow any fruit.",
+        "He wanted to cut it down, but the gardener asked for one more year to take care of it and help it grow.",
+        "The man agreed to wait. If the tree grows fruit, it can stay. If not, then it will be cut down.",
+        "This shows that God gives people more time to grow and change before judgment."
+    ];
+    $gospel = ['Luke'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['luke/13.htm#6'];
+    $passage = ['13:6-9'];
+}
+
+function parableWickedTenants() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+    $title = "The Wicked Tenants";
+    $image = "../images/wickedTenants.webp";
+    $imageAlt = "Vineyard workers attack the owner's messengers";
+    $linked_image = "wickedTenants.webp";
+
+    $description = "Foretells Jesus' rejection by religious leaders through the story of rebellious vineyard workers";
+
+    $paragraphDialogs = [
+        "A man owned a vineyard and rented it to some farmers. When it was time to collect fruit, he sent servants.",
+        "The farmers beat the servants and sent them away. The man sent more, and they were treated badly too.",
+        "Finally, he sent his son, thinking they would respect him. But the farmers killed the son.",
+        "Jesus told this story to show how people rejected God's messengers and even Jesus, God's Son."
+    ];
+    $gospel = ['Matthew','Mark','Luke'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['matthew/21.htm#33','mark/12.htm#1','luke/20.htm#9'];
+    $passage = ['21:33-46,','12:1-12','20:9-19'];
+}
+
+function parableWeddingFeast() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+
+    $title = "The Wedding Feast";
+    $image = "../images/weddingFeast.webp";
+    $imageAlt = "Guests are invited to a royal wedding";
+    $linked_image = "weddingFeast.webp";
+
+    $description = "Illustrates the invitation to God's kingdom and the importance of proper response";
+
+    $paragraphDialogs = [
+        "A king planned a big wedding for his son and invited many guests.",
+        "But the guests didn’t want to come. Some made excuses, and others were mean to the messengers.",
+        "The king then invited people from the streets, both good and bad, and the wedding hall was filled.",
+        "Jesus says this is like God's kingdom—everyone is invited, but we must be ready and take it seriously."
+    ];
+    $gospel = ['Matthew','Luke'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['matthew/22.htm#1','luke/14.htm#16'];
+    $passage = ['22:1-14,','14:16-24'];
+}
+
+function parableRichFool() {
+    global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+    $title = "The Rich Fool";
+    $image = "../images/richFool.webp";
+    $imageAlt = "A man builds bigger barns for his crops";
+    $linked_image = "richFool.webp";
+    $description = "Warns against greed and storing up treasures on earth rather than being rich toward God";
+    $paragraphDialogs = [
+        "A rich man had a great harvest and didn’t know where to store all his crops.",
+        "He decided to tear down his barns and build bigger ones to keep everything.",
+        "He thought, ‘Now I can relax, eat, drink, and enjoy life!’",
+        "But that night, he died. Jesus said this shows how foolish it is to only think about money and not about God."
+    ];
+    $gospel = ['Luke'];
+    $gLP = 'https://openbible.com/ylt/';
+    $gospelLinks = ['luke/12.htm#13'];
+    $passage = ['12:13-21'];
+}
+
+
 // Array of functions to call
-$parableFunctions = ['theSower', 'mustardSeed'];
+$parableFunctions = ['theSower', 'mustardSeed', 'leavenedFlour', 'hiddenTreasure', 'pearlOfGreatPrice','dragnet', 'goodSamaritan', 'prodigalSon', 'lostSheep', 'lostCoin', 'unmercifulServant', 'workersInVineyard', 'richManAndLazarus', 'phariseeAndTaxCollector', 'persistentWidow', 'tenVirgins', 'talents', 'parableSheepAndGoats', 'parableTwoDebtors', 'parableUnfruitfulFigTree', 'parableWickedTenants', 'parableWeddingFeast', 'parableRichFool'];
 
 foreach ($parableFunctions as $functionTableRow) {
     // Call the current function
@@ -240,111 +749,9 @@ foreach ($parableFunctions as $functionTableRow) {
         </tr>
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*HTML SAMPLES OF THE FUNCTIONS -->
 
-        <tr>
-            <td class="parable-name">The Leaven</td>
-            <td>Shows how the kingdom of God works subtly but thoroughly transforms</td>
-            <td>Matthew 13:33, Luke 13:20-21</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Hidden Treasure</td>
-            <td>Reveals the supreme value of God's kingdom, worth sacrificing everything to obtain</td>
-            <td>Matthew 13:44</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Pearl of Great Price</td>
-            <td>Similar to the Hidden Treasure, emphasizes the kingdom's incomparable worth</td>
-            <td>Matthew 13:45-46</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Dragnet</td>
-            <td>Describes the final judgment when the righteous will be separated from the wicked</td>
-            <td>Matthew 13:47-50</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Good Samaritan</td>
-            <td>Teaches about loving one's neighbor through the story of an unlikely hero helping a wounded stranger</td>
-            <td>Luke 10:25-37</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Prodigal Son</td>
-            <td>Illustrates God's forgiveness and the joy of reconciliation through a father welcoming back his wayward son</td>
-            <td>Luke 15:11-32</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Lost Sheep</td>
-            <td>Shows God's concern for each individual through a shepherd seeking one lost sheep</td>
-            <td>Matthew 18:12-14, Luke 15:1-7</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Lost Coin</td>
-            <td>Emphasizes the value God places on finding those who are lost</td>
-            <td>Luke 15:8-10</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Unmerciful Servant</td>
-            <td>Teaches about forgiveness by contrasting a king's mercy with a servant's harshness</td>
-            <td>Matthew 18:21-35</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Workers in the Vineyard</td>
-            <td>Reveals God's generosity and grace that defies human expectations of fairness</td>
-            <td>Matthew 20:1-16</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Rich Man and Lazarus</td>
-            <td>Warns about the dangers of wealth and ignoring those in need</td>
-            <td>Luke 16:19-31</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Pharisee and the Tax Collector</td>
-            <td>Contrasts self-righteous pride with humble repentance in prayer</td>
-            <td>Luke 18:9-14</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Persistent Widow</td>
-            <td>Encourages persistent prayer through the story of a widow seeking justice</td>
-            <td>Luke 18:1-8</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Ten Virgins</td>
-            <td>Stresses readiness for Christ's return through the analogy of wedding attendants</td>
-            <td>Matthew 25:1-13</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Talents/Minas</td>
-            <td>Teaches about stewardship and accountability for what God entrusts to us</td>
-            <td>Matthew 25:14-30, Luke 19:11-27</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Sheep and the Goats</td>
-            <td>Describes the final judgment based on how people treated "the least of these"</td>
-            <td>Matthew 25:31-46</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Two Debtors</td>
-            <td>Shows how gratitude flows from understanding the depth of forgiveness received</td>
-            <td>Luke 7:41-43</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Unfruitful Fig Tree</td>
-            <td>Warns about the need for spiritual fruitfulness and God's patience</td>
-            <td>Luke 13:6-9</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Wicked Tenants</td>
-            <td>Foretells Jesus' rejection by religious leaders through the story of rebellious vineyard workers</td>
-            <td>Matthew 21:33-46, Mark 12:1-12, Luke 20:9-19</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Wedding Feast</td>
-            <td>Illustrates the invitation to God's kingdom and the importance of proper response</td>
-            <td>Matthew 22:1-14, Luke 14:16-24</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Rich Fool</td>
-            <td>Warns against greed and storing up treasures on earth rather than being rich toward God</td>
-            <td>Luke 12:13-21</td>
-        </tr>
+
+
+        
         <tr>
             <td class="parable-name">The Wise and Foolish Builders</td>
             <td>Contrasts those who hear Jesus' words and act on them versus those who don't</td>
