@@ -1,37 +1,109 @@
 <?php
-$title = 'Our Lord And Savior';
+$title="Welcome";
 $dir = './';
+//$about ='active';
+$keywords ='<meta name="keywords" content="California, Los Angeles County, San Bernardino county, Riverside County, Orange County, computer service and repair">';
+$description ='<meta name="description" content="We want to bring families and individuals, the experience of a fully working computer system; laptops and desktops. We offer mostly on-site and remote services, but we will work on a physical location soon.">';
+
 function content(){
-    echo'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum ante sit amet egestas faucibus. Vivamus sagittis purus vel est iaculis, id varius lorem lobortis. Sed sit amet finibus ex, eget egestas nunc. Aliquam eu leo maximus, iaculis tellus eget, porta felis. Nullam a leo id tortor ultricies vulputate et vel justo. Sed sed commodo odio. In ut molestie sem. Curabitur nec odio facilisis, suscipit nisl in, venenatis risus. Praesent lobortis lobortis suscipit. In eu arcu ut enim dapibus cursus. Fusce eu interdum metus, a semper purus. Duis efficitur, mi et lobortis tristique, mauris dui fermentum nisl, sed sodales risus est et massa.
+  $title = ' <h2>About Us</h2>';
+  $start = ' <p>We started back in 2009 with one technician Omar, we have one goal since, here in LAtinosPC we want to bring families and individuals, the experience of a fully working computer system. We offer mostly on-site and remote services, but we will work on a physical location soon. Omar started his career while still in high school, attending adult school evening classes, after that he went to college. His computer career started for family and friends and fixing their computers, then friends of friends and their families. After home computers then we started working with small local businesses with their day-to day computer needs. And have been trying to stay busy since 2009.</p>';
+  $guarantee =' <h2>100% Satisfaction Guarantee | 90  Days Service Package -included</h2>
+    <div class="clr"></div>
+    <a rel="example_group" href="https://latinospc.com/images/button.jpg" title="Tool Box" alt="LAPC">
+      <img src="https://latinospc.com/images/s_button.webp" width="263" height="146" alt="image" class="lr" />
+    </a>
+    <h3>LAtinosPC has branched out to a few other industry fields, and we will bring the same level of dedication to every project. We build basic personalized websites with a unique design for a flat rate!</h3>
+    <h2>We are located in the city of Pomona, We service The  counties of Los Angeles, San Bernardino, Riverside and the Orange County.</h2>
+    <a href="?read_more#info" class="rm">
+      <h3>Read more</h3>
+    </a>
+    <div class="clr"></div>';
 
-Morbi sagittis nunc ac cursus egestas. Cras accumsan blandit lectus ac lobortis. Fusce a orci sit amet velit facilisis faucibus posuere id nulla. In non ultricies velit, imperdiet vestibulum velit. Nullam eget lorem felis. Donec ultrices pulvinar nunc, in faucibus nulla faucibus sit amet. Vivamus mollis diam scelerisque condimentum sodales. Pellentesque sollicitudin, tellus sit amet placerat vestibulum, velit ex porta augue, sed convallis orci dui nec nisl. Morbi eu ornare risus. Suspendisse potenti. Pellentesque egestas libero lacinia neque suscipit interdum. Curabitur mattis elementum leo a auctor.
+  $services = [
+    'title' => [
+      'Service, repair & Sales of Computer systems and Website configurations',
+      'Services, in-house and Remote.',
+      'Basic services',
+      'Recurring plans',
+      'Managed contracts',
+      'Software, and hardware recommendations',
+      'Also computer services on problems that could be answered over the phone, visitation may be required at times',
+      'In-house',
+      'Computer Related Products'
+    ],
 
-In hac habitasse platea dictumst. Suspendisse eget rhoncus enim. Ut laoreet tristique quam, eu vulputate nisl convallis ut. Praesent interdum risus urna, vel eleifend sem egestas ut. Ut nec metus erat. Suspendisse vestibulum massa quis convallis dignissim. Pellentesque tristique bibendum elit, vitae rutrum dolor. Maecenas at faucibus lorem. Duis eros lacus, ultrices eget sollicitudin eu, ornare lacinia nunc. Quisque at purus ut nulla porttitor sodales.
+    'links' => [
+      '<a href="../software">Software</a>','<a href ="../hardware">Hardware</a>'
+    ],
+  ];
 
-Ut cursus, purus vel varius volutpat, nulla tellus placerat elit, sit amet facilisis nulla erat in lacus. Phasellus tristique convallis ligula sed venenatis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam libero magna, varius sit amet neque vitae, mollis accumsan sapien. Etiam quis lacinia eros, porta consectetur nulla. Sed commodo bibendum justo et faucibus. In malesuada magna nec arcu rhoncus, id volutpat diam dapibus.
+  $mission = [
+    'Mission Statement',
 
-Cras maximus eros id metus iaculis maximus. Cras et tincidunt enim, eu elementum quam. Nulla gravida in elit sit amet ullamcorper. Duis eget neque non massa laoreet ullamcorper. Pellentesque dictum ornare nunc eu ullamcorper. Aenean et libero enim. Duis luctus dignissim efficitur. Cras eu convallis quam, luctus scelerisque augue. Nulla tincidunt finibus porta. Nam sit amet fermentum urna. Vivamus scelerisque justo porttitor neque convallis, id ornare lorem semper. Donec dapibus suscipit augue. Donec non fermentum magna. Nunc scelerisque orci metus, ut eleifend risus malesuada eu.
+    'goals' => [
+      'Our goal is to provide you and your company with outstanding service. We\'re dedicated to enhancing your experience through effective marketing, customer-friendly retention strategies, and maintaining top-notch quality control.',
+      'We\'re dedicated to simplifying technology for you. Our specialization provides tailored computer services for home users, and ensures a seamless experience. Our remote support is designed to be user-friendly, making tech issues a thing of the past. Additionally, we excel in fostering strong business relationships and driving advancements in technology solutions, making your journey with technology smooth and accessible.'
+    ],
 
-Nunc ornare placerat volutpat. Praesent accumsan malesuada fringilla. Pellentesque in libero nec metus fringilla auctor. Aenean vel congue quam. Quisque vitae dolor at massa ultrices lacinia. Ut ultricies ligula a maximus gravida. Duis tristique hendrerit eros, sit amet elementum metus ullamcorper non. Quisque molestie lorem a porttitor rhoncus. Nullam fringilla tellus sem, eget consequat neque sagittis ut. Quisque vitae nisl auctor, placerat justo et, gravida erat. Morbi porta neque in diam vulputate, nec egestas quam pulvinar. Cras magna arcu, aliquam id faucibus vitae, pulvinar in arcu.
+    'company' => [
+      'Company History',
+      'LAtinosPC founded in 2021, initially as a sole proprietor, with plans to reconfigure to a S-corporation in the near future. The founder Omar has gone through a lot of changes in the business. The idea for this company is simple, reachable and profitable.'
+      ],
 
-Vivamus eget mi hendrerit, finibus felis sit amet, imperdiet lectus. Nulla lobortis, leo ut luctus rutrum, ante lacus egestas enim, non placerat urna mauris vel lorem. Cras at diam tincidunt, congue nulla eu, dignissim lorem. Ut ac eleifend lacus, vel dapibus enim. Aliquam vitae diam ut dolor dapibus mollis sed ut orci. Duis blandit imperdiet urna ac auctor. Suspendisse sed imperdiet quam. Sed turpis diam, tempor vitae tempus consequat, varius id turpis. Mauris consequat ipsum ac rhoncus ornare. Phasellus consectetur, metus rutrum laoreet condimentum, metus libero aliquam metus, at viverra sem lectus non urna. Quisque ac tortor vitae metus hendrerit molestie non et velit. Vivamus imperdiet varius ipsum, a vulputate lacus viverra nec.
+    'tech' => [
+      'Started his career early in life, his childhood home was a family business run "from home" acrylic fiber fabric manufacturer. Anecdotes tell of him playing with the weaving and sewing machines pretending he was servicing them and caring for them. Time passed, technology improved around his neighborhood, and Omar found curiosity for the electronic components in the textile shop.',
+      'Also around this time his family got a NES for Christmas, it was the Japanese version of the console, also around this time arcades were really popular; -so most of Omar\'s allowances as a boy would be spent at the different arcade places around his neighborhood. The best arcades were the ones inside the town\'s shopping center, inside this place was also a movie theater, and many places to shop.',
+      'During secondary education school, Omar attended a Saturday school program near his house, he had to take one public transit bus to school. From what Omar remembers (since it was long ago), his school was divided into 3 main groups, beginners, intermediate, and advanced. Omar was in the beginners group; there he learnt how to use a computer’s operating system without the use of a graphical user interface. The whole screen was blue and the letters were white.',
+      'With computer commands, the students would tell the computer what they wanted to do. Omar remembers mostly using the word processing capabilities of the pc at the time, his class was so nice because every student had their own pc.',
+      'Later in life his family purchased a computer loaded with Windows 95. And tons of diskettes already in folders inside the memory of the computer. Long story short Omar played Doom on his win95 PC and many more copies of old games. There was no internet in the house, so aside from school work, and games, the PC was used to learn an art software, that the OS included.',
+      'This type of art was very popular at the time; it consisted of opening Paint, and selecting the best brush, the skill of the artist and the brush made an abstract contemporary drawing that later would be filled in in a multicolored fashion by the bucket tool. If the artist was lucky enough this art would be transferred from the digital world, into our physical reality via printers. Also everyone was drawing the Sun with sunshades in their landscape drawings.',
+      'After many years when it was time to upgrade, his family got a windows ME machine -fully loaded with a CD-rom and the ability to play 16-bit games natively. Some time after when Omar became more familiar with computers his family upgraded to a Dell machine loaded with WindowsXP, later he would install an ATI video card.The ATI x700. He would later build his first client machine and this card would be donated for the client, although at this time an aftermarket Arctic Cooler would\'ve been installed, it was a bigger heatsink than the stock, in a blue plastic chassis.',
+      'Omar\'s first encounter with the repair world came when he was playing around inside the windows folder, installing and uninstalling programs, and deleting files and entire folders. So of course after the last restart, the computer would greet Omar with a blank screen and white letters telling him that there was no bootable media available. So he did what any person would do, hire an expert. After the initial expert diagnosis from a reputable local electronics store, he was told that they needed to look further into the problem and that it would cost more than $100 for the complete diagnosis of the machine. After the repair Omar would’ve been billed for repairs, parts, and whatnot. So he decided that it was better to take the pc home and ask his closest cousin for his computer’s media installation CD. So that\'s what he did. Omar ended up half fixing his computer. He was puzzled by the new Oldwindows folder. He had no idea why it was there. But He was happy because the computer was working again. After the initial backup, History began right there and then at the age of 14.'
+      ],
 
-In aliquet nunc eros. Suspendisse eu gravida lectus. Integer imperdiet tincidunt ipsum, vitae mattis urna hendrerit mattis. Nullam aliquam quam eleifend neque maximus lacinia. Integer nunc justo, vestibulum sit amet magna ac, eleifend malesuada odio. Fusce vestibulum, odio hendrerit mattis efficitur, lectus justo suscipit leo, ac commodo est risus sed justo. Fusce quis lectus in lacus ullamcorper iaculis. Ut ac nulla nec justo porta ullamcorper vel vel nisi. Mauris fermentum orci ac lectus tristique faucibus.
+    'objective' => [
+      'Objectives',
+      'Our main objective is to provide the best service available to the community at a competitive price. To generate substantial market share so that LAtinosPC is a common name. Constant growth in sales from start up through year three. To generate customer satisfaction so that at least 40% of our customer base is repeat business.'
+      ],
 
-Aliquam non ligula tellus. Praesent faucibus metus ac tristique tempus. Phasellus sollicitudin est vitae accumsan sollicitudin. Nam magna arcu, mattis non orci eu, molestie condimentum eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vel nulla nec nisl semper molestie. Nulla nisl est, lobortis et tortor id, malesuada porta sapien. Nunc mollis mi nisi, sit amet efficitur neque lobortis et. Donec scelerisque metus a purus pellentesque, non tincidunt eros facilisis.
+    'mission' => [
+      'Mission',
+      'Our goal is to set the standard for on-site computer solutions, and responsive site development through fast,
+            on-site service and response. Our customers will always receive one-on-one personal attention at a very
+            competitive price. Also, we will offer the highest quality of customer service available. Our employees will
+            receive extensive training, a great place to work, fair pay and benefits, and incentives to use their own
+            good judgment to solve customers\' problems.'
+    ],
 
-Nullam eget interdum mi. Morbi sit amet eros nec lectus pretium tincidunt. Maecenas vel nibh finibus, aliquam mauris id, tempor libero. Aenean eu arcu eget nunc tempor tempor. Maecenas eget mauris dignissim, vulputate nisi non, luctus ante. Sed condimentum nisl id maximus porttitor. Aliquam tempor nunc non augue molestie vulputate. Proin fermentum leo sit amet purus imperdiet interdum. Nam venenatis mattis augue, et lacinia justo. Donec magna ex, consectetur eu aliquet eu, auctor suscipit mauris. Curabitur et luctus dui. Aliquam sit amet auctor turpis.
+    'keys' => [
+      'Keys',
+      'Establishing a brand identity and generating brand recognition through marketing, and unmatched customer service relations.',
+      'Responsiveness: being an on-call computer paramedic with fast response time.',
+      'Meet deadlines for web and/or network projects.',
+      'Quality: getting the job done right the first time, offering 100% guarantee.',
+      'Relationships: developing loyal repeat customers -- and friendships.'
+    ]
+  ];
 
-Phasellus commodo convallis malesuada. Sed ultrices felis id felis feugiat eleifend. Aliquam facilisis mauris finibus congue porttitor. Suspendisse porta, lacus sit amet semper convallis, dui risus vulputate leo, at porta diam dui eu ex. Morbi ut lorem volutpat, scelerisque libero at, lobortis elit. Cras iaculis iaculis massa vel malesuada. Pellentesque vitae convallis elit.
+  $company = [
+    'Company Ownership',
+    'LAtinosPC was initially envisioned as an LLC in the owner\'s home. However, recent feedback from our
+                marketing outreach has suggested a much higher sales potential than originally imagined, and LAtinosPC
+                will be reformed as an S Corporation. This change will provide additional legal protection for the
+                owner, and will also streamline the financial operations of the company (as we expand the personnel to 5
+                people within the next three years), the ability to lease a separate space for offices, and purchase
+                company vehicles, hardware and software.
+                <br />The current owner, Omar Garcia, has 10+ years of experience in the fields of In-home sales, technical
+                support, web development, networking, computer training and repair. Omar has also operated a similar
+                profitable business under a partnership in Ontario Ca, and understands the computer needs of small
+                businesses, and their rapidly technology adopting clientele.',
+                'Business Cards'
+  ];
 
-Nullam vulputate quam non lorem iaculis sodales ut ac augue. Etiam bibendum et augue eget bibendum. Ut ex libero, ullamcorper a malesuada vel, suscipit cursus justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque sagittis posuere tincidunt. Ut ultricies cursus nisi vitae interdum. In aliquet vulputate accumsan. Morbi convallis magna et elementum euismod. Nunc dapibus facilisis posuere. Vivamus sit amet condimentum magna.
-
-Praesent blandit magna eu justo sollicitudin condimentum. Aenean id turpis quis nibh semper gravida. Suspendisse ligula est, ornare non ipsum eget, efficitur pretium metus. Quisque ante sapien, elementum a est in, mattis tincidunt velit. Maecenas fermentum elit id feugiat feugiat. Phasellus nec volutpat velit, id varius magna. Nam tortor arcu, consequat ac accumsan a, vestibulum nec orci. Nullam auctor bibendum elit ac rhoncus. Quisque laoreet turpis placerat ex laoreet, nec tristique tortor convallis. Cras eu felis at arcu maximus sodales. Pellentesque vitae auctor erat, eleifend semper arcu. Maecenas nec diam lobortis, rutrum justo ac, condimentum ligula. Nunc at tincidunt dui. Aliquam sit amet libero lobortis purus ultricies tristique. Nullam faucibus dolor sed mauris dictum mollis. Pellentesque hendrerit quis lorem eu fringilla.
-
-In at dolor in nibh mattis tincidunt vitae et lacus. Aliquam aliquam risus maximus iaculis tincidunt. Vestibulum et erat elit. Vivamus in lacus vel nisi iaculis efficitur ut ac dolor. Donec et pellentesque nulla. Pellentesque ligula quam, gravida at vestibulum quis, pellentesque maximus arcu. Suspendisse potenti. Maecenas at mi sed dolor lacinia hendrerit sit amet in ante. Suspendisse facilisis ut tellus sed commodo. Donec congue lacus nisi, id pretium tellus mollis nec.
-
-Quisque leo orci, pellentesque non rutrum et, interdum a dui. Pellentesque in orci tortor. Pellentesque a nisi lorem. Nunc eget molestie tortor, quis molestie lacus. Phasellus ornare sit amet libero vel facilisis. Curabitur a velit ante. Ut vitae feugiat turpis. Quisque pellentesque erat et nibh bibendum lobortis. Morbi fermentum tortor a enim finibus malesuada. Donec sit amet erat mollis, maximus lacus quis, volutpat libero.';
+    include_once('./content/about.php');
 }
+
 include_once('./code/functions.php');
 include ('./code/html_structure/page.php');
 ?>
