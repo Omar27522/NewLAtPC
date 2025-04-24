@@ -13,7 +13,6 @@ article h2{
 .container {
     width: 85%;
     margin: auto;
-    
     font-size: 1.1em;
 }
 

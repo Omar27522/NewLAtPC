@@ -6,7 +6,7 @@
     </a>
     <a href="./jesusChrist">
         <li>Heavenly Father Tell me about the Web</li>
-    </a><a href="https://bibilium.com/38-parables-of-jesus-parables-of-jesus/">
+    </a><a href="./content/theParables.php"><!-- https://bibilium.com/38-parables-of-jesus-parables-of-jesus/ -->
         <li>Parables</li>
     </a><a href="#">
         <li>Sermons/Discourses</li>

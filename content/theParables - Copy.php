@@ -71,14 +71,13 @@
         .gospel{
           display:inline-block;
         }
-        .link-dialog p{
-          font-size:1.07em;
-        }
-        .link-dialog p:hover,.link-dialog p:focus{
-          background:black;
-          color:white;
-        }
-</style>
+                .dialog-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: </style>
 </head>
 <body>
     <h3 style="font-size:2em; margin:0;padding:1.3%;text-align:center;">Jesus in the Gospels</h3>
@@ -649,7 +648,6 @@ function parableRichFool() {
     $passage = ['12:13-21'];
 }
 
-
 function wiseAndFoolishBuilders() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
   
@@ -831,6 +829,7 @@ function unjustSteward() {
   $passage = ['16:1-13'];
 }
 
+
 // Array of functions to call
 $parableFunctions = ['theSower', 'mustardSeed', 'leavenedFlour', 'hiddenTreasure', 'pearlOfGreatPrice','dragnet', 'goodSamaritan', 'prodigalSon', 'lostSheep', 'lostCoin', 'unmercifulServant', 'workersInVineyard', 'richManAndLazarus', 'phariseeAndTaxCollector', 'persistentWidow', 'tenVirgins', 'talents', 'parableSheepAndGoats', 'parableTwoDebtors', 'parableUnfruitfulFigTree', 'parableWickedTenants', 'parableWeddingFeast', 'parableRichFool','wiseAndFoolishBuilders','growingSeed','newClothOnOldGarment','newWineInOldWineskins','lampOnStand','twoSons','unjustSteward'];
 
@@ -928,7 +927,7 @@ foreach ($parableFunctions as $functionTableRow) {
             </td>
             <td>Matthew 13:31-32, Mark 4:30-32, Luke 13:18-19</td>
         </tr>
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*HTML SAMPLES OF THE FUNCTIONS -->
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*HTML SAMPLES OF THE FUNCTIONS 
 
 
 
@@ -967,7 +966,8 @@ foreach ($parableFunctions as $functionTableRow) {
             <td class="parable-name">The Unjust Steward</td>
             <td>Encourages wise use of worldly resources with eternal perspective</td>
             <td>Luke 16:1-13</td>
-        </tr>
+        </tr>-->
+
         <tr>
             <td class="parable-name">The Friend at Midnight</td>
             <td>Teaches persistence in prayer through a story about borrowing bread at night</td>
@@ -1121,6 +1121,35 @@ foreach ($parableFunctions as $functionTableRow) {
         closeAnyOpenDialogs();
       }
     });
+(linkedText && imageDialog) {
+        linkedText.addEventListener('click', (event) => {
+          event.stopPropagation();
+          closeAnyOpenDialogs();
+          imageDialog.style.display = 'block';
+          imageDialog.classList.add('visible'); // Assuming you have CSS for .visible
+          currentlyOpenDialog = imageDialog;
+        });
+      }
+    });
+
+    // --- Close Any Open Dialogs ---
+    function closeAnyOpenDialogs() {
+      if (currentlyOpenDialog) {
+        currentlyOpenDialog.style.display = 'none';
+        currentlyOpenDialog.classList.remove('visible'); //If you are using class visible
+        currentlyOpenDialog = null;
+        currentlyOpenTextLink = null;
+      }
+    }
+
+    // --- Global Click Handler ---
+    document.addEventListener('click', (event) => {
+      if (currentlyOpenDialog &&
+          !currentlyOpenDialog.contains(event.target) &&
+          event.target !== currentlyOpenTextLink) { // Prevent closing on the text link
+        closeAnyOpenDialogs();
+      }
+    });
 
     // --- Escape Key Handler ---
     document.addEventListener('keydown', (event) => {
@@ -1138,77 +1167,4 @@ foreach ($parableFunctions as $functionTableRow) {
     });
   });
 </script>
-
 <!-- This is the script for the Image and Text Dialog Links -->
- <!-- Place this script after your current dialog JS, before </body> -->
-<script>
-  // Create the backdrop element if it doesn't exist
-  let backdrop = document.getElementById('dialogBackdrop');
-  if (!backdrop) {
-    backdrop = document.createElement('div');
-    backdrop.className = 'dialog-backdrop';
-    backdrop.id = 'dialogBackdrop';
-    document.body.appendChild(backdrop);
-  }
-
-  // Helper to show/hide backdrop
-  function showDialogBackdrop() {
-    backdrop.classList.add('active');
-  }
-  function hideDialogBackdrop() {
-    backdrop.classList.remove('active');
-  }
-
-  // Patch your dialog logic to show/hide the backdrop
-  // You likely have something like this already:
-  document.addEventListener('DOMContentLoaded', () => {
-    const linkDialogs = document.querySelectorAll('.link-dialog');
-    const linkedTexts = document.querySelectorAll('.linked-text');
-    let currentlyOpenDialog = null;
-    let currentlyOpenTextLink = null;
-
-    linkedTexts.forEach((linkedTextElement) => {
-      const correspondingDialog = linkedTextElement.nextElementSibling;
-      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
-        linkedTextElement.addEventListener('click', (event) => {
-          event.stopPropagation();
-          if (currentlyOpenDialog === correspondingDialog) {
-            // Close if re-clicked
-            correspondingDialog.style.display = 'none';
-            currentlyOpenDialog = null;
-            currentlyOpenTextLink = null;
-            hideDialogBackdrop();
-          } else {
-            if (currentlyOpenDialog) {
-              currentlyOpenDialog.style.display = 'none';
-            }
-            correspondingDialog.style.display = 'block';
-            currentlyOpenDialog = correspondingDialog;
-            currentlyOpenTextLink = linkedTextElement;
-            showDialogBackdrop();
-          }
-        });
-      }
-    });
-
-    // Clicking backdrop closes dialog
-    backdrop.addEventListener('click', () => {
-      if (currentlyOpenDialog) {
-        currentlyOpenDialog.style.display = 'none';
-        currentlyOpenDialog = null;
-        currentlyOpenTextLink = null;
-      }
-      hideDialogBackdrop();
-    });
-
-    // Escape key closes dialog
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && currentlyOpenDialog) {
-        currentlyOpenDialog.style.display = 'none';
-        currentlyOpenDialog = null;
-        currentlyOpenTextLink = null;
-        hideDialogBackdrop();
-      }
-    });
-  });
-</script>
