@@ -831,8 +831,436 @@ function unjustSteward() {
   $passage = ['16:1-13'];
 }
 
+function friendAtMidnight() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Friend at Midnight";
+  $image = "../images/friendAtMidnight.webp";
+  $imageAlt = "Illustration of a person knocking on a door at night";
+  $linked_image = $image;
+  $figCaption = "The Friend at Midnight";
+  $description = "Teaches persistence in prayer through a story about borrowing bread at night";
+  
+  $paragraphDialogs = [
+    "In this parable, Jesus tells about a guy who had a friend come visit him late at night. The problem was, he didn't have any food to give his visitor! So he went to another friend's house at midnight to ask for some bread.",
+    "The friend was already in bed with his family and didn't want to get up. But the first guy kept knocking and asking, and wouldn't stop.",
+    "Finally, the friend got up and gave him what he needed - not because they were friends, but because the guy was so persistent!",
+    "Jesus used this story to teach us about prayer. God isn't like the grumpy friend who doesn't want to help. But Jesus wants us to understand that we should keep praying and not give up, even when it seems like no one is listening."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/11.htm#5"];
+  $passage = ['11:5-8'];
+}
+
+function barrenFigTree() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Barren Fig Tree";
+  $image = "../images/barrenFigTree.webp";
+  $imageAlt = "Illustration of a fig tree without fruit";
+  $linked_image = $image;
+  $figCaption = "The Barren Fig Tree";
+  $description = "Warns about the consequences of unfruitfulness despite God's patience";
+  
+  $paragraphDialogs = [
+    "Jesus told a story about a man who had a fig tree in his garden that wasn't growing any figs. For three whole years, the man came looking for fruit but found nothing!",
+    "He told his gardener to just cut it down because it was wasting space and soil.",
+    "But the gardener asked for one more chance - he would dig around it and put fertilizer on it. If it grew fruit next year, great! If not, then they could cut it down.",
+    "This parable teaches us that God is patient with us, but He does expect us to grow and change. He gives us chances to become better and produce 'good fruit' in our lives, but His patience won't last forever.",
+    "We need to use the time He gives us to grow and become better people."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/13.htm#6"];
+  $passage = ['13:6-9'];
+}
+
+function greatBanquet() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Great Banquet";
+  $image = "../images/greatBanquet.webp";
+  $imageAlt = "Illustration of a grand feast with empty seats and servants inviting new guests";
+  $linked_image = $image;
+  $figCaption = "The Great Banquet";
+  $description = "Shows how many reject God's invitation while the unlikely are welcomed";
+  
+  $paragraphDialogs = [
+    "Jesus told about a man who planned a huge dinner party and sent out invitations to lots of people. When everything was ready, he sent his servant to tell the guests it was time to come.",
+    "But they all started making excuses! One guy said he bought a field and had to go see it. Another said he bought some oxen and needed to try them out. Another said he just got married so he couldn't come.",
+    "The host got really upset and told his servant to go into the streets and bring in the poor, the disabled, the blind, and the lame instead.",
+    "After doing this, there was still room, so the host sent the servant to the roads and country lanes to invite even more people!",
+    "Jesus used this story to show how many people who should have accepted God's invitation to be part of His kingdom make excuses and miss out. So God welcomes those who society often ignores or looks down on.",
+    "The point is that God's invitation is for everyone, but especially for those who recognize their need for Him."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/14.htm#15"];
+  $passage = ['14:15-24'];
+}
+
+function buildingTowerAndKingGoingToWar() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "Building a Tower and King Going to War";
+  $image = "../images/buildingTower.webp";
+  $imageAlt = "Illustration of a person planning a tower and a king planning for battle";
+  $linked_image = $image;
+  $figCaption = "Building a Tower and King Going to War";
+  $description = "Emphasizes counting the cost of discipleship before committing";
+  
+  $paragraphDialogs = [
+    "Jesus shared two short stories to make people think carefully before deciding to follow Him.",
+    "First, He talked about someone who wants to build a tower. A smart builder would sit down first and figure out how much it would cost to make sure they have enough money to finish it. Otherwise, they might lay the foundation but run out of money, and everyone would laugh at them!",
+    "In the second story, Jesus described a king who's about to go to war against another king. Before fighting, he needs to figure out if his 10,000 soldiers can beat the other king's 20,000 soldiers. If not, he'd better send people to ask for peace terms!",
+    "Jesus used these examples to teach that following Him is a serious decision. We need to understand what it will cost us - like maybe losing friends or facing hard times - and be prepared to go all the way, not just start and then quit when things get tough."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/14.htm#28"];
+  $passage = ['14:28-33'];
+}
+
+function unprofitableServants() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Unprofitable Servants";
+  $image = "../images/unprofitableServants.webp";
+  $imageAlt = "Illustration of servants working in a field";
+  $linked_image = $image;
+  $figCaption = "The Unprofitable Servants";
+  $description = "Teaches humility in service, showing we only do our duty before God";
+  
+  $paragraphDialogs = [
+    "Jesus asked His followers to imagine they had a servant who worked in their fields or took care of their sheep. When that servant comes in from working all day, would the master say, 'Hey, come sit down and eat'?",
+    "No way! Instead, the master would tell the servant to make dinner, serve it, and only after the master finished eating could the servant eat. And the master wouldn't thank the servant for doing these things because that's just what servants are supposed to do.",
+    "Jesus then told His disciples that they should have the same attitude. When they've done everything God has commanded them to do, they shouldn't expect special praise or rewards.",
+    "They should simply say, 'We are unprofitable servants; we have only done what was our duty to do.'",
+    "This teaches us to be humble when we serve God and others. We shouldn't serve to get attention or praise, but because it's the right thing to do."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/17.htm#7"];
+  $passage = ['17:7-10'];
+}
+
+function unjustJudge() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Unjust Judge";
+  $image = "../images/unjustJudge.webp";
+  $imageAlt = "Illustration of a widow persistently appearing before a judge";
+  $linked_image = $image;
+  $figCaption = "The Unjust Judge";
+  $description = "Encourages persistent prayer and faith until Jesus returns";
+  
+  $paragraphDialogs = [
+    "Jesus told this story to teach His followers to keep praying and never give up. There was a judge in a certain city who didn't care about God or what people thought about him.",
+    "A widow in that city kept coming to him, asking for justice against someone who had wronged her. For a long time the judge ignored her. But she wouldn't stop asking!",
+    "Finally, the judge thought, 'Even though I don't care about God or people, this woman is driving me crazy with her constant requests. I'll give her justice just to get her to leave me alone!'",
+    "Jesus explained that if even an unfair judge eventually helps because of persistence, how much more will God - who is perfectly good and loves us - answer His people who pray day and night?",
+    "But then Jesus asked a sad question: 'When I come back, will I find people on earth who still have faith?' This reminds us to keep trusting God and praying even when it seems like He's not answering right away."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/18.htm#1"];
+  $passage = ['18:1-8'];
+}
+
+function blindLeadingTheBlind() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "Blind Leading the Blind";
+  $image = "../images/blindLeadingBlind.webp";
+  $imageAlt = "Illustration of two blind people where one is trying to lead the other";
+  $linked_image = $image;
+  $figCaption = "Blind Leading the Blind";
+  $description = "Warns against following spiritually blind teachers";
+  
+  $paragraphDialogs = [
+    "Jesus asked a really good question: 'Can a blind person lead another blind person?' Of course not! They'd both fall into a ditch!",
+    "This short parable has a simple but important message. If someone doesn't understand the truth about God themselves, they can't properly teach others about Him. It's like trying to give directions to a place you've never been.",
+    "Jesus was warning people to be careful about who they listen to and learn from. Some religious teachers act like they know everything about God, but if they don't really understand God's truth, following them will lead to trouble.",
+    "Jesus also taught that a student isn't better than their teacher - at best, they'll know what their teacher knows. So if we want to grow in our understanding of God, we need to make sure we're learning from people who truly know Him."
+  ];
+  
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/15.htm#14", "luke/6.htm#39"];
+  $passage = ['15:14', '6:39'];
+}
+
+function faithfulAndWiseServant() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Faithful and Wise Servant";
+  $image = "../images/faithfulWiseServant.webp";
+  $imageAlt = "Illustration of a servant managing a household while the master is away";
+  $linked_image = $image;
+  $figCaption = "The Faithful and Wise Servant";
+  $description = "Contrasts faithful and unfaithful stewardship while waiting for the master's return";
+  
+  $paragraphDialogs = [
+    "Jesus told about a master who put a servant in charge of his household while he went away on a trip. The servant had one main job - to make sure all the other servants were fed at the right time.",
+    "Jesus asked, 'Who is the faithful and wise servant that the master can trust to do this?' A good servant would be found doing his job when the master returned, and the master would reward him by giving him even more responsibility.",
+    "But what if the servant was bad and thought, 'My master is taking a long time to come back,' and started beating the other servants and partying with troublemakers?",
+    "When the master finally returned on a day when the servant wasn't expecting him, he would punish that servant severely!",
+    "Jesus was teaching about how we should live while we wait for Him to return. We shouldn't get lazy or do wrong things just because Jesus hasn't come back yet.",
+    "Instead, we should faithfully do what He's asked us to do, caring for others and living right, so we'll be ready whenever He returns."
+  ];
+  
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/24.htm#45", "luke/12.htm#42"];
+  $passage = ['24:45-51', '12:42-48'];
+}
+
+function watchfulServants() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Watchful Servants";
+  $image = "../images/watchfulServants.webp";
+  $imageAlt = "Illustration of servants with lamps lit waiting for their master's return";
+  $linked_image = $image;
+  $figCaption = "The Watchful Servants";
+  $description = "Emphasizes staying alert and ready for Christ's return";
+  
+  $paragraphDialogs = [
+    "Jesus told His followers to be like servants waiting for their master to return from a wedding feast. These good servants would be dressed and ready for action, with their lamps lit even late at night. When the master knocked, they could immediately open the door.",
+    "The master would be so happy with these watchful servants that he would do something amazing - he would have them sit down while he served them a meal!",
+    "Jesus also compared His return to a thief breaking into a house at night - you don't know exactly when it will happen, so you need to be ready all the time.",
+    "In another version of this teaching, Jesus described a man going on a journey who puts his servants in charge of his house, giving each one a job to do. The doorkeeper especially needs to stay awake and watch because no one knows when the master will return - evening, midnight, when the rooster crows, or at dawn.",
+    "Jesus was teaching us to live in a way that we'd be happy for Him to find us at any moment - not doing wrong things or being lazy, but actively doing what He's asked us to do."
+  ];
+  
+  $gospel = ['Mark', 'Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["mark/13.htm#34", "luke/12.htm#35"];
+  $passage = ['13:34-37', '12:35-40'];
+}
+
+function childrenInTheMarketplace() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "Children in the Marketplace";
+  $image = "../images/childrenMarketplace.webp";
+  $imageAlt = "Illustration of children playing in a marketplace while others refuse to join";
+  $linked_image = $image;
+  $figCaption = "Children in the Marketplace";
+  $description = "Illustrates the inconsistent criticism Jesus and John the Baptist received";
+  
+  $paragraphDialogs = [
+    "Jesus noticed how people were never satisfied with God's messengers, no matter what they did. He compared them to kids sitting in the marketplace calling out to other kids: 'We played wedding music for you, but you wouldn't dance! We played funeral music, but you wouldn't cry!'",
+    "Then Jesus explained what He meant. John the Baptist came living super strictly - not drinking wine and barely eating - and people said, 'He's crazy! He has a demon!'",
+    "Then Jesus came, enjoying food and wine at parties with all kinds of people, and the same critics said, 'Look at him! He eats too much, drinks too much, and hangs out with tax collectors and sinners!'",
+    "Jesus was pointing out how some people were just determined to find fault no matter what. These critics weren't being honest or fair - they just didn't want to listen to God's message, so they made excuses about the messengers.",
+    "But Jesus said that wisdom is proved right by its results - both His way and John's way were part of God's plan and produced good fruit in the lives of those who actually listened."
+  ];
+  
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/11.htm#16", "luke/7.htm#31"];
+  $passage = ['11:16-19', '7:31-35'];
+}
+
+function speckAndLog() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Speck and the Log";
+  $image = "../images/speckAndLog.webp";
+  $imageAlt = "Illustration of a person with a log in their eye trying to remove a speck from another's eye";
+  $linked_image = $image;
+  $figCaption = "The Speck and the Log";
+  $description = "Warns against hypocritical judgment of others";
+  
+  $paragraphDialogs = [
+    "Jesus used a funny picture to teach about judging others. He asked, 'Why do you notice the tiny speck of sawdust in your friend's eye, but completely ignore the massive log sticking out of your own eye?'",
+    "Imagine trying to help someone get a tiny dust particle out of their eye when you have a huge wooden beam sticking out of yours!",
+    "Jesus called people who do this 'hypocrites' - people who criticize others for small mistakes while ignoring their own big problems.",
+    "He said we should first take the log out of our own eye (fix our own major issues), and then we'll be able to see clearly enough to help others with their smaller problems.",
+    "This doesn't mean we should never help others improve - it means we need to be honest about our own faults first. We should deal with our own mistakes before pointing fingers at everyone else.",
+    "Jesus wants us to help each other grow, but with humility and self-awareness, not with a judgmental attitude."
+  ];
+  
+  $gospel = ['Matthew', 'Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/7.htm#3", "luke/6.htm#41"];
+  $passage = ['7:3-5', '6:41-42'];
+}
+
+function fishNet() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Fish Net";
+  $image = "../images/fishNet.webp";
+  $imageAlt = "Illustration of fishermen sorting good fish from bad after a catch";
+  $linked_image = $image;
+  $figCaption = "The Fish Net";
+  $description = "Describes the final separation of the righteous and wicked";
+  
+  $paragraphDialogs = [
+    "Jesus said God's kingdom is like a huge fishing net that was thrown into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore.",
+    "Then they sat down and sorted the good fish into containers, but threw the bad ones away.",
+    "Jesus explained that this is how it will be at the end of the world. Angels will come and separate the wicked people from the righteous ones, and throw the wicked into a fiery furnace, where there will be weeping and gnashing of teeth.",
+    "This parable teaches that right now, both people who truly follow God and people who don't are mixed together in the world - just like different kinds of fish in the same net. But a time is coming when God will sort everyone out.",
+    "It's a serious reminder that our choices now about whether to follow Jesus or not have big consequences for our future. Jesus wants everyone to be counted among the 'good fish' by believing in Him and living according to His teachings."
+  ];
+  
+  $gospel = ['Matthew'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/13.htm#47"];
+  $passage = ['13:47-50'];
+}
+
+function householder() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Householder";
+  $image = "../images/householder.webp";
+  $imageAlt = "Illustration of a homeowner bringing out treasures from storage";
+  $linked_image = $image;
+  $figCaption = "The Householder";
+  $description = "Compares a teacher of scripture to a homeowner bringing out treasures old and new";
+  
+  $paragraphDialogs = [
+    "After teaching several parables about God's kingdom, Jesus asked His disciples if they understood everything He said. When they answered yes, He gave them one more short comparison.",
+    "He said that every teacher of religious law who has become a disciple in the kingdom of heaven is like the owner of a house who brings out of his storeroom new treasures as well as old.",
+    "This mini-parable is about how Jesus' followers should teach others. A good teacher doesn't just stick to old familiar ideas or only chase after new trends.",
+    "Instead, they're like someone who has collected valuable things over time - some old, some new - and knows when to share each one.",
+    "Jesus was telling His disciples that they should use both the treasured wisdom from the Old Testament scriptures AND the new teachings He was giving them. Both are valuable!",
+    "This teaches us that we should appreciate traditional wisdom while also being open to fresh insights about God's truth."
+  ];
+  
+  $gospel = ['Matthew'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["matthew/13.htm#52"];
+  $passage = ['13:52'];
+}
+
+function dishonestManager() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Dishonest Manager";
+  $image = "../images/dishonestManager.webp";
+  $imageAlt = "Illustration of a manager reducing debts owed to his master";
+  $linked_image = $image;
+  $figCaption = "The Dishonest Manager";
+  $description = "Teaches shrewd use of worldly resources for eternal purposes";
+  
+  $paragraphDialogs = [
+    "Jesus told one of His most surprising stories about a manager who was about to get fired for wasting his rich employer's money.",
+    "Realizing he'd soon be unemployed, the manager quickly called in people who owed his master money and reduced their debts - cutting one bill from 800 gallons of olive oil to 400, and another from 1,000 bushels of wheat to 800. He did this so these people would welcome him into their homes after he lost his job.",
+    "The weird part is that when the rich man found out, he actually praised the dishonest manager for being so clever!",
+    "Jesus wasn't saying we should be dishonest. Instead, He made the point that 'the people of this world are more shrewd in dealing with their own kind than are the people of the light.'",
+    "Then Jesus gave the real lesson: we should use our money ('worldly wealth') to help others and make friends, so that when earthly money is gone, these people will welcome us into 'eternal dwellings' (heaven).",
+    "Jesus was teaching that we should be at least as clever about using our resources for eternal purposes as dishonest people are about using money for their temporary benefit on earth."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/16.htm#1"];
+  $passage = ['16:1-9'];
+}
+
+function goodShepherd() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Good Shepherd";
+  $image = "../images/goodShepherd.webp";
+  $imageAlt = "Illustration of a shepherd protecting his sheep";
+  $linked_image = $image;
+  $figCaption = "The Good Shepherd";
+  $description = "Depicts Jesus as the shepherd who knows, protects, and lays down his life for his sheep";
+  
+  $paragraphDialogs = [
+    "Jesus described Himself as the Good Shepherd who truly cares for His sheep. Unlike a hired worker who runs away when wolves come because the sheep don't really belong to him, Jesus actually lays down His life to protect His sheep.",
+    "He explained that He knows His sheep personally, and they know His voice. When He calls, they follow Him because they recognize and trust Him, but they run from strangers whose voices they don't know.",
+    "Jesus also said He has 'other sheep' (meaning non-Jewish believers) who will also become part of His one flock under one shepherd.",
+    "The most amazing part is when Jesus said that no one forces Him to die for His sheep - He chooses to lay down His life willingly, and He has the power to take it up again.",
+    "This beautiful word picture teaches us that Jesus loves us personally, protects us, guides us, and made the ultimate sacrifice for us.",
+    "It also shows that Jesus is not just a good person or teacher - He claimed the authority to lay down His life and take it up again, something only God could do."
+  ];
+  
+  $gospel = ['John'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["john/10.htm#1"];
+  $passage = ['10:1-18'];
+}
+
+function vineAndBranches() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Vine and the Branches";
+  $image = "../images/vineAndBranches.webp";
+  $imageAlt = "Illustration of a grapevine with branches bearing fruit";
+  $linked_image = $image;
+  $figCaption = "The Vine and the Branches";
+  $description = "Illustrates the necessity of remaining connected to Jesus to bear spiritual fruit";
+  
+  $paragraphDialogs = [
+    "Jesus used a picture that His followers would easily understand - a grapevine. He said, 'I am the true vine, and my Father is the gardener.' He explained that God removes branches that don't bear fruit, but prunes (cuts back) the fruitful ones so they'll produce even more.",
+    "Then Jesus told His disciples the most important part: 'Remain in me, and I will remain in you. No branch can bear fruit by itself; it must remain in the vine.' Just like a branch can't grow grapes if it's cut off from the vine, we can't live truly good and meaningful lives if we're disconnected from Jesus.",
+    "He said, 'Apart from me you can do nothing.' Jesus also warned that branches that don't stay connected get thrown away, wither, and are burned.",
+    "But He gave an amazing promise too: if we stay connected to Him and His words stay in us, we can ask whatever we wish, and it will be done for us!",
+    "The 'fruit' Jesus talked about includes things like love, joy, peace, patience, and kindness - the good qualities that naturally grow in our lives when we stay close to Him."
+  ];
+  
+  $gospel = ['John'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["john/15.htm#1"];
+  $passage = ['15:1-8'];
+}
+
+function masterAndServant() {
+  global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
+  global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
+  
+  $title = "The Master and Servant";
+  $image = "../images/masterAndServant.webp";
+  $imageAlt = "Illustration of a servant working in a field then serving his master at the table";
+  $linked_image = $image;
+  $figCaption = "The Master and Servant";
+  $description = "Shows the proper relationship between God and his servants";
+  
+  $paragraphDialogs = [
+    "Jesus asked His disciples to imagine they owned a servant who had been plowing fields or taking care of sheep all day. When that servant came in from the fields, would any master say, 'Come and sit down to eat'?",
+    "No way! Instead, the master would say, 'Make my dinner, serve me while I eat and drink, and afterward you can eat and drink.' And the master wouldn't thank the servant for just doing what he was supposed to do.",
+    "Jesus then told His followers that they should have the same attitude when serving God: 'When you have done everything you were told to do, you should say, \"We are unworthy servants; we have only done our duty.\"'",
+    "This parable teaches us humility in our relationship with God. We shouldn't serve God expecting special praise or thinking we deserve rewards. Everything we have already comes from God, so when we serve Him, we're just doing what we ought to do.",
+    "This doesn't mean God doesn't appreciate our service - other teachings show that He does reward faithfulness. But it reminds us that our attitude should be humble gratitude for the privilege of serving Him, not pride or a feeling that God owes us something."
+  ];
+  
+  $gospel = ['Luke'];
+  $gLP = "https://openbible.com/ylt/";
+  $gospelLinks = ["luke/17.htm#7"];
+  $passage = ['17:7-10'];
+}
+
 // Array of functions to call
-$parableFunctions = ['theSower', 'mustardSeed', 'leavenedFlour', 'hiddenTreasure', 'pearlOfGreatPrice','dragnet', 'goodSamaritan', 'prodigalSon', 'lostSheep', 'lostCoin', 'unmercifulServant', 'workersInVineyard', 'richManAndLazarus', 'phariseeAndTaxCollector', 'persistentWidow', 'tenVirgins', 'talents', 'parableSheepAndGoats', 'parableTwoDebtors', 'parableUnfruitfulFigTree', 'parableWickedTenants', 'parableWeddingFeast', 'parableRichFool','wiseAndFoolishBuilders','growingSeed','newClothOnOldGarment','newWineInOldWineskins','lampOnStand','twoSons','unjustSteward'];
+$parableFunctions = ['theSower', 'mustardSeed', 'leavenedFlour', 'hiddenTreasure', 'pearlOfGreatPrice','dragnet', 'goodSamaritan', 'prodigalSon', 'lostSheep', 'lostCoin', 'unmercifulServant', 'workersInVineyard', 'richManAndLazarus', 'phariseeAndTaxCollector', 'persistentWidow', 'tenVirgins', 'talents', 'parableSheepAndGoats', 'parableTwoDebtors', 'parableUnfruitfulFigTree', 'parableWickedTenants', 'parableWeddingFeast', 'parableRichFool','wiseAndFoolishBuilders','growingSeed','newClothOnOldGarment','newWineInOldWineskins','lampOnStand','twoSons','unjustSteward','friendAtMidnight','barrenFigTree','greatBanquet','buildingTowerAndKingGoingToWar','unprofitableServants','unjustJudge','blindLeadingTheBlind','faithfulAndWiseServant','watchfulServants','childrenInTheMarketplace','speckAndLog','fishNet','householder','dishonestManager','goodShepherd','vineAndBranches','masterAndServant'];
 
 foreach ($parableFunctions as $functionTableRow) {
     // Call the current function
@@ -872,188 +1300,6 @@ foreach ($parableFunctions as $functionTableRow) {
 
 
 
-
-
-<!-- HTML SAMPLES OF THE FUNCTIONS
-        <tr>
-            <div class="multi-link-container-img" >
-              <td><span class="linked-text-img" >The Sower</span></td>
-                <div class="image-dialog" >
-                  <figure>
-                      <img src="../images/sower.webp" alt="Image 1">
-                      <figcaption><a href="../images/sower.png">The Parable of the Sower</a></figcaption>
-                  </figure>
-                </div>
-            </div>
-              <td>
-            <div class="multi-link-container">
-              <span class="linked-text">Describes different responses to the gospel message using the analogy of seeds falling on different types of soil</span>
-              <div class="link-dialog">
-                <p tabindex="0">Okay, imagine a farmer throwing seeds on the ground. That's kind of like when someone tells you about Jesus. The seeds are the message, and the ground is like your heart.</p>
-                <p tabindex="0">Jesus told a story about this. He said some seeds fell on a path where birds ate them up. That's like people who hear the message but don't get it, and then it's just forgotten.</p>
-                <p tabindex="0">Some seeds fell on rocky ground. They grew fast at first, but because the soil wasn't deep, they dried up and died. That's like people who are excited about the message at first, but when things get tough, they give up.</p>
-                <p tabindex="0">Other seeds fell among thorny bushes. The bushes grew bigger and stopped the seeds from growing. That's like people who hear the message, but they get too worried about other stuff, like money or wanting things, and the message doesn't really change them.</p>
-                <p tabindex="0">But some seeds fell on good dirt. They grew really well and made lots more seeds. That's like people who really listen to the message, understand it, and let it change how they live. They end up doing good things because of it.</p>
-                <p tabindex="0">So, the story is about how different people hear the same message in different ways, depending on what's going on in their hearts. Only the people with "good hearts" really let the message grow and make a difference.</p>
-              </div>
-            </div>
-            </td>
-            <td>
-              <div class="gospel">Matthew <a href="https://openbible.com/ylt/matthew/13.htm" target="_blank">13:1-23,</a></div>
-              <div class="gospel">Mark <a href="https://openbible.com/ylt/mark/4.htm">4:1-20,</a></div>
-              <div class="gospel">Luke <a href="https://openbible.com/ylt/luke/8.htm">8:4-15</a></div>
-            </td>
-        </tr>
-
-        <tr>
-            <div class="multi-link-container-img" >
-              <td><span class="linked-text-img" >The Mustard Seed</span></td>
-                <div class="image-dialog" >
-                  <figure>
-                      <img src="../images/mustardSeed.webp" alt="Image 1">
-                      <figcaption><a href="../images/mustardSeed.png">Parable of The Mustard Seed</a></figcaption>
-                  </figure>
-                </div>
-            </div>
-            <td>
-              <div class="multi-link-container">
-                <span class="linked-text">Illustrates how God's kingdom starts small but grows enormously</span>
-                <div class="link-dialog">
-                  <p tabindex="0">Okay, so Jesus told another story, this time about a tiny mustard seed. You know how small those are, right?</p>
-                  <p tabindex="0">He said that the kingdom of God is like that little seed. When it's planted, it's one of the smallest seeds you can find.</p>
-                  <p tabindex="0">But guess what? When it grows up, it becomes the biggest of all garden plants! It gets so big that birds can even come and make nests in its branches.</p>
-                  <p tabindex="0">So, what Jesus was saying is that even though God's kingdom might seem really small or unimportant at first, it has the power to grow into something huge and amazing. It starts small but ends up being big enough to help and shelter lots of people, just like the big mustard plant shelters the birds. It's like something little that has the potential to become something really, really big!</p>
-                  </div>
-              </div>
-            </td>
-            <td>Matthew 13:31-32, Mark 4:30-32, Luke 13:18-19</td>
-        </tr>
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*HTML SAMPLES OF THE FUNCTIONS -->
-
-
-
-        
-        <tr>
-            <td class="parable-name">The Wise and Foolish Builders</td>
-            <td>Contrasts those who hear Jesus' words and act on them versus those who don't</td>
-            <td>Matthew 7:24-27, Luke 6:47-49</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Growing Seed</td>
-            <td>Shows how God's kingdom grows mysteriously by God's power, not human effort</td>
-            <td>Mark 4:26-29</td>
-        </tr>
-        <tr>
-            <td class="parable-name">New Cloth on Old Garment</td>
-            <td>Illustrates the incompatibility of the old religious system with Jesus' new teaching</td>
-            <td>Matthew 9:16, Mark 2:21, Luke 5:36</td>
-        </tr>
-        <tr>
-            <td class="parable-name">New Wine in Old Wineskins</td>
-            <td>Similar to the cloth parable, shows how Jesus' message requires new structures</td>
-            <td>Matthew 9:17, Mark 2:22, Luke 5:37-39</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Lamp on a Stand</td>
-            <td>Teaches that spiritual truth is meant to illuminate, not be hidden</td>
-            <td>Matthew 5:14-16, Mark 4:21-22, Luke 8:16-17, 11:33-36</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Two Sons</td>
-            <td>Contrasts obedience with mere words, showing the importance of actual repentance</td>
-            <td>Matthew 21:28-32</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Unjust Steward</td>
-            <td>Encourages wise use of worldly resources with eternal perspective</td>
-            <td>Luke 16:1-13</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Friend at Midnight</td>
-            <td>Teaches persistence in prayer through a story about borrowing bread at night</td>
-            <td>Luke 11:5-8</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Barren Fig Tree</td>
-            <td>Warns about the consequences of unfruitfulness despite God's patience</td>
-            <td>Luke 13:6-9</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Great Banquet</td>
-            <td>Shows how many reject God's invitation while the unlikely are welcomed</td>
-            <td>Luke 14:15-24</td>
-        </tr>
-        <tr>
-            <td class="parable-name">Building a Tower and King Going to War</td>
-            <td>Emphasizes counting the cost of discipleship before committing</td>
-            <td>Luke 14:28-33</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Unprofitable Servants</td>
-            <td>Teaches humility in service, showing we only do our duty before God</td>
-            <td>Luke 17:7-10</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Unjust Judge</td>
-            <td>Encourages persistent prayer and faith until Jesus returns</td>
-            <td>Luke 18:1-8</td>
-        </tr>
-        <tr>
-            <td class="parable-name">Blind Leading the Blind</td>
-            <td>Warns against following spiritually blind teachers</td>
-            <td>Matthew 15:14, Luke 6:39</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Faithful and Wise Servant</td>
-            <td>Contrasts faithful and unfaithful stewardship while waiting for the master's return</td>
-            <td>Matthew 24:45-51, Luke 12:42-48</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Watchful Servants</td>
-            <td>Emphasizes staying alert and ready for Christ's return</td>
-            <td>Mark 13:34-37, Luke 12:35-40</td>
-        </tr>
-        <tr>
-            <td class="parable-name">Children in the Marketplace</td>
-            <td>Illustrates the inconsistent criticism Jesus and John the Baptist received</td>
-            <td>Matthew 11:16-19, Luke 7:31-35</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Speck and the Log</td>
-            <td>Warns against hypocritical judgment of others</td>
-            <td>Matthew 7:3-5, Luke 6:41-42</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Fish Net</td>
-            <td>Describes the final separation of the righteous and wicked</td>
-            <td>Matthew 13:47-50</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Householder</td>
-            <td>Compares a teacher of scripture to a homeowner bringing out treasures old and new</td>
-            <td>Matthew 13:52</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Dishonest Manager</td>
-            <td>Teaches shrewd use of worldly resources for eternal purposes</td>
-            <td>Luke 16:1-9</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Good Shepherd</td>
-            <td>Depicts Jesus as the shepherd who knows, protects, and lays down his life for his sheep</td>
-            <td>John 10:1-18</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Vine and the Branches</td>
-            <td>Illustrates the necessity of remaining connected to Jesus to bear spiritual fruit</td>
-            <td>John 15:1-8</td>
-        </tr>
-        <tr>
-            <td class="parable-name">The Master and Servant</td>
-            <td>Shows the proper relationship between God and his servants</td>
-            <td>Luke 17:7-10</td>
-        </tr>
-    </table>
 
 
 
