@@ -7,17 +7,6 @@
     <li>Rather than forcing interpretations, parables invited listeners to discover meaning for themselves, engaging their minds and hearts in the process.</li>
 </ul>
 
-<!-- This is the Dialog for the links
-<div class="multi-link-container" id="multiLinkContainer">
-  <span class="linked-text" id="linkedText">Click Here</span>
-  <div class="link-dialog" id="linkDialog">
-    <a href="https://www.example.com/link1">Link 1</a>
-    <a href="https://www.example.com/link2">Link 2</a>
-    <a href="https://www.example.com/link3">Another Link</a>
-  </div>
-</div>
- This is the Dialog for the links -->
-
 <link rel="stylesheet" href="../code/dialogs.css">
 
 <style>
@@ -54,6 +43,7 @@
             white-space: nowrap;
             max-width: 100%;
             font-size: 0.9em; /* Optionally reduce font size for small screens */
+            color:black;
         }
         figcaption a {
           text-decoration:none;
@@ -77,6 +67,16 @@
         .link-dialog p:hover,.link-dialog p:focus{
           background:black;
           color:white;
+        }
+        .linked-text, .linked-text-img{
+          color:black;
+        }
+        .linked-text:active, .linked-text-img:active{
+          color:red;
+        }
+        .linked-text.focused, .linked-text-img.focused{
+          color:red;
+          transition: color 2s ease-out, border 2s ease-out;
         }
 </style>
 </head>
@@ -1269,7 +1269,7 @@ foreach ($parableFunctions as $functionTableRow) {
     ?>
         <tr>
             <div class="multi-link-container-img" >
-              <td><span class="linked-text-img" ><?= $title; ?></span></td>
+              <td><span tabindex="0" class="linked-text-img" ><?= $title; ?></span></td>
                 <div class="image-dialog" >
                   <figure>
                       <img src="<?= $image; ?>" alt="<?= $imageAlt; ?>">
@@ -1279,7 +1279,7 @@ foreach ($parableFunctions as $functionTableRow) {
             </div>
               <td>
             <div class="multi-link-container">
-              <span class="linked-text"><?= $description; ?></span>
+              <span tabindex="0" class="linked-text"><?= $description; ?></span>
               <div class="link-dialog">
                 <?php foreach ($paragraphDialogs as $index ) {
                   echo '<p tabindex="0">'.$index.'</p>';
@@ -1297,9 +1297,17 @@ foreach ($parableFunctions as $functionTableRow) {
         <?php
         }
         ?>
-
-
-
+        <script>
+document.querySelectorAll('.linked-text, .linked-text-img').forEach(el => {
+    el.addEventListener('focus', () => {
+        el.classList.add('focused');
+    });
+    el.addEventListener('blur', () => {
+        setTimeout(() => {
+            el.classList.remove('focused');
+        }, 2000); // Keeps the focus effect for 5 seconds
+    });
+});</script>
 
 
 
@@ -1327,7 +1335,7 @@ foreach ($parableFunctions as $functionTableRow) {
             closeAnyOpenDialogs();
           } else {
             closeAnyOpenDialogs();
-            correspondingDialog.style.display = 'block';
+            correspondingDialog.classList.add('visible');
             currentlyOpenDialog = correspondingDialog;
             currentlyOpenTextLink = linkedTextElement;
           }
@@ -1342,8 +1350,7 @@ foreach ($parableFunctions as $functionTableRow) {
         linkedText.addEventListener('click', (event) => {
           event.stopPropagation();
           closeAnyOpenDialogs();
-          imageDialog.style.display = 'block';
-          imageDialog.classList.add('visible'); // Assuming you have CSS for .visible
+          imageDialog.classList.add('visible');
           currentlyOpenDialog = imageDialog;
         });
       }
@@ -1352,11 +1359,14 @@ foreach ($parableFunctions as $functionTableRow) {
     // --- Close Any Open Dialogs ---
     function closeAnyOpenDialogs() {
       if (currentlyOpenDialog) {
-        currentlyOpenDialog.style.display = 'none';
-        currentlyOpenDialog.classList.remove('visible'); //If you are using class visible
+        currentlyOpenDialog.classList.remove('visible');
         currentlyOpenDialog = null;
         currentlyOpenTextLink = null;
       }
+      // Hide all image dialogs
+      imageDialogs.forEach(dialog => dialog.classList.remove('visible'));
+      // Hide all text dialogs
+      linkDialogs.forEach(dialog => dialog.classList.remove('visible'));
     }
 
     // --- Global Click Handler ---
@@ -1420,15 +1430,15 @@ foreach ($parableFunctions as $functionTableRow) {
           event.stopPropagation();
           if (currentlyOpenDialog === correspondingDialog) {
             // Close if re-clicked
-            correspondingDialog.style.display = 'none';
+            correspondingDialog.classList.remove('visible');
             currentlyOpenDialog = null;
             currentlyOpenTextLink = null;
             hideDialogBackdrop();
           } else {
             if (currentlyOpenDialog) {
-              currentlyOpenDialog.style.display = 'none';
+              currentlyOpenDialog.classList.remove('visible');
             }
-            correspondingDialog.style.display = 'block';
+            correspondingDialog.classList.add('visible');
             currentlyOpenDialog = correspondingDialog;
             currentlyOpenTextLink = linkedTextElement;
             showDialogBackdrop();
@@ -1440,7 +1450,7 @@ foreach ($parableFunctions as $functionTableRow) {
     // Clicking backdrop closes dialog
     backdrop.addEventListener('click', () => {
       if (currentlyOpenDialog) {
-        currentlyOpenDialog.style.display = 'none';
+        currentlyOpenDialog.classList.remove('visible');
         currentlyOpenDialog = null;
         currentlyOpenTextLink = null;
       }
@@ -1450,7 +1460,7 @@ foreach ($parableFunctions as $functionTableRow) {
     // Escape key closes dialog
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && currentlyOpenDialog) {
-        currentlyOpenDialog.style.display = 'none';
+        currentlyOpenDialog.classList.remove('visible');
         currentlyOpenDialog = null;
         currentlyOpenTextLink = null;
         hideDialogBackdrop();

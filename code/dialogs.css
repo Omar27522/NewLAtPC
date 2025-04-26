@@ -61,17 +61,29 @@
   }
 
   .link-dialog {
-    display: none; /* Initially hidden */
-    position: absolute; /* Position relative to the container */
-    top: 100%; /* Position directly below the text */
-    left: 0; /* Align with the left edge of the text */
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000; /* Ensure it's on top */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    min-width: 120px; /* Adjust as needed */
-  }
+  display: none; /* Initially hidden */
+  position: fixed; /* Centered on the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.link-dialog.visible {
+  display: block;
+  opacity: 1;
+}
 
   .link-dialog a {
     display: block;
