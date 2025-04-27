@@ -37,7 +37,7 @@
     <meta charset="UTF-8"><!-- Character Encoding -->
     <!--3:57 PM 4/26/2025 Local Time-->
 	<!--6:51 PM 4/26/2025 Last Edit-->
-    <meta name="viewport" content="width=100vw, initial-scale=1.0"><!-- Viewport Settings for Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Viewport Settings for Responsive Design -->
     <meta charset="UTF-8"><!-- Character Encoding -->
     <!-- Page Description for Search Engines -->
     <meta name="description" content="A detailed guide to HTML meta tags.">
@@ -47,8 +47,8 @@
     <meta name="author" content="Omar">
     <!-- Controlling Search Engine Behavior -->
     <meta name="robots" content="index, follow"> <!-- This Tag is For security Restrictions.-->
-    <!-- Refresh or Redirect the Page -->
-    <meta http-equiv="refresh" content="500000;url=index.html">
+    <!-- Refresh or Redirect the Page
+    <meta http-equiv="refresh" content="500000;url=index.html">-->
     <!-- Setting a Default Language -->
     <meta http-equiv="Content-Language" content="en">
     <!-- Specifying Theme Color -->
@@ -135,6 +135,18 @@
             Common use cases include sidebars, callout boxes, or related links.
         </aside>
 
-
+<footer>
+<div style="text-align:center; margin-top:40px;">
+  <h2 style="color:aquamarine;">Meta Tag Dash</h2>
+  <button id="startBtn" style="font-size:large; background:aquamarine; color:#3366ff; border:none; border-radius:8px; padding:8px 20px; margin-bottom:10px; cursor:pointer;">Start Game</button>
+  <div style="font-size:large; margin:10px; color:aquamarine;">
+    <span id="scoreDisplay">Score: 149</span>
+    <span id="speedDisplay" style="font-weight:bold; margin-left:20px;">Speed: 1.00</span>
+  </div>
+  <div id="factDisplay" style="font-size:xx-large; margin:10px; color:#3366ff;"></div>
+  <canvas id="gameCanvas" width="600" height="500" style="background:lightblue; border:2px solid aquamarine; margin-top:10px;"></canvas>
+</div>
+</footer>
+<script src="../canvas.js"></script>
 </body>
 </html>
