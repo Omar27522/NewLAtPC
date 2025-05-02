@@ -3,6 +3,7 @@
     $routes = [
         "/jesusChrist" => "/jesucristo",
         //"/jesucristo/" => "/jesusChrist/"
+        "/services" => "/servicios"
     ];
 
 $var = isset($routes[$uri]) ? $routes[$uri] : "español/";
