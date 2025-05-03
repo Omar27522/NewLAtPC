@@ -1,8 +1,11 @@
-<?php //La URL contiene un ? precediendo el valor. Cada valor corresponde a un título en el sitio.
-// URL: ?psu    =>   El título será "Fuente de Poder".
+<?php
 
-#Titulos del Hardware
-$hardwareTitulos = [
+$title = "Hardware";
+$dir = '../';
+
+function content() {
+    
+    $hardwareTitulos = [
     'cc'   => 'Console Controllers',
     'cpu'  => 'CPU',
     'ram'  => 'RAM',
@@ -33,7 +36,7 @@ $hardwareTitulos = [
     'almohadillas_anti-deslizantes' => 'Alfombrillas Antideslizantes',
     'bocinas_y_Subwoofers' => 'Bocinas y Subwoofers',
     'uniformes' => 'Uniformes'
-];
+    ];
 
     $titulo = 'Hardware'; // Default title
     foreach ($hardwareTitulos as $llave => $valor) {
@@ -43,11 +46,11 @@ $hardwareTitulos = [
         }
     }
 
-$directoryPath = '../../';
-$hardware ='active';
+    $directoryPath = '../../';
+    $hardware ='active';
 
-// Descripciones y Palabras Clave.
-if (isset($_GET)) :
+    // Descripciones y Palabras Clave.
+    if (isset($_GET)) :
     switch (key($_GET)) :
                 case 'cpu':
                     $palabrasClave = '<meta name="keywords" content="CPU, Procesador, Unidad Central de Procesamiento, Intel, AMD">';
@@ -189,9 +192,9 @@ if (isset($_GET)) :
     endswitch;
 endif;
 #---->PAGINA<----
-//include ('../../include/_code/pagina.php');
 
-function content(){
+
+
     $hw = 'es';
 	$include_path = '../../include/_works/_hardware/';
 	$include_path_vars = '../../español/hardware/';
@@ -395,10 +398,13 @@ if (isset($_GET)) :
 
     $links =[''];
 
-
+include ('../content/hardware.php');
 break;
 endswitch;
 endif;
-include ('../content/hardware.php');
+
 }
+
+include_once('../code/funciones.php');
+include ('../code/html_structure/page.php');
 ?>
