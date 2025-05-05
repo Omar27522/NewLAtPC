@@ -2,7 +2,7 @@
     <section class="hero3 article" id="article">
         <div class="container">
             <?= empty($title) ? $titulo : $title;?>
-            <?= empty($description) ? $descripcion : $description;?>
+            <?= empty($descriptions) ? $descripcion : $descriptions;?>
         </div>
     </section>
     <section class="hero article" style="background-color: whitesmoke;">

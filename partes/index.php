@@ -350,7 +350,7 @@ if (isset($_GET)) :
         default:
 	$title = "<h2>El hardware es la computadora — sus componentes físicos.</h2>";
 
-	$description = "<p>Estos componentes pueden incluir la funcionalidad, diseño, materiales, innovaciones, termales, etc. de la computadora.<br />Una computadora es un dispositivo electrónico que manipula datos o información. Tiene la capacidad de almacenar, recuperar y procesar datos.<p> <!--https://unsplash.com/photos/2sILr4DwabQ-->
+	$descripcion = "<p>Estos componentes pueden incluir la funcionalidad, diseño, materiales, innovaciones, termales, etc. de la computadora.<br />Una computadora es un dispositivo electrónico que manipula datos o información. Tiene la capacidad de almacenar, recuperar y procesar datos.<p> <!--https://unsplash.com/photos/2sILr4DwabQ-->
 	<h3><a href=\"https://latinospc.com/hardware/?anatomy_of_a_computer#navi\">La anatomía de una computadora</a> típicamente incluye, 
 	<a href=\"https://latinospc.com//hardware/?notebooks#navi\">Portátiles</a>, Dispositivos Portátiles, Dispositivos Inteligentes, PC's Modulares, ETC.</h3>";
 

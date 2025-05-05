@@ -6,7 +6,9 @@
         "/espa%C3%B1ol/" => "../",
         "/servicios" => "/services",
         "/hardware" => "/hardware",
-        "/jesucristo/parabolas"=> "/jesusChrist/parables"
+        "/jesucristo/parabolas"=> "/jesusChrist/parables",
+        "/partes"=> "/parts"
+        
     ];
 
 $var = isset($routes[$uri]) ? $routes[$uri] : "./";
