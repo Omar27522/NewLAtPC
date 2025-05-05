@@ -1,6 +1,6 @@
 <?php
 $titulo="¿Quienes somos?";
-$directoryPath = '../../';
+$dir = '../';
 $palabrasClave ='<meta name="keywords" content="California, Condado de Los Ángeles, Condado de San Bernardino, Condado de Riverside, Condado de Orange, servicio y reparación de computadoras">';
 $descripción = '<meta name="description" content="Queremos brindar a las familias e individuos la experiencia de un sistema informático completamente funcional; laptops y desktops. Ofrecemos principalmente servicios a domicilio y remotos, pero pronto trabajaremos en una ubicación física.">';
 

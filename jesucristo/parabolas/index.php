@@ -1,9 +1,8 @@
 <?php
-$title = 'The Parables';
+$title = 'Las Parabolas';
 $dir = '../../';
-include_once('../../code/functions.php');
-echo $_SERVER['REQUEST_URI'];
-include './content.php';
+include_once('../../code/funciones.php');
+include './contenido.php';
 //include '../content/heavenlyFatherTellmeAboutTheWeb.php';
 include ('../../code/html_structure/page.php');
 ?>

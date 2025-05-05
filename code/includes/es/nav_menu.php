@@ -6,7 +6,7 @@
             width="100%" height="auto"></li>
 </a><a href="../jesucristo">
     <li>Padre en el Cielo dime acerca de la Web</li>
-</a><a href="https://ancladoencristo.org/las-parabolas-de-jesus-lista-completa/">
+</a><a href="../jesucristo/parabolas/">
         <li>Parabolas</li>
     </a><a href="#">
         <li>Sermones/Discursos</li>

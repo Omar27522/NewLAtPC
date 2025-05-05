@@ -1,103 +1,137 @@
-<h2>The Gospels use mental illustrations. Jesus actively interacts with a wide range of people, using parables as a key tool to communicate His message in a way that everyone could understand.</h2>
+<?php
+function content(){ ?>
+<h2>Los Evangelios usan ilustraciones mentales. Jesús interactúa activamente con una amplia variedad de personas,
+    utilizando parábolas como una herramienta clave para comunicar Su mensaje de una manera que todos pudieran entender.
+</h2>
 <ul>
-    <li>They were Universally accessible by using every day scenarios, Jesus made complex spiritual concepts understandable to both educated scholars and illiterate laborers.</li>
-    <li>The use of parables was culturally relevant by using the agricultural and domestic settings of these stories resonated with his audience's daily experiences in the 1st century.</li>
-    <li>The multiple layers of meaning often contained surface-level stories that anyone could grasp, while offering deeper theological insights to those willing to contemplate them further.</li>
-    <li>The narrative structure of parables made them easier to remember and share than abstract theological concepts.</li>
-    <li>Rather than forcing interpretations, parables invited listeners to discover meaning for themselves, engaging their minds and hearts in the process.</li>
+    <li>Eran universalmente accesibles: al usar escenarios cotidianos, Jesús hacía que conceptos espirituales complejos
+        fueran comprensibles tanto para los eruditos educados como para los trabajadores analfabetos.</li>
+    <li>El uso de parábolas era culturalmente relevante: al utilizar entornos agrícolas y domésticos, estas historias
+        resonaban con las experiencias diarias de su audiencia en el siglo I.</li>
+    <li>Las múltiples capas de significado a menudo contenían historias superficiales que cualquiera podía comprender,
+        mientras ofrecían profundos conocimientos teológicos a quienes estaban dispuestos a reflexionarlas más a fondo.
+    </li>
+    <li>La estructura narrativa de las parábolas las hacía más fáciles de recordar y compartir que los conceptos
+        teológicos abstractos.</li>
+    <li>En lugar de imponer interpretaciones, las parábolas invitaban a los oyentes a descubrir el significado por sí
+        mismos, involucrando sus mentes y corazones en el proceso.</li>
 </ul>
 
-<link rel="stylesheet" href="../code/dialogs.css">
+<link rel="stylesheet" href="../../code/dialogs.css">
 
 <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: Arial, sans-serif;
-        }
-        th {
-            background-color:rgb(50, 58, 172);
-            color: white;
-            padding: 12px;
-            text-align: left;
-        }
-        td {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #e9f5e9;
-        }
-        .parable-name {
-            font-weight: bold;
-        }
-        h1 {
-            color:rgb(148, 30, 30);
-            text-align: center;
-        }
-        a {
-            display: inline-block;
-            white-space: nowrap;
-            max-width: 100%;
-            font-size: 0.9em; /* Optionally reduce font size for small screens */
-            color:black;
-        }
-        figcaption a {
-          text-decoration:none;
-          font-size:2em;
-          color:white;
-          background-color:black;
-          margin-top:2%;
-          padding-right:2%;
-          padding-left:2%;
-        }
-        figcaption a:hover{
-          text-decoration:underline;
-          color:royalblue;
-        }
-        .gospel{
-          display:inline-block;
-        }
-        .link-dialog p{
-          font-size:1.07em;
-        }
-        .link-dialog p:hover,.link-dialog p:focus{
-          background:black;
-          color:white;
-        }
-        .linked-text, .linked-text-img{
-          color:black;
-        }
-        .linked-text:active, .linked-text-img:active{
-          color:red;
-        }
-        .linked-text.focused, .linked-text-img.focused{
-          color:red;
-          transition: color 2s ease-out, border 2s ease-out;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 3%;
+}
+
+th {
+    background-color: rgb(50, 58, 172);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9f5e9;
+}
+
+.parable-name {
+    font-weight: bold;
+}
+
+h1 {
+    color: rgb(148, 30, 30);
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 0.9em;
+    /* Optionally reduce font size for small screens */
+    color: black;
+}
+
+figcaption a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    background-color: black;
+    margin-top: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+    color: royalblue;
+}
+
+.gospel {
+    display: inline-block;
+}
+
+.link-dialog p {
+    font-size: 1.07em;
+}
+
+.link-dialog p:hover,
+.link-dialog p:focus {
+    background: black;
+    color: white;
+}
+
+.linked-text,
+.linked-text-img {
+    color: black;
+}
+
+.linked-text:active,
+.linked-text-img:active {
+    color: red;
+}
+
+.linked-text.focused,
+.linked-text-img.focused {
+    color: red;
+    transition: color 2s ease-out, border 2s ease-out;
+}
 </style>
 </head>
+
 <body>
-    <h3 style="font-size:2em; margin:0;padding:1.3%;text-align:center;">Jesus in the Gospels</h3>
+    <h3 style="font-size:2em; margin:0;padding:1.3%;text-align:center;">Jesús en los Evangelios</h3>
     <table>
 
         <tr>
-            <th>Parable</th>
-            <th>Description</th>
-            <th>Scripture Reference <span style="float:right;margin-right:10%;">
-                <a href="https://berean.bible" title="Young's Literal Translation
-Section Headings Courtesy Berean Study Bible
-OpenBible.com" style="color:white;"><ruby>
-                [1] <rt> Bible </rt></ruby>
-                </a></span>
+        <th>Parábola</th>
+          <th>Descripción</th>
+          <th>Referencia Bíblica <span style="float:right;margin-right:10%;">
+                              <a href="https://www.vatican.va/archive/ESL0506/_INDEX.HTM" title="EL LIBRO DEL PUEBLO DE DIOS
+                                                                                                  La Biblia
+                                                                                                  (Traducción argentina)
+
+                                                                                                  1990" style="color:white;"><ruby>
+                            [1] <rt> Biblia </rt></ruby>
+                    </a></span>
             </th>
         </tr>
+<!-- https://www.vatican.va/archive/bible/index_sp.htm -->
 
-
-<?php
+        <?php
 global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
 // Not really sure why The global $Vars have to be declared outside as well as inside the function.
 function theSower(){
@@ -652,14 +686,14 @@ function parableRichFool() {
 
 function wiseAndFoolishBuilders() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'The Wise and Foolish Builders';
   $image = '../images/wiseAndFoolishBuilders.webp';
   $imageAlt = 'The Wise and Foolish Builders Parable';
   $linked_image = '../images/wiseAndFoolishBuilders.png';
   $figCaption = 'The Parable of the Wise and Foolish Builders';
   $description = 'Contrasts those who hear Jesus\' words and act on them versus those who don\'t';
-  
+
   $paragraphDialogs = [
     'Jesus told a story about two people who both built houses. One was wise, and one was foolish.',
     'The wise builder constructed his house on solid rock. He dug deep and made sure the foundation was strong.',
@@ -670,7 +704,7 @@ function wiseAndFoolishBuilders() {
     'But people who hear His words and don\'t follow them are like the foolish builder who built on sand. When problems come, everything falls apart for them.',
     'This story teaches us that it\'s not enough to just listen to what Jesus says - we need to actually do what He teaches us!'
   ];
-  
+
   $gospel = ['Matthew', 'Luke'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['matthew/7.htm#24', 'luke/6.htm#47'];
@@ -679,14 +713,14 @@ function wiseAndFoolishBuilders() {
 
 function growingSeed() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'The Growing Seed';
   $image = '../images/growingSeed.webp';
   $imageAlt = 'The Growing Seed Parable';
   $linked_image = '../images/growingSeed.png';
   $figCaption = 'The Parable of the Growing Seed';
   $description = 'Shows how God\'s kingdom grows mysteriously by God\'s power, not human effort';
-  
+
   $paragraphDialogs = [
     'Jesus told a story comparing God\'s kingdom to a man who scattered seed on the ground.',
     'Night and day, whether the man was asleep or awake, the seeds sprouted and grew. But the man had no idea how it happened!',
@@ -695,7 +729,7 @@ function growingSeed() {
     'Jesus was teaching that God\'s kingdom grows in ways we don\'t always understand. We might plant seeds by telling others about Jesus, but it\'s God who makes those seeds grow!',
     'This story shows us that we don\'t need to worry so much about making God\'s kingdom grow - that\'s God\'s job! Our job is to scatter the seeds and be ready for the harvest.'
   ];
-  
+
   $gospel = ['Mark'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['mark/4.htm#26'];
@@ -704,14 +738,14 @@ function growingSeed() {
 
 function newClothOnOldGarment() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'New Cloth on Old Garment';
   $image = '../images/newClothOnOldGarment.webp';
   $imageAlt = 'The New Cloth on Old Garment Parable';
   $linked_image = '../images/newClothOnOldGarment.png';
   $figCaption = 'The Parable of the New Cloth on Old Garment';
   $description = 'Illustrates the incompatibility of the old religious system with Jesus\' new teaching';
-  
+
   $paragraphDialogs = [
     'Jesus told a short story about clothes to help people understand something important. He asked, "Who would use a piece of new cloth to patch up an old garment?"',
     'He explained that if you did that, the new patch would shrink when you wash it. Then it would pull away from the old garment and make an even bigger tear than before!',
@@ -720,7 +754,7 @@ function newClothOnOldGarment() {
     'Jesus was saying that you can\'t just add His new teachings onto the old religious system - they wouldn\'t fit together right. His new way required a completely fresh start!',
     'This story helped people see that Jesus wasn\'t just fixing up the old way of doing things. He was bringing something totally new that would change everything!'
   ];
-  
+
   $gospel = ['Matthew', 'Mark', 'Luke'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['matthew/9.htm#16', 'mark/2.htm#21', 'luke/5.htm#36'];
@@ -729,14 +763,14 @@ function newClothOnOldGarment() {
 
 function newWineInOldWineskins() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'New Wine in Old Wineskins';
   $image = '../images/newWineInOldWineskins.webp';
   $imageAlt = 'The New Wine in Old Wineskins Parable';
   $linked_image = '../images/newWineInOldWineskins.png';
   $figCaption = 'The Parable of the New Wine in Old Wineskins';
   $description = 'Similar to the cloth parable, shows how Jesus\' message requires new structures';
-  
+
   $paragraphDialogs = [
     'Jesus told another short story about wine to help explain His ministry. He asked, "Does anyone pour new wine into old wineskins?"',
     'In those days, they used animal skins as containers for wine. When wine was new, it would still be fermenting and producing gases that would make the wineskin stretch.',
@@ -746,7 +780,7 @@ function newWineInOldWineskins() {
     'The "old wineskins" represented old religious systems and traditions that couldn\'t contain Jesus\' new way without breaking.',
     'Jesus was teaching that His message was so new and different that it needed new ways of thinking and new structures. People needed to be ready for completely new ways of relating to God!'
   ];
-  
+
   $gospel = ['Matthew', 'Mark', 'Luke'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['matthew/9.htm#17', 'mark/2.htm#22', 'luke/5.htm#37'];
@@ -755,14 +789,14 @@ function newWineInOldWineskins() {
 
 function lampOnStand() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'The Lamp on a Stand';
   $image = '../images/lampOnStand.webp';
   $imageAlt = 'The Lamp on a Stand Parable';
   $linked_image = '../images/lampOnStand.png';
   $figCaption = 'The Parable of the Lamp on a Stand';
   $description = 'Teaches that spiritual truth is meant to illuminate, not be hidden';
-  
+
   $paragraphDialogs = [
     'Jesus asked a simple question: "Do people light a lamp and then put it under a bowl or a bed? Of course not! They put it on a stand so it can give light to everyone in the house."',
     'In Jesus\' time, they used oil lamps to light their homes at night. It would be silly to light a lamp and then hide it - that would defeat the whole purpose of having a lamp!',
@@ -771,7 +805,7 @@ function lampOnStand() {
     'Jesus also said, "You are the light of the world." He wanted His followers to shine brightly for others to see, like a city on a hill that can\'t be hidden.',
     'This story reminds us that we shouldn\'t hide our faith or the things God has taught us. Instead, we should let our light shine so others can see it and give glory to God!'
   ];
-  
+
   $gospel = ['Matthew', 'Mark', 'Luke'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['matthew/5.htm#14', 'mark/4.htm#21', 'luke/8.htm#16', 'luke/11.htm#33'];
@@ -780,14 +814,14 @@ function lampOnStand() {
 
 function twoSons() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'The Two Sons';
   $image = '../images/twoSons.webp';
   $imageAlt = 'The Two Sons Parable';
   $linked_image = '../images/twoSons.png';
   $figCaption = 'The Parable of the Two Sons';
   $description = 'Contrasts obedience with mere words, showing the importance of actual repentance';
-  
+
   $paragraphDialogs = [
     'Jesus told a story about a father who had two sons. The father went to the first son and said, "Son, go and work today in the vineyard."',
     'The first son answered, "I will not." But later he changed his mind and went to work in the vineyard after all.',
@@ -797,7 +831,7 @@ function twoSons() {
     'And He compared tax collectors and prostitutes (people everyone looked down on) to the first son. These people had said "no" to God at first through their sinful lives, but then they had changed their minds and truly repented when they heard John the Baptist\'s message.',
     'Jesus was teaching that it\'s not just what we say that matters to God, but what we actually do. God cares more about true repentance and obedience than about people who just say the right religious words but don\'t follow through with their actions.'
   ];
-  
+
   $gospel = ['Matthew'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['matthew/21.htm#28'];
@@ -806,14 +840,14 @@ function twoSons() {
 
 function unjustSteward() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description, $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = 'The Unjust Steward';
   $image = '../images/unjustSteward.webp';
   $imageAlt = 'The Unjust Steward Parable';
   $linked_image = '../images/unjustSteward.png';
   $figCaption = 'The Parable of the Unjust Steward';
   $description = 'Encourages wise use of worldly resources with eternal perspective';
-  
+
   $paragraphDialogs = [
     'Jesus told a strange story about a manager (or steward) who worked for a rich man. The rich man found out that this manager was wasting his money, so he called him in and said, "What\'s this I hear about you? Give an account of your management, because you cannot be manager any longer."',
     'The manager thought to himself, "Oh no! I\'m going to lose my job! I\'m not strong enough to dig, and I\'m too proud to beg. What will I do?" Then he came up with a clever plan to make friends who would help him after he lost his job.',
@@ -824,7 +858,7 @@ function unjustSteward() {
     'Jesus then taught, "Use worldly wealth to gain friends for yourselves, so that when it is gone, you will be welcomed into eternal dwellings." He was saying we should use our money and possessions in ways that have eternal value - like helping others and advancing God\'s kingdom.',
     'Jesus ended with an important reminder: "Whoever can be trusted with very little can also be trusted with much." He taught that how we handle money shows a lot about our character, and we can\'t serve both God and money at the same time.'
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = 'https://openbible.com/ylt/';
   $gospelLinks = ['luke/16.htm#1'];
@@ -834,21 +868,21 @@ function unjustSteward() {
 function friendAtMidnight() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Friend at Midnight";
   $image = "../images/friendAtMidnight.webp";
   $imageAlt = "Illustration of a person knocking on a door at night";
   $linked_image = $image;
   $figCaption = "The Friend at Midnight";
   $description = "Teaches persistence in prayer through a story about borrowing bread at night";
-  
+
   $paragraphDialogs = [
     "In this parable, Jesus tells about a guy who had a friend come visit him late at night. The problem was, he didn't have any food to give his visitor! So he went to another friend's house at midnight to ask for some bread.",
     "The friend was already in bed with his family and didn't want to get up. But the first guy kept knocking and asking, and wouldn't stop.",
     "Finally, the friend got up and gave him what he needed - not because they were friends, but because the guy was so persistent!",
     "Jesus used this story to teach us about prayer. God isn't like the grumpy friend who doesn't want to help. But Jesus wants us to understand that we should keep praying and not give up, even when it seems like no one is listening."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/11.htm#5"];
@@ -858,14 +892,14 @@ function friendAtMidnight() {
 function barrenFigTree() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Barren Fig Tree";
   $image = "../images/barrenFigTree.webp";
   $imageAlt = "Illustration of a fig tree without fruit";
   $linked_image = $image;
   $figCaption = "The Barren Fig Tree";
   $description = "Warns about the consequences of unfruitfulness despite God's patience";
-  
+
   $paragraphDialogs = [
     "Jesus told a story about a man who had a fig tree in his garden that wasn't growing any figs. For three whole years, the man came looking for fruit but found nothing!",
     "He told his gardener to just cut it down because it was wasting space and soil.",
@@ -873,7 +907,7 @@ function barrenFigTree() {
     "This parable teaches us that God is patient with us, but He does expect us to grow and change. He gives us chances to become better and produce 'good fruit' in our lives, but His patience won't last forever.",
     "We need to use the time He gives us to grow and become better people."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/13.htm#6"];
@@ -883,14 +917,14 @@ function barrenFigTree() {
 function greatBanquet() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Great Banquet";
   $image = "../images/greatBanquet.webp";
   $imageAlt = "Illustration of a grand feast with empty seats and servants inviting new guests";
   $linked_image = $image;
   $figCaption = "The Great Banquet";
   $description = "Shows how many reject God's invitation while the unlikely are welcomed";
-  
+
   $paragraphDialogs = [
     "Jesus told about a man who planned a huge dinner party and sent out invitations to lots of people. When everything was ready, he sent his servant to tell the guests it was time to come.",
     "But they all started making excuses! One guy said he bought a field and had to go see it. Another said he bought some oxen and needed to try them out. Another said he just got married so he couldn't come.",
@@ -899,7 +933,7 @@ function greatBanquet() {
     "Jesus used this story to show how many people who should have accepted God's invitation to be part of His kingdom make excuses and miss out. So God welcomes those who society often ignores or looks down on.",
     "The point is that God's invitation is for everyone, but especially for those who recognize their need for Him."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/14.htm#15"];
@@ -909,21 +943,21 @@ function greatBanquet() {
 function buildingTowerAndKingGoingToWar() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "Building a Tower and King Going to War";
   $image = "../images/buildingTower.webp";
   $imageAlt = "Illustration of a person planning a tower and a king planning for battle";
   $linked_image = $image;
   $figCaption = "Building a Tower and King Going to War";
   $description = "Emphasizes counting the cost of discipleship before committing";
-  
+
   $paragraphDialogs = [
     "Jesus shared two short stories to make people think carefully before deciding to follow Him.",
     "First, He talked about someone who wants to build a tower. A smart builder would sit down first and figure out how much it would cost to make sure they have enough money to finish it. Otherwise, they might lay the foundation but run out of money, and everyone would laugh at them!",
     "In the second story, Jesus described a king who's about to go to war against another king. Before fighting, he needs to figure out if his 10,000 soldiers can beat the other king's 20,000 soldiers. If not, he'd better send people to ask for peace terms!",
     "Jesus used these examples to teach that following Him is a serious decision. We need to understand what it will cost us - like maybe losing friends or facing hard times - and be prepared to go all the way, not just start and then quit when things get tough."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/14.htm#28"];
@@ -933,14 +967,14 @@ function buildingTowerAndKingGoingToWar() {
 function unprofitableServants() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Unprofitable Servants";
   $image = "../images/unprofitableServants.webp";
   $imageAlt = "Illustration of servants working in a field";
   $linked_image = $image;
   $figCaption = "The Unprofitable Servants";
   $description = "Teaches humility in service, showing we only do our duty before God";
-  
+
   $paragraphDialogs = [
     "Jesus asked His followers to imagine they had a servant who worked in their fields or took care of their sheep. When that servant comes in from working all day, would the master say, 'Hey, come sit down and eat'?",
     "No way! Instead, the master would tell the servant to make dinner, serve it, and only after the master finished eating could the servant eat. And the master wouldn't thank the servant for doing these things because that's just what servants are supposed to do.",
@@ -948,7 +982,7 @@ function unprofitableServants() {
     "They should simply say, 'We are unprofitable servants; we have only done what was our duty to do.'",
     "This teaches us to be humble when we serve God and others. We shouldn't serve to get attention or praise, but because it's the right thing to do."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/17.htm#7"];
@@ -958,14 +992,14 @@ function unprofitableServants() {
 function unjustJudge() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Unjust Judge";
   $image = "../images/unjustJudge.webp";
   $imageAlt = "Illustration of a widow persistently appearing before a judge";
   $linked_image = $image;
   $figCaption = "The Unjust Judge";
   $description = "Encourages persistent prayer and faith until Jesus returns";
-  
+
   $paragraphDialogs = [
     "Jesus told this story to teach His followers to keep praying and never give up. There was a judge in a certain city who didn't care about God or what people thought about him.",
     "A widow in that city kept coming to him, asking for justice against someone who had wronged her. For a long time the judge ignored her. But she wouldn't stop asking!",
@@ -973,7 +1007,7 @@ function unjustJudge() {
     "Jesus explained that if even an unfair judge eventually helps because of persistence, how much more will God - who is perfectly good and loves us - answer His people who pray day and night?",
     "But then Jesus asked a sad question: 'When I come back, will I find people on earth who still have faith?' This reminds us to keep trusting God and praying even when it seems like He's not answering right away."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/18.htm#1"];
@@ -983,21 +1017,21 @@ function unjustJudge() {
 function blindLeadingTheBlind() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "Blind Leading the Blind";
   $image = "../images/blindLeadingBlind.webp";
   $imageAlt = "Illustration of two blind people where one is trying to lead the other";
   $linked_image = $image;
   $figCaption = "Blind Leading the Blind";
   $description = "Warns against following spiritually blind teachers";
-  
+
   $paragraphDialogs = [
     "Jesus asked a really good question: 'Can a blind person lead another blind person?' Of course not! They'd both fall into a ditch!",
     "This short parable has a simple but important message. If someone doesn't understand the truth about God themselves, they can't properly teach others about Him. It's like trying to give directions to a place you've never been.",
     "Jesus was warning people to be careful about who they listen to and learn from. Some religious teachers act like they know everything about God, but if they don't really understand God's truth, following them will lead to trouble.",
     "Jesus also taught that a student isn't better than their teacher - at best, they'll know what their teacher knows. So if we want to grow in our understanding of God, we need to make sure we're learning from people who truly know Him."
   ];
-  
+
   $gospel = ['Matthew', 'Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/15.htm#14", "luke/6.htm#39"];
@@ -1007,14 +1041,14 @@ function blindLeadingTheBlind() {
 function faithfulAndWiseServant() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Faithful and Wise Servant";
   $image = "../images/faithfulWiseServant.webp";
   $imageAlt = "Illustration of a servant managing a household while the master is away";
   $linked_image = $image;
   $figCaption = "The Faithful and Wise Servant";
   $description = "Contrasts faithful and unfaithful stewardship while waiting for the master's return";
-  
+
   $paragraphDialogs = [
     "Jesus told about a master who put a servant in charge of his household while he went away on a trip. The servant had one main job - to make sure all the other servants were fed at the right time.",
     "Jesus asked, 'Who is the faithful and wise servant that the master can trust to do this?' A good servant would be found doing his job when the master returned, and the master would reward him by giving him even more responsibility.",
@@ -1023,7 +1057,7 @@ function faithfulAndWiseServant() {
     "Jesus was teaching about how we should live while we wait for Him to return. We shouldn't get lazy or do wrong things just because Jesus hasn't come back yet.",
     "Instead, we should faithfully do what He's asked us to do, caring for others and living right, so we'll be ready whenever He returns."
   ];
-  
+
   $gospel = ['Matthew', 'Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/24.htm#45", "luke/12.htm#42"];
@@ -1033,14 +1067,14 @@ function faithfulAndWiseServant() {
 function watchfulServants() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Watchful Servants";
   $image = "../images/watchfulServants.webp";
   $imageAlt = "Illustration of servants with lamps lit waiting for their master's return";
   $linked_image = $image;
   $figCaption = "The Watchful Servants";
   $description = "Emphasizes staying alert and ready for Christ's return";
-  
+
   $paragraphDialogs = [
     "Jesus told His followers to be like servants waiting for their master to return from a wedding feast. These good servants would be dressed and ready for action, with their lamps lit even late at night. When the master knocked, they could immediately open the door.",
     "The master would be so happy with these watchful servants that he would do something amazing - he would have them sit down while he served them a meal!",
@@ -1048,7 +1082,7 @@ function watchfulServants() {
     "In another version of this teaching, Jesus described a man going on a journey who puts his servants in charge of his house, giving each one a job to do. The doorkeeper especially needs to stay awake and watch because no one knows when the master will return - evening, midnight, when the rooster crows, or at dawn.",
     "Jesus was teaching us to live in a way that we'd be happy for Him to find us at any moment - not doing wrong things or being lazy, but actively doing what He's asked us to do."
   ];
-  
+
   $gospel = ['Mark', 'Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["mark/13.htm#34", "luke/12.htm#35"];
@@ -1058,14 +1092,14 @@ function watchfulServants() {
 function childrenInTheMarketplace() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "Children in the Marketplace";
   $image = "../images/childrenMarketplace.webp";
   $imageAlt = "Illustration of children playing in a marketplace while others refuse to join";
   $linked_image = $image;
   $figCaption = "Children in the Marketplace";
   $description = "Illustrates the inconsistent criticism Jesus and John the Baptist received";
-  
+
   $paragraphDialogs = [
     "Jesus noticed how people were never satisfied with God's messengers, no matter what they did. He compared them to kids sitting in the marketplace calling out to other kids: 'We played wedding music for you, but you wouldn't dance! We played funeral music, but you wouldn't cry!'",
     "Then Jesus explained what He meant. John the Baptist came living super strictly - not drinking wine and barely eating - and people said, 'He's crazy! He has a demon!'",
@@ -1073,7 +1107,7 @@ function childrenInTheMarketplace() {
     "Jesus was pointing out how some people were just determined to find fault no matter what. These critics weren't being honest or fair - they just didn't want to listen to God's message, so they made excuses about the messengers.",
     "But Jesus said that wisdom is proved right by its results - both His way and John's way were part of God's plan and produced good fruit in the lives of those who actually listened."
   ];
-  
+
   $gospel = ['Matthew', 'Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/11.htm#16", "luke/7.htm#31"];
@@ -1083,14 +1117,14 @@ function childrenInTheMarketplace() {
 function speckAndLog() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Speck and the Log";
   $image = "../images/speckAndLog.webp";
   $imageAlt = "Illustration of a person with a log in their eye trying to remove a speck from another's eye";
   $linked_image = $image;
   $figCaption = "The Speck and the Log";
   $description = "Warns against hypocritical judgment of others";
-  
+
   $paragraphDialogs = [
     "Jesus used a funny picture to teach about judging others. He asked, 'Why do you notice the tiny speck of sawdust in your friend's eye, but completely ignore the massive log sticking out of your own eye?'",
     "Imagine trying to help someone get a tiny dust particle out of their eye when you have a huge wooden beam sticking out of yours!",
@@ -1099,7 +1133,7 @@ function speckAndLog() {
     "This doesn't mean we should never help others improve - it means we need to be honest about our own faults first. We should deal with our own mistakes before pointing fingers at everyone else.",
     "Jesus wants us to help each other grow, but with humility and self-awareness, not with a judgmental attitude."
   ];
-  
+
   $gospel = ['Matthew', 'Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/7.htm#3", "luke/6.htm#41"];
@@ -1109,14 +1143,14 @@ function speckAndLog() {
 function fishNet() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Fish Net";
   $image = "../images/fishNet.webp";
   $imageAlt = "Illustration of fishermen sorting good fish from bad after a catch";
   $linked_image = $image;
   $figCaption = "The Fish Net";
   $description = "Describes the final separation of the righteous and wicked";
-  
+
   $paragraphDialogs = [
     "Jesus said God's kingdom is like a huge fishing net that was thrown into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore.",
     "Then they sat down and sorted the good fish into containers, but threw the bad ones away.",
@@ -1124,7 +1158,7 @@ function fishNet() {
     "This parable teaches that right now, both people who truly follow God and people who don't are mixed together in the world - just like different kinds of fish in the same net. But a time is coming when God will sort everyone out.",
     "It's a serious reminder that our choices now about whether to follow Jesus or not have big consequences for our future. Jesus wants everyone to be counted among the 'good fish' by believing in Him and living according to His teachings."
   ];
-  
+
   $gospel = ['Matthew'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/13.htm#47"];
@@ -1134,14 +1168,14 @@ function fishNet() {
 function householder() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Householder";
   $image = "../images/householder.webp";
   $imageAlt = "Illustration of a homeowner bringing out treasures from storage";
   $linked_image = $image;
   $figCaption = "The Householder";
   $description = "Compares a teacher of scripture to a homeowner bringing out treasures old and new";
-  
+
   $paragraphDialogs = [
     "After teaching several parables about God's kingdom, Jesus asked His disciples if they understood everything He said. When they answered yes, He gave them one more short comparison.",
     "He said that every teacher of religious law who has become a disciple in the kingdom of heaven is like the owner of a house who brings out of his storeroom new treasures as well as old.",
@@ -1150,7 +1184,7 @@ function householder() {
     "Jesus was telling His disciples that they should use both the treasured wisdom from the Old Testament scriptures AND the new teachings He was giving them. Both are valuable!",
     "This teaches us that we should appreciate traditional wisdom while also being open to fresh insights about God's truth."
   ];
-  
+
   $gospel = ['Matthew'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["matthew/13.htm#52"];
@@ -1160,14 +1194,14 @@ function householder() {
 function dishonestManager() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Dishonest Manager";
   $image = "../images/dishonestManager.webp";
   $imageAlt = "Illustration of a manager reducing debts owed to his master";
   $linked_image = $image;
   $figCaption = "The Dishonest Manager";
   $description = "Teaches shrewd use of worldly resources for eternal purposes";
-  
+
   $paragraphDialogs = [
     "Jesus told one of His most surprising stories about a manager who was about to get fired for wasting his rich employer's money.",
     "Realizing he'd soon be unemployed, the manager quickly called in people who owed his master money and reduced their debts - cutting one bill from 800 gallons of olive oil to 400, and another from 1,000 bushels of wheat to 800. He did this so these people would welcome him into their homes after he lost his job.",
@@ -1176,7 +1210,7 @@ function dishonestManager() {
     "Then Jesus gave the real lesson: we should use our money ('worldly wealth') to help others and make friends, so that when earthly money is gone, these people will welcome us into 'eternal dwellings' (heaven).",
     "Jesus was teaching that we should be at least as clever about using our resources for eternal purposes as dishonest people are about using money for their temporary benefit on earth."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/16.htm#1"];
@@ -1186,14 +1220,14 @@ function dishonestManager() {
 function goodShepherd() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Good Shepherd";
   $image = "../images/goodShepherd.webp";
   $imageAlt = "Illustration of a shepherd protecting his sheep";
   $linked_image = $image;
   $figCaption = "The Good Shepherd";
   $description = "Depicts Jesus as the shepherd who knows, protects, and lays down his life for his sheep";
-  
+
   $paragraphDialogs = [
     "Jesus described Himself as the Good Shepherd who truly cares for His sheep. Unlike a hired worker who runs away when wolves come because the sheep don't really belong to him, Jesus actually lays down His life to protect His sheep.",
     "He explained that He knows His sheep personally, and they know His voice. When He calls, they follow Him because they recognize and trust Him, but they run from strangers whose voices they don't know.",
@@ -1202,7 +1236,7 @@ function goodShepherd() {
     "This beautiful word picture teaches us that Jesus loves us personally, protects us, guides us, and made the ultimate sacrifice for us.",
     "It also shows that Jesus is not just a good person or teacher - He claimed the authority to lay down His life and take it up again, something only God could do."
   ];
-  
+
   $gospel = ['John'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["john/10.htm#1"];
@@ -1212,14 +1246,14 @@ function goodShepherd() {
 function vineAndBranches() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Vine and the Branches";
   $image = "../images/vineAndBranches.webp";
   $imageAlt = "Illustration of a grapevine with branches bearing fruit";
   $linked_image = $image;
   $figCaption = "The Vine and the Branches";
   $description = "Illustrates the necessity of remaining connected to Jesus to bear spiritual fruit";
-  
+
   $paragraphDialogs = [
     "Jesus used a picture that His followers would easily understand - a grapevine. He said, 'I am the true vine, and my Father is the gardener.' He explained that God removes branches that don't bear fruit, but prunes (cuts back) the fruitful ones so they'll produce even more.",
     "Then Jesus told His disciples the most important part: 'Remain in me, and I will remain in you. No branch can bear fruit by itself; it must remain in the vine.' Just like a branch can't grow grapes if it's cut off from the vine, we can't live truly good and meaningful lives if we're disconnected from Jesus.",
@@ -1227,7 +1261,7 @@ function vineAndBranches() {
     "But He gave an amazing promise too: if we stay connected to Him and His words stay in us, we can ask whatever we wish, and it will be done for us!",
     "The 'fruit' Jesus talked about includes things like love, joy, peace, patience, and kindness - the good qualities that naturally grow in our lives when we stay close to Him."
   ];
-  
+
   $gospel = ['John'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["john/15.htm#1"];
@@ -1237,14 +1271,14 @@ function vineAndBranches() {
 function masterAndServant() {
   global $title, $image, $imageAlt, $linked_image, $figCaption, $description;
   global $paragraphDialogs, $gospel, $gLP, $gospelLinks, $passage;
-  
+
   $title = "The Master and Servant";
   $image = "../images/masterAndServant.webp";
   $imageAlt = "Illustration of a servant working in a field then serving his master at the table";
   $linked_image = $image;
   $figCaption = "The Master and Servant";
   $description = "Shows the proper relationship between God and his servants";
-  
+
   $paragraphDialogs = [
     "Jesus asked His disciples to imagine they owned a servant who had been plowing fields or taking care of sheep all day. When that servant came in from the fields, would any master say, 'Come and sit down to eat'?",
     "No way! Instead, the master would say, 'Make my dinner, serve me while I eat and drink, and afterward you can eat and drink.' And the master wouldn't thank the servant for just doing what he was supposed to do.",
@@ -1252,7 +1286,7 @@ function masterAndServant() {
     "This parable teaches us humility in our relationship with God. We shouldn't serve God expecting special praise or thinking we deserve rewards. Everything we have already comes from God, so when we serve Him, we're just doing what we ought to do.",
     "This doesn't mean God doesn't appreciate our service - other teachings show that He does reward faithfulness. But it reminds us that our attitude should be humble gratitude for the privilege of serving Him, not pride or a feeling that God owes us something."
   ];
-  
+
   $gospel = ['Luke'];
   $gLP = "https://openbible.com/ylt/";
   $gospelLinks = ["luke/17.htm#7"];
@@ -1268,203 +1302,209 @@ foreach ($parableFunctions as $functionTableRow) {
     /*The code below is the Main Table row the loop will iterate over each function*/
     ?>
         <tr>
-            <div class="multi-link-container-img" >
-              <td><span tabindex="0" class="linked-text-img" ><?= $title; ?></span></td>
-                <div class="image-dialog" >
-                  <figure>
-                      <img src="<?= $image; ?>" alt="<?= $imageAlt; ?>">
-                      <figcaption><a href="<?= $linked_image; ?>"><?= $figCaption; ?></a></figcaption>
-                  </figure>
+            <div class="multi-link-container-img">
+                <td><span tabindex="0" class="linked-text-img"><?= $title; ?></span></td>
+                <div class="image-dialog">
+                    <figure>
+                        <img src="<?= $image; ?>" alt="<?= $imageAlt; ?>">
+                        <figcaption><a href="<?= $linked_image; ?>"><?= $figCaption; ?></a></figcaption>
+                    </figure>
                 </div>
             </div>
-              <td>
-            <div class="multi-link-container">
-              <span tabindex="0" class="linked-text"><?= $description; ?></span>
-              <div class="link-dialog">
-                <?php foreach ($paragraphDialogs as $index ) {
+            <td>
+                <div class="multi-link-container">
+                    <span tabindex="0" class="linked-text"><?= $description; ?></span>
+                    <div class="link-dialog">
+                        <?php foreach ($paragraphDialogs as $index ) {
                   echo '<p tabindex="0">'.$index.'</p>';
                 }
                 ?>
+                    </div>
                 </div>
-            </div>
             </td>
             <td>
-            <?php foreach ($gospel as $index => $text): ?>
-              <div class="gospel"><?= $text ?> <a href="<?= $gLP . $gospelLinks[$index] ?>" target="_blank"><?= $passage[$index] ?></a></div>
-            <?php endforeach; ?>
+                <?php foreach ($gospel as $index => $text): ?>
+                <div class="gospel"><?= $text ?> <a href="<?= $gLP . $gospelLinks[$index] ?>"
+                        target="_blank"><?= $passage[$index] ?></a></div>
+                <?php endforeach; ?>
             </td>
         </tr>
         <?php
         }
         ?>
         <script>
-document.querySelectorAll('.linked-text, .linked-text-img').forEach(el => {
-    el.addEventListener('focus', () => {
-        el.classList.add('focused');
-    });
-    el.addEventListener('blur', () => {
-        setTimeout(() => {
-            el.classList.remove('focused');
-        }, 2000); // Keeps the focus effect for 5 seconds
-    });
-});</script>
-
-
-
-<!-- This is the script for the Image and Text Dialog Links -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const multiLinkContainers = document.querySelectorAll('.multi-link-container');
-    const linkedTexts = document.querySelectorAll('.linked-text');
-    const linkDialogs = document.querySelectorAll('.link-dialog');
-
-    const imageDialogs = document.querySelectorAll('.image-dialog');
-    const linkedTextsImg = document.querySelectorAll('.linked-text-img');
-
-    let currentlyOpenDialog = null; // This will track ANY open dialog (image or text)
-    let currentlyOpenTextLink = null; // Track the clicked text link
-
-    // --- Text Dialogs ---
-    linkedTexts.forEach((linkedTextElement) => {
-      const correspondingDialog = linkedTextElement.nextElementSibling;
-      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
-        linkedTextElement.addEventListener('click', (event) => {
-          event.stopPropagation();
-          if (currentlyOpenDialog === correspondingDialog) {
-            // Close if re-clicked
-            closeAnyOpenDialogs();
-          } else {
-            closeAnyOpenDialogs();
-            correspondingDialog.classList.add('visible');
-            currentlyOpenDialog = correspondingDialog;
-            currentlyOpenTextLink = linkedTextElement;
-          }
+        document.querySelectorAll('.linked-text, .linked-text-img').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.classList.add('focused');
+            });
+            el.addEventListener('blur', () => {
+                setTimeout(() => {
+                    el.classList.remove('focused');
+                }, 2000); // Keeps the focus effect for 5 seconds
+            });
         });
-      }
-    });
+        </script>
 
-    // --- Image Dialogs ---
-    linkedTextsImg.forEach((linkedText, index) => {
-      const imageDialog = imageDialogs[index];
-      if (linkedText && imageDialog) {
-        linkedText.addEventListener('click', (event) => {
-          event.stopPropagation();
-          closeAnyOpenDialogs();
-          imageDialog.classList.add('visible');
-          currentlyOpenDialog = imageDialog;
-        });
-      }
-    });
 
-    // --- Close Any Open Dialogs ---
-    function closeAnyOpenDialogs() {
-      if (currentlyOpenDialog) {
-        currentlyOpenDialog.classList.remove('visible');
-        currentlyOpenDialog = null;
-        currentlyOpenTextLink = null;
-      }
-      // Hide all image dialogs
-      imageDialogs.forEach(dialog => dialog.classList.remove('visible'));
-      // Hide all text dialogs
-      linkDialogs.forEach(dialog => dialog.classList.remove('visible'));
-    }
 
-    // --- Global Click Handler ---
-    document.addEventListener('click', (event) => {
-      if (currentlyOpenDialog &&
-          !currentlyOpenDialog.contains(event.target) &&
-          event.target !== currentlyOpenTextLink) { // Prevent closing on the text link
-        closeAnyOpenDialogs();
-      }
-    });
+        <!-- This is the script for the Image and Text Dialog Links -->
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const multiLinkContainers = document.querySelectorAll('.multi-link-container');
+            const linkedTexts = document.querySelectorAll('.linked-text');
+            const linkDialogs = document.querySelectorAll('.link-dialog');
 
-    // --- Escape Key Handler ---
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && currentlyOpenDialog) {
-        closeAnyOpenDialogs();
-      }
-    });
+            const imageDialogs = document.querySelectorAll('.image-dialog');
+            const linkedTextsImg = document.querySelectorAll('.linked-text-img');
 
-    // --- Image Dialog Click Handler ---
-    imageDialogs.forEach(dialog => {
-      dialog.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent conflict with the document click handler
-        closeAnyOpenDialogs(); // Close on click inside
-      });
-    });
-  });
-</script>
+            let currentlyOpenDialog = null; // This will track ANY open dialog (image or text)
+            let currentlyOpenTextLink = null; // Track the clicked text link
 
-<!-- This is the script for the Image and Text Dialog Links -->
- <!-- Place this script after your current dialog JS, before </body> -->
-<script>
-  // Create the backdrop element if it doesn't exist
-  let backdrop = document.getElementById('dialogBackdrop');
-  if (!backdrop) {
-    backdrop = document.createElement('div');
-    backdrop.className = 'dialog-backdrop';
-    backdrop.id = 'dialogBackdrop';
-    document.body.appendChild(backdrop);
-  }
+            // --- Text Dialogs ---
+            linkedTexts.forEach((linkedTextElement) => {
+                const correspondingDialog = linkedTextElement.nextElementSibling;
+                if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
+                    linkedTextElement.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        if (currentlyOpenDialog === correspondingDialog) {
+                            // Close if re-clicked
+                            closeAnyOpenDialogs();
+                        } else {
+                            closeAnyOpenDialogs();
+                            correspondingDialog.classList.add('visible');
+                            currentlyOpenDialog = correspondingDialog;
+                            currentlyOpenTextLink = linkedTextElement;
+                        }
+                    });
+                }
+            });
 
-  // Helper to show/hide backdrop
-  function showDialogBackdrop() {
-    backdrop.classList.add('active');
-  }
-  function hideDialogBackdrop() {
-    backdrop.classList.remove('active');
-  }
+            // --- Image Dialogs ---
+            linkedTextsImg.forEach((linkedText, index) => {
+                const imageDialog = imageDialogs[index];
+                if (linkedText && imageDialog) {
+                    linkedText.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        closeAnyOpenDialogs();
+                        imageDialog.classList.add('visible');
+                        currentlyOpenDialog = imageDialog;
+                    });
+                }
+            });
 
-  // Patch your dialog logic to show/hide the backdrop
-  // You likely have something like this already:
-  document.addEventListener('DOMContentLoaded', () => {
-    const linkDialogs = document.querySelectorAll('.link-dialog');
-    const linkedTexts = document.querySelectorAll('.linked-text');
-    let currentlyOpenDialog = null;
-    let currentlyOpenTextLink = null;
-
-    linkedTexts.forEach((linkedTextElement) => {
-      const correspondingDialog = linkedTextElement.nextElementSibling;
-      if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
-        linkedTextElement.addEventListener('click', (event) => {
-          event.stopPropagation();
-          if (currentlyOpenDialog === correspondingDialog) {
-            // Close if re-clicked
-            correspondingDialog.classList.remove('visible');
-            currentlyOpenDialog = null;
-            currentlyOpenTextLink = null;
-            hideDialogBackdrop();
-          } else {
-            if (currentlyOpenDialog) {
-              currentlyOpenDialog.classList.remove('visible');
+            // --- Close Any Open Dialogs ---
+            function closeAnyOpenDialogs() {
+                if (currentlyOpenDialog) {
+                    currentlyOpenDialog.classList.remove('visible');
+                    currentlyOpenDialog = null;
+                    currentlyOpenTextLink = null;
+                }
+                // Hide all image dialogs
+                imageDialogs.forEach(dialog => dialog.classList.remove('visible'));
+                // Hide all text dialogs
+                linkDialogs.forEach(dialog => dialog.classList.remove('visible'));
             }
-            correspondingDialog.classList.add('visible');
-            currentlyOpenDialog = correspondingDialog;
-            currentlyOpenTextLink = linkedTextElement;
-            showDialogBackdrop();
-          }
+
+            // --- Global Click Handler ---
+            document.addEventListener('click', (event) => {
+                if (currentlyOpenDialog &&
+                    !currentlyOpenDialog.contains(event.target) &&
+                    event.target !== currentlyOpenTextLink) { // Prevent closing on the text link
+                    closeAnyOpenDialogs();
+                }
+            });
+
+            // --- Escape Key Handler ---
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && currentlyOpenDialog) {
+                    closeAnyOpenDialogs();
+                }
+            });
+
+            // --- Image Dialog Click Handler ---
+            imageDialogs.forEach(dialog => {
+                dialog.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent conflict with the document click handler
+                    closeAnyOpenDialogs(); // Close on click inside
+                });
+            });
         });
-      }
-    });
+        </script>
 
-    // Clicking backdrop closes dialog
-    backdrop.addEventListener('click', () => {
-      if (currentlyOpenDialog) {
-        currentlyOpenDialog.classList.remove('visible');
-        currentlyOpenDialog = null;
-        currentlyOpenTextLink = null;
-      }
-      hideDialogBackdrop();
-    });
+        <!-- This is the script for the Image and Text Dialog Links -->
+        <!-- Place this script after your current dialog JS, before </body> -->
+        <script>
+        // Create the backdrop element if it doesn't exist
+        let backdrop = document.getElementById('dialogBackdrop');
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.className = 'dialog-backdrop';
+            backdrop.id = 'dialogBackdrop';
+            document.body.appendChild(backdrop);
+        }
 
-    // Escape key closes dialog
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && currentlyOpenDialog) {
-        currentlyOpenDialog.classList.remove('visible');
-        currentlyOpenDialog = null;
-        currentlyOpenTextLink = null;
-        hideDialogBackdrop();
-      }
-    });
-  });
-</script>
+        // Helper to show/hide backdrop
+        function showDialogBackdrop() {
+            backdrop.classList.add('active');
+        }
+
+        function hideDialogBackdrop() {
+            backdrop.classList.remove('active');
+        }
+
+        // Patch your dialog logic to show/hide the backdrop
+        // You likely have something like this already:
+        document.addEventListener('DOMContentLoaded', () => {
+            const linkDialogs = document.querySelectorAll('.link-dialog');
+            const linkedTexts = document.querySelectorAll('.linked-text');
+            let currentlyOpenDialog = null;
+            let currentlyOpenTextLink = null;
+
+            linkedTexts.forEach((linkedTextElement) => {
+                const correspondingDialog = linkedTextElement.nextElementSibling;
+                if (correspondingDialog && correspondingDialog.classList.contains('link-dialog')) {
+                    linkedTextElement.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        if (currentlyOpenDialog === correspondingDialog) {
+                            // Close if re-clicked
+                            correspondingDialog.classList.remove('visible');
+                            currentlyOpenDialog = null;
+                            currentlyOpenTextLink = null;
+                            hideDialogBackdrop();
+                        } else {
+                            if (currentlyOpenDialog) {
+                                currentlyOpenDialog.classList.remove('visible');
+                            }
+                            correspondingDialog.classList.add('visible');
+                            currentlyOpenDialog = correspondingDialog;
+                            currentlyOpenTextLink = linkedTextElement;
+                            showDialogBackdrop();
+                        }
+                    });
+                }
+            });
+
+            // Clicking backdrop closes dialog
+            backdrop.addEventListener('click', () => {
+                if (currentlyOpenDialog) {
+                    currentlyOpenDialog.classList.remove('visible');
+                    currentlyOpenDialog = null;
+                    currentlyOpenTextLink = null;
+                }
+                hideDialogBackdrop();
+            });
+
+            // Escape key closes dialog
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && currentlyOpenDialog) {
+                    currentlyOpenDialog.classList.remove('visible');
+                    currentlyOpenDialog = null;
+                    currentlyOpenTextLink = null;
+                    hideDialogBackdrop();
+                }
+            });
+        });
+        </script>
+        <?php
+}
+?>

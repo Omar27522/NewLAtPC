@@ -4,7 +4,8 @@
         "/jesusChrist" => "/jesucristo",
         //"/jesucristo/" => "/jesusChrist/"
         "/services" => "/servicios",
-        "/hardware" => "/hardware"
+        "/hardware" => "/hardware",
+        "/jesusChrist/parables"=> "/jesucristo/parabolas"
     ];
 
 $var = isset($routes[$uri]) ? $routes[$uri] : "español/";
