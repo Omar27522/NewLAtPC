@@ -5,7 +5,7 @@ function is_spanish(){
     $css = '<link rel="stylesheet" href="'.$dir.'code/style.css">
             <link rel="stylesheet" href="'.$dir.'code/logo.css">
             <link rel="stylesheet" href="'.$dir.'code/terwanpop.css">';
-    $crumbs = '<a href="'.$dir.'servicios">Servicio</a>&nbsp;<a href="./partes">Partes</a>&nbsp;<a href="./programas/">Software</a>';
+    $crumbs = '<a href="'.$dir.'servicios">Servicio</a>&nbsp;<a href="'.$dir.'partes">Partes</a>&nbsp;<a href="'.$dir.'programas">Software</a>';
 
     $logo = '<div class="logos"><span>LA</span>tinos<span>PC</span>.com
                 <small class="rtl">PC por Computadora Personal</small></div>';
