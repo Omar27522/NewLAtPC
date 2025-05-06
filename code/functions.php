@@ -5,7 +5,7 @@ function is_english(){
     $css = '<link rel="stylesheet" href="'.$dir.'code/style.css">
             <link rel="stylesheet" href="'.$dir.'code/logo.css">
             <link rel="stylesheet" href="'.$dir.'code/terwanpop.css">';
-    $crumbs = '<a href="'.$dir.'services">Service</a>&nbsp;<a href="'.$dir.'parts">Parts</a>&nbsp;<a href="'.$dir.'programs/">Software</a>';
+    $crumbs = '<a href="'.$dir.'services">Service</a>&nbsp;<a href="'.$dir.'parts">Parts</a>&nbsp;<a href="'.$dir.'programs">Software</a>';
 
    /* $logo = '<img src="banner2.webp" class="logos">
                 <small>PC is for Personal Computer</small>';*/
