@@ -8,6 +8,9 @@ const speedDisplay = document.getElementById('speedDisplay');
 const baseSpeed = 1; // 100% at start
 const factDisplay = document.getElementById('factDisplay');
 
+// Track the highest score achieved
+let highestScore = 0;
+
 // Player properties
 const player = {
         width: 100,
@@ -570,6 +573,12 @@ let correctAnswerIndex = 0;
 let tagClickable = false;
 let currentTagHitbox = null;
 
+// Mouse tracking for hover effects
+let lastMouseX = 0;
+let lastMouseY = 0;
+let isMouseDown = false;
+let frameCount = 0; // For throttling debug logs
+
 function checkCollisions() {
         for (let i = 0; i < fallingTags.length; i++) {
                 const tag = fallingTags[i];
@@ -582,6 +591,12 @@ function checkCollisions() {
                         if (tag.good) {
                                 // Good tag collected
                                 score += 1;
+                                
+                                // Update highest score if current score is higher
+                                if (score > highestScore) {
+                                    highestScore = score;
+                                }
+                                
                                 scoreDisplay.textContent = 'Score: ' + score;
 
                                 // Always update the last tag saved regardless of level
@@ -630,7 +645,8 @@ function endGame(message) {
         gameActive = false;
         clearInterval(tagInterval);
         cancelAnimationFrame(animationId);
-        startBtn.disabled = false;
+        // Keep the start button disabled during the outro sequence
+        startBtn.disabled = true;
 
         // Create a custom message that includes the last tag saved info
         let customMessage = 'Error ➡️ "The code is broken!"';
@@ -655,6 +671,7 @@ function drawOutro(msg) {
         const tagSpeed = 2; // Speed of tag falling
         let tagBounce = 0; // For bounce effect
         let tagBounceDir = 1; // Direction of bounce
+        let isHovered = false; // Track hover state
 
         // Reset quiz state at the start
         showQuiz = false;
@@ -671,6 +688,22 @@ function drawOutro(msg) {
         
         // Reset the global hitbox
         currentTagHitbox = null;
+        
+        // Make sure the start button stays disabled during the outro
+        startBtn.disabled = true;
+        
+        // Function to check if mouse is hovering over the tag
+        function checkHover() {
+            if (!tagClickable || showQuiz) return false;
+            
+            const tagWidth = 110;
+            const tagHeight = 32;
+            const tagX = canvas.width / 2 - tagWidth / 2;
+            const tagY2 = tagY - tagHeight / 2;
+            
+            return lastMouseX >= tagX && lastMouseX <= tagX + tagWidth &&
+                   lastMouseY >= tagY2 && lastMouseY <= tagY2 + tagHeight;
+        }
 
         function drawComputer() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -691,15 +724,15 @@ function drawOutro(msg) {
                                         tagClickable = true;
                                         
                                         // Force a redraw of the hitbox
-                                        const tagWidth = 110;
-                                        const tagHeight = 32;
-                                        currentTagHitbox = {
-                                                x: canvas.width/2 - tagWidth/2,
-                                                y: tagY - tagHeight/2,
-                                                width: tagWidth,
-                                                height: tagHeight
-                                        };
-                                        console.log('Updated global hitbox:', currentTagHitbox);
+                                const tagWidth = 110;
+                                const tagHeight = 32;
+                                currentTagHitbox = {
+                                        x: canvas.width/2 - tagWidth/2,
+                                        y: tagY - tagHeight/2,
+                                        width: tagWidth,
+                                        height: tagHeight
+                                };
+                                console.log('Updated global hitbox:', currentTagHitbox);
                                 }
                         }
 
@@ -707,30 +740,91 @@ function drawOutro(msg) {
                         const tagWidth = 110;
                         const tagHeight = 32;
 
-                        // Update hitbox for click detection
-                        tagHitbox = {
-                                x: canvas.width / 2 - tagWidth / 2,
-                                y: tagY - tagHeight / 2,
-                                width: tagWidth,
-                                height: tagHeight
-                        };
-
-                        // Update the global hitbox for the click handler
-                        currentTagHitbox = tagHitbox;
+                        // Only update hitbox if tag has reached its target position
+                        if (tagY >= tagTargetY - 5) {
+                                // Make tag clickable
+                                tagClickable = true;
+                                
+                                // Update hitbox for click detection
+                                const tagX = canvas.width / 2 - tagWidth / 2;
+                                const tagY2 = tagY - tagHeight / 2;
+                                
+                                tagHitbox = {
+                                        x: tagX,
+                                        y: tagY2,
+                                        width: tagWidth,
+                                        height: tagHeight
+                                };
+        
+                                // Always update the global hitbox for the click handler
+                                // This is critical for click detection
+                                currentTagHitbox = {
+                                        x: tagX,
+                                        y: tagY2,
+                                        width: tagWidth,
+                                        height: tagHeight
+                                };
+                                
+                                // Check if mouse is over the tag (for hover effect)
+                                isHovered = lastMouseX >= tagX && lastMouseX <= tagX + tagWidth &&
+                                           lastMouseY >= tagY2 && lastMouseY <= tagY2 + tagHeight;
+                                
+                                // Debug info
+                                if (frameCount % 60 === 0) { // Only log once per second
+                                    console.log('Mouse position:', { x: lastMouseX, y: lastMouseY });
+                                    console.log('Tag position:', currentTagHitbox);
+                                    console.log('Is hovered:', isHovered);
+                                    console.log('Is mouse down:', isMouseDown);
+                                }
+                        }
 
                         ctx.save();
                         ctx.globalAlpha = Math.min(opacity, 1);
 
-                        // Highlight tag if clickable
+                        // Variables for hover and click effects
+                        let isPressed = false;
+                        
+                        // Check if mouse is hovering over the tag
                         if (tagClickable && !showQuiz) {
-                                ctx.fillStyle = 'aquamarine';
-                                ctx.strokeStyle = '#ff9900'; // Orange highlight
-                                ctx.lineWidth = 3;
-
-                                // Add glow effect
-                                ctx.shadowColor = '#ff9900';
-                                ctx.shadowBlur = 10;
+                                // Use the current mouse position for hover detection
+                                // isHovered is now calculated earlier in the code for better responsiveness
+                                
+                                // Check if mouse is pressed down on tag
+                                isPressed = isHovered && isMouseDown;
+                                
+                                // For debugging - draw a small dot at the mouse position
+                                ctx.save();
+                                ctx.fillStyle = isHovered ? 'red' : 'blue';
+                                ctx.beginPath();
+                                ctx.arc(lastMouseX, lastMouseY, 3, 0, Math.PI * 2);
+                                ctx.fill();
+                                ctx.restore();
+                                
+                                // Apply visual styles based on state
+                                if (isPressed) {
+                                        // Pressed state - darker color, inset shadow
+                                        ctx.fillStyle = '#7fffd4'; // Darker aquamarine
+                                        ctx.strokeStyle = '#e08800'; // Darker orange
+                                        ctx.lineWidth = 3;
+                                        ctx.shadowColor = '#e08800';
+                                        ctx.shadowBlur = 5;
+                                } else if (isHovered) {
+                                        // Hover state - brighter glow
+                                        ctx.fillStyle = 'aquamarine';
+                                        ctx.strokeStyle = '#ffaa00'; // Brighter orange
+                                        ctx.lineWidth = 3;
+                                        ctx.shadowColor = '#ffaa00';
+                                        ctx.shadowBlur = 15;
+                                } else {
+                                        // Normal clickable state
+                                        ctx.fillStyle = 'aquamarine';
+                                        ctx.strokeStyle = '#ff9900'; // Orange highlight
+                                        ctx.lineWidth = 3;
+                                        ctx.shadowColor = '#ff9900';
+                                        ctx.shadowBlur = 10;
+                                }
                         } else {
+                                // Not clickable state
                                 ctx.fillStyle = 'aquamarine';
                                 ctx.strokeStyle = '#3366ff';
                                 ctx.lineWidth = 2;
@@ -738,9 +832,23 @@ function drawOutro(msg) {
 
                         ctx.beginPath();
 
-                        // Apply bounce effect to scale
-                        const scale = 1 + Math.max(0, tagBounce * 0.1);
-                        ctx.translate(canvas.width / 2, tagY);
+                        // Apply bounce effect to scale and add button-like transform when pressed
+                        let scale = 1 + Math.max(0, tagBounce * 0.1);
+                        
+                        // If the tag is pressed, make it look like it's being pushed down
+                        if (isPressed) {
+                            // Smaller scale and slight y-offset for pressed effect
+                            scale = scale * 0.95;
+                            ctx.translate(canvas.width / 2, tagY + 2); // Move down slightly
+                        } else if (isHovered) {
+                            // Slightly larger scale for hover effect
+                            scale = scale * 1.05;
+                            ctx.translate(canvas.width / 2, tagY);
+                        } else {
+                            // Normal position
+                            ctx.translate(canvas.width / 2, tagY);
+                        }
+                        
                         ctx.scale(scale, scale);
 
                         ctx.roundRect(-tagWidth / 2, -tagHeight / 2, tagWidth, tagHeight, 8);
@@ -782,6 +890,12 @@ function drawOutro(msg) {
         }
 
         function animateOutro() {
+                // Increment frame counter for debug logging
+                frameCount++;
+                
+                // Check for hover state on each frame
+                isHovered = checkHover();
+                
                 drawComputer();
 
                 // Draw quiz if active
@@ -795,23 +909,20 @@ function drawOutro(msg) {
                         ctx.font = 'bold 28px monospace';
                         ctx.textAlign = 'center';
                         ctx.fillText(msg.substring(0, charsToShow), canvas.width / 2, canvas.height / 2 - 18);
-
-                        // Draw a button instead of relying on tag clicks
-                        if (opacity >= 0.9) {
-                                // Draw button
-                                ctx.fillStyle = '#ff9900';
-                                ctx.strokeStyle = '#ffffff';
-                                ctx.lineWidth = 2;
-                                ctx.beginPath();
-                                ctx.roundRect(canvas.width / 2 - 100, canvas.height / 2 + 100, 200, 40, 8);
-                                ctx.fill();
-                                ctx.stroke();
-                                
-                                // Button text
-                                ctx.fillStyle = '#ffffff';
+                        
+                        // Add hint text to click the tag if it's clickable
+                        if (opacity >= 0.9 && tagClickable) {
+                                // Use different color based on hover state
+                                ctx.fillStyle = isHovered ? '#ffaa00' : '#ff9900';
                                 ctx.font = 'bold 16px monospace';
                                 ctx.textAlign = 'center';
-                                ctx.fillText('Take a Quiz for 2nd Chance!', canvas.width / 2, canvas.height / 2 + 125);
+                                ctx.fillText('Click the tag for a second chance!', canvas.width / 2, canvas.height / 2 + 125);
+                                
+                                // Debug hover state
+                                if (frameCount % 30 === 0) {
+                                    console.log('Hover state:', isHovered);
+                                    console.log('Mouse position:', { x: lastMouseX, y: lastMouseY });
+                                }
                         }
 
                         // Show the score at the bottom
@@ -826,50 +937,216 @@ function drawOutro(msg) {
 
                 if (opacity < maxOpacity) opacity += fadeSpeed;
                 if (charsToShow < msg.length) charsToShow += typeSpeed;
-                if (opacity < maxOpacity || charsToShow < msg.length || tagY < tagTargetY) {
+                
+                // Always continue the animation loop when quiz is active
+                // or when animation is still in progress
+                if (showQuiz || opacity < maxOpacity || charsToShow < msg.length || tagY < tagTargetY) {
                         requestAnimationFrame(animateOutro);
                 }
         }
 
-        // Function to draw the quiz
+        // Function to draw the quiz (inside drawOutro)
         function drawQuiz() {
-                ctx.save();
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // Just draw the quiz directly here
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw a dark overlay
+            ctx.save();
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                // Draw quiz title
-                ctx.fillStyle = '#ffffff';
-                ctx.font = 'bold 24px monospace';
-                ctx.textAlign = 'center';
-                ctx.fillText(`What does ${lastTagSaved} do?`, canvas.width / 2, 100);
+            // Draw quiz title with a highlight
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 28px monospace';
+            ctx.textAlign = 'center';
+            ctx.shadowColor = '#3366ff';
+            ctx.shadowBlur = 10;
+            ctx.fillText(`What does ${lastTagSaved} do?`, canvas.width / 2, 100);
+            ctx.shadowBlur = 0;
 
-                // Draw options
-                const optionHeight = 50;
-                const optionWidth = 400;
-                const startY = 150;
-                const padding = 20;
+            // Draw options
+            const optionHeight = 60;
+            const optionWidth = 450;
+            const startY = 150;
+            const padding = 25;
 
-                for (let i = 0; i < quizOptions.length; i++) {
-                        const y = startY + i * (optionHeight + padding);
+            for (let i = 0; i < quizOptions.length; i++) {
+                const y = startY + i * (optionHeight + padding);
 
-                        // Draw option background
-                        ctx.fillStyle = 'rgba(50, 50, 80, 0.9)';
-                        ctx.strokeStyle = '#3366ff';
-                        ctx.lineWidth = 2;
-                        ctx.beginPath();
-                        ctx.roundRect(canvas.width / 2 - optionWidth / 2, y, optionWidth, optionHeight, 8);
-                        ctx.fill();
-                        ctx.stroke();
-
-                        // Draw option text
-                        ctx.fillStyle = '#ffffff';
-                        ctx.font = '18px monospace';
-                        ctx.textAlign = 'left';
-                        ctx.fillText(`${i+1}. ${quizOptions[i]}`, canvas.width / 2 - optionWidth / 2 + 20, y + optionHeight / 2 + 6);
+                // Check if mouse is over this option
+                const isOptionHovered = 
+                    lastMouseX >= canvas.width/2 - optionWidth/2 && 
+                    lastMouseX <= canvas.width/2 + optionWidth/2 &&
+                    lastMouseY >= y && 
+                    lastMouseY <= y + optionHeight;
+                    
+                // Draw option background with hover effect
+                if (isOptionHovered) {
+                    ctx.fillStyle = 'rgba(80, 100, 180, 0.9)';
+                    ctx.strokeStyle = '#ffaa00';
+                    ctx.shadowColor = '#ffaa00';
+                    ctx.shadowBlur = 15;
+                } else {
+                    ctx.fillStyle = 'rgba(50, 50, 80, 0.9)';
+                    ctx.strokeStyle = '#3366ff';
+                    ctx.shadowBlur = 0;
                 }
+                
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.roundRect(canvas.width / 2 - optionWidth / 2, y, optionWidth, optionHeight, 12);
+                ctx.fill();
+                ctx.stroke();
+                ctx.shadowBlur = 0;
 
-                ctx.restore();
+                // Draw option text
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '20px monospace';
+                ctx.textAlign = 'left';
+                
+                // Wrap text if needed
+                const maxWidth = optionWidth - 40;
+                const text = `${i+1}. ${quizOptions[i]}`;
+                
+                // Simple text wrapping
+                if (ctx.measureText(text).width > maxWidth) {
+                    const words = text.split(' ');
+                    let line = '';
+                    let y1 = y + optionHeight / 2 - 10;
+                    
+                    for (let n = 0; n < words.length; n++) {
+                        const testLine = line + words[n] + ' ';
+                        if (ctx.measureText(testLine).width > maxWidth) {
+                            ctx.fillText(line, canvas.width / 2 - optionWidth / 2 + 20, y1);
+                            line = words[n] + ' ';
+                            y1 += 25;
+                        } else {
+                            line = testLine;
+                        }
+                    }
+                    ctx.fillText(line, canvas.width / 2 - optionWidth / 2 + 20, y1);
+                } else {
+                    ctx.fillText(text, canvas.width / 2 - optionWidth / 2 + 20, y + optionHeight / 2 + 6);
+                }
+            }
+
+            ctx.restore();
         }
+    
+    // Draw a dark overlay
+    ctx.save();
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw quiz title with a highlight
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 28px monospace';
+    ctx.textAlign = 'center';
+    ctx.shadowColor = '#3366ff';
+    ctx.shadowBlur = 10;
+    ctx.fillText(`What does ${lastTagSaved} do?`, canvas.width / 2, 100);
+    ctx.shadowBlur = 0;
+
+    // Draw options
+    const optionHeight = 60;
+    const optionWidth = 450;
+    const startY = 150;
+    const padding = 25;
+
+    for (let i = 0; i < quizOptions.length; i++) {
+        const y = startY + i * (optionHeight + padding);
+
+        // Check if mouse is over this option
+        const isOptionHovered = 
+            lastMouseX >= canvas.width/2 - optionWidth/2 && 
+            lastMouseX <= canvas.width/2 + optionWidth/2 &&
+            lastMouseY >= y && 
+            lastMouseY <= y + optionHeight;
+            
+        // Draw option background with hover effect
+        if (isOptionHovered) {
+            ctx.fillStyle = 'rgba(80, 100, 180, 0.9)';
+            ctx.strokeStyle = '#ffaa00';
+            ctx.shadowColor = '#ffaa00';
+            ctx.shadowBlur = 15;
+        } else {
+            ctx.fillStyle = 'rgba(50, 50, 80, 0.9)';
+            ctx.strokeStyle = '#3366ff';
+            ctx.shadowBlur = 0;
+        }
+        
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(canvas.width / 2 - optionWidth / 2, y, optionWidth, optionHeight, 12);
+        ctx.fill();
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+
+        // Draw option text
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '20px monospace';
+        ctx.textAlign = 'left';
+        
+        // Wrap text if needed
+        const maxWidth = optionWidth - 40;
+        const text = `${i+1}. ${quizOptions[i]}`;
+        
+        // Simple text wrapping
+        if (ctx.measureText(text).width > maxWidth) {
+            const words = text.split(' ');
+            let line = '';
+            let y1 = y + optionHeight / 2 - 10;
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                if (ctx.measureText(testLine).width > maxWidth) {
+                    ctx.fillText(line, canvas.width / 2 - optionWidth / 2 + 20, y1);
+                    line = words[n] + ' ';
+                    y1 += 25;
+                } else {
+                    line = testLine;
+                }
+            }
+            ctx.fillText(line, canvas.width / 2 - optionWidth / 2 + 20, y1);
+        } else {
+            ctx.fillText(text, canvas.width / 2 - optionWidth / 2 + 20, y + optionHeight / 2 + 6);
+        }
+    }
+
+    ctx.restore();
+    
+    // Set up a click handler for quiz options
+    canvas.onclick = function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+        
+        const optionHeight = 60;
+        const optionWidth = 450;
+        const startY = 150;
+        const padding = 25;
+        
+        for (let i = 0; i < quizOptions.length; i++) {
+            const y = startY + i * (optionHeight + padding);
+            if (clickX >= canvas.width/2 - optionWidth/2 && 
+                clickX <= canvas.width/2 + optionWidth/2 &&
+                clickY >= y && 
+                clickY <= y + optionHeight) {
+                
+                console.log('Option clicked:', i);
+                handleQuizAnswer(i);
+                // Reset the click handler
+                canvas.onclick = null;
+                break;
+            }
+        }
+    };
+
+// Function to draw the quiz (inside drawOutro)
+function drawQuiz() {
+    // Just call the global function
+    displayQuiz();
+}
         // Function to generate quiz options
         function generateQuizOptions() {
                 // Find the correct fact for the last tag saved
@@ -912,7 +1189,8 @@ function drawOutro(msg) {
                 if (answerIndex === correctAnswerIndex) {
                         // Correct answer - give player a second chance
                         gameActive = true;
-                        score = -5; // Start with negative score as penalty
+                        // Set score to highest score minus 5 as a penalty
+                        score = Math.max(0, highestScore - 5); // Ensure score doesn't go below 0
                         scoreDisplay.textContent = 'Score: ' + score;
                         factDisplay.textContent = 'Correct! You get a second chance!';
 
@@ -1265,23 +1543,21 @@ function startGame() {
 
 // Keyboard controls
 function keyDown(e) {
-        if (!gameActive) return;
-        if (e.key === 'ArrowLeft') player.dx = -player.speed;
-        if (e.key === 'ArrowRight') player.dx = player.speed;
+        // Allow arrow keys to work regardless of game state
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                // Prevent default browser scrolling behavior
+                e.preventDefault();
+                
+                // Handle player movement
+                if (e.key === 'ArrowLeft') player.dx = -player.speed;
+                if (e.key === 'ArrowRight') player.dx = player.speed;
+        }
 }
 
 function keyUp(e) {
         if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') player.dx = 0;
 }
 
-document.addEventListener('keydown', keyDown);
-document.addEventListener('keyup', keyUp);
-startBtn.addEventListener('click', startGame);
-
-// Responsive canvas (optional: adjust canvas size on window resize)
-// window.addEventListener('resize', () => {
-//     canvas.width = Math.min(600, window.innerWidth - 40);
-// });
 
 // Function to generate quiz options
 function generateQuizOptions() {
@@ -1320,12 +1596,85 @@ function generateQuizOptions() {
         return allOptions;
 }
 
+// Global function to display the quiz screen
+function displayQuiz() {
+    console.log('Displaying quiz directly');
+    
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw dark background
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw title
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 28px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(`What does ${lastTagSaved} do?`, canvas.width / 2, 100);
+    
+    // Draw options
+    const optionHeight = 60;
+    const optionWidth = 450;
+    const startY = 150;
+    const padding = 25;
+    
+    for (let i = 0; i < quizOptions.length; i++) {
+        const y = startY + i * (optionHeight + padding);
+        
+        // Draw option background
+        ctx.fillStyle = 'rgba(50, 50, 80, 0.9)';
+        ctx.strokeStyle = '#3366ff';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(canvas.width / 2 - optionWidth / 2, y, optionWidth, optionHeight, 12);
+        ctx.fill();
+        ctx.stroke();
+        
+        // Draw option text
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '20px monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText(`${i+1}. ${quizOptions[i]}`, canvas.width / 2 - optionWidth / 2 + 20, y + 30);
+    }
+    
+    // Set up a temporary click handler for the quiz options
+    const quizClickHandler = function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+        
+        for (let i = 0; i < quizOptions.length; i++) {
+            const y = startY + i * (optionHeight + padding);
+            if (clickX >= canvas.width/2 - optionWidth/2 && 
+                clickX <= canvas.width/2 + optionWidth/2 &&
+                clickY >= y && 
+                clickY <= y + optionHeight) {
+                
+                console.log('Quiz option clicked:', i);
+                
+                // Remove this temporary click handler
+                canvas.removeEventListener('click', quizClickHandler);
+                
+                // Handle the answer
+                handleQuizAnswer(i);
+                break;
+            }
+        }
+    };
+    
+    // Add the temporary click handler
+    canvas.addEventListener('click', quizClickHandler);
+}
+
 // Function to handle quiz answer
 function handleQuizAnswer(answerIndex) {
         if (answerIndex === correctAnswerIndex) {
                 // Correct answer - give player a second chance
                 gameActive = true;
-                score = -5; // Start with negative score as penalty
+                // Subtract 5 from the last score (not the highest score)
+                // This is the score the player had when they hit the tag
+                score = Math.max(0, score - 5); // Ensure score doesn't go below 0
                 scoreDisplay.textContent = 'Score: ' + score;
                 factDisplay.textContent = 'Correct! You get a second chance!';
 
@@ -1387,32 +1736,81 @@ function canvasClickHandler(e) {
             }
         }
     } 
-    // Check if we're in the end screen (game not active)
+    // Check for tag click in the end screen
     else if (!gameActive) {
-        // Check if the quiz button was clicked
-        const buttonArea = {
-            x: canvas.width/2 - 100,
-            y: canvas.height/2 + 100,
-            width: 200,
-            height: 40
-        };
-        
-        console.log('Button area:', buttonArea);
         console.log('Click position:', {clickX, clickY});
         
-        if (clickX >= buttonArea.x && clickX <= buttonArea.x + buttonArea.width &&
-            clickY >= buttonArea.y && clickY <= buttonArea.y + buttonArea.height) {
+        // Create a very generous hitbox for the tag (almost the entire top half of the screen)
+        // This ensures the tag is easy to click
+        const tagArea = {
+            x: canvas.width / 2 - 100,
+            y: canvas.height / 2 - 200,
+            width: 200,
+            height: 100
+        };
+        
+        console.log('Tag area:', tagArea);
+        
+        // Check if click is within the tag area
+        if (clickX >= tagArea.x && clickX <= tagArea.x + tagArea.width &&
+            clickY >= tagArea.y && clickY <= tagArea.y + tagArea.height) {
             
-            console.log('Quiz button was clicked!');
-            showQuiz = true;
+            console.log('Tag area was clicked!');
+            
+            // Clear any existing quiz options
+            quizOptions = [];
+            
+            // Generate new quiz options
             quizOptions = generateQuizOptions();
-            console.log('Quiz options:', quizOptions);
+            console.log('Generated quiz options:', quizOptions);
             console.log('Correct answer index:', correctAnswerIndex);
+            
+            // Enable quiz mode
+            showQuiz = true;
+            
+            // Generate quiz options and store them
+            quizOptions = generateQuizOptions();
+            console.log('Quiz options generated:', quizOptions);
+            
+            // Directly show the quiz screen using our global function
+            displayQuiz();
+            
+            // Set showQuiz flag to true to maintain state
+            showQuiz = true;
         }
     }
 }
 
 // Add the new click handler
 canvas.addEventListener('click', canvasClickHandler);
+
+// Add mouse tracking for hover effects
+canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    lastMouseX = e.clientX - rect.left;
+    lastMouseY = e.clientY - rect.top;
+});
+
+canvas.addEventListener('mousedown', () => {
+    isMouseDown = true;
+});
+
+canvas.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+canvas.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+});
+
+document.addEventListener('keydown', keyDown);
+document.addEventListener('keyup', keyUp);
+startBtn.addEventListener('click', startGame);
+
+// Responsive canvas (optional: adjust canvas size on window resize)
+// window.addEventListener('resize', () => {
+//     canvas.width = Math.min(600, window.innerWidth - 40);
+// });
+
 
 drawIntro(); // Show intro on initial page load
