@@ -7,6 +7,7 @@
         "/hardware" => "/hardware",
         "/jesusChrist/parables"=> "/jesucristo/parabolas",
         "/parts"=> "/partes",
+        "/contact"=> "/contacto",
         "/programs"=> "/programas"
     ];
 
